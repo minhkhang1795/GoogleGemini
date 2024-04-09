@@ -85,14 +85,21 @@ WSGI_APPLICATION = 'googlegemini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DJANGO_DBNAME'),
+#         'HOST': os.environ.get('DJANGO_HOST'),
+#         'USER': os.environ.get('DJANGO_USER'),
+#         'PASSWORD': os.environ.get('DJANGO_PASS'),
+#         'OPTIONS': {'sslmode': 'require'},
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DJANGO_DBNAME'),
-        'HOST': os.environ.get('DJANGO_HOST'),
-        'USER': os.environ.get('DJANGO_USER'),
-        'PASSWORD': os.environ.get('DJANGO_PASS'),
-        'OPTIONS': {'sslmode': 'require'},
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
