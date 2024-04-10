@@ -4,13 +4,11 @@ import os
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
 
+from .forms import UploadForm
 from .gemini.menu_image_model import MenuImageModel
 from .models import Image
-from PIL import Image as PILImage
-from .forms import UploadForm
 from .tables import ImageTable
 
-logger = logging.getLogger(__name__)
 menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
 
 
@@ -31,14 +29,13 @@ def index(request):
 def upload_view(request):
     upload_form = UploadForm(data=request.POST, files=request.FILES)
 
-    result = ""
     if upload_form.is_valid():
         result = menu_image_model.menu_image_to_text(upload_form.instance.file)
         request.session['result'] = result
-        logger.info(result)
+        logging.info(result)
     else:
-        logger.warning("Something went wrong with uploading the file.")
-        logger.warning(request.POST)
-        logger.warning(request.FILES)
+        logging.warning("Something went wrong with uploading the file.")
+        logging.warning(request.POST)
+        logging.warning(request.FILES)
 
     return redirect('index')

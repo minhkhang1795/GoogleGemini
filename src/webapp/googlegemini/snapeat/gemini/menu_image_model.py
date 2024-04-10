@@ -1,8 +1,11 @@
+import logging
 import os
 import time
+from io import BytesIO
 
 import google.generativeai as genai
 import PIL.Image
+from django.core.files import File
 from google.generativeai import GenerationConfig
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
@@ -45,16 +48,16 @@ class MenuImageModel:
         text = ""
         start_time = time.perf_counter()
         try:
-            print(f'menu_image_to_text: analyzing menu image {image}')
+            logging.info(f'analyzing menu image {image}')
             img = PIL.Image.open(image)
             response = self.image_model.generate_content(["look at the following picture and tell me what's on the menu in json format", img])
             response.resolve()
             if response.text:
                 text = response.text
         except Exception as e:
-            print(f'menu_image_to_text: {type(e).__name__}: {e}')
+            logging.error(f'{type(e).__name__}: {e}')
 
         end_time = time.perf_counter()
         elapsed_time = end_time - start_time
-        print(f'menu_image_to_text: {elapsed_time} seconds')
+        logging.info(f'{elapsed_time} seconds')
         return text

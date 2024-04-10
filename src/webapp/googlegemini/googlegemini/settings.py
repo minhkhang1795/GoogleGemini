@@ -10,8 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import logging
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
+
+
+logging.basicConfig(level=logging.INFO,
+                    format='[%(levelname)s] %(asctime)s %(module)s %(name)s.%(funcName)s +%(lineno)s: [%(process)d] %(message)s',
+                    handlers=[
+                        logging.StreamHandler(sys.stdout)]
+                    )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
