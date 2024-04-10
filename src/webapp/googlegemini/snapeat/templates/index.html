@@ -11,35 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <style>
-        #video-container {
-            width: 100%;
-            height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-            min-width: 400px;
-            min-height: 600px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #video {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
-
-        #capture-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -58,48 +29,6 @@
             {% endif %}
         </div>
     </div>
-    <div id="video-container">
-        <video id="video" autoplay></video>
-    </div>
-<!--    <button id="capture-btn">Capture</button>-->
 </div>
-
-<script>
-    const video = document.getElementById('video');
-    // const captureButton = document.getElementById('capture-btn');
-
-    let stream;
-
-    navigator.mediaDevices.getUserMedia({video: { facingMode: 'environment' }})
-        .then(function (mediaStream) {
-            stream = mediaStream;
-            video.srcObject = mediaStream;
-            video.onloadedmetadata = function (e) {
-                video.play();
-            };
-        })
-        .catch(function (err) {
-            console.log('Error accessing camera:', err);
-        });
-
-    // captureButton.addEventListener('click', function () {
-    //     const canvas = document.createElement('canvas');
-    //     const context = canvas.getContext('2d');
-    //     canvas.width = video.videoWidth;
-    //     canvas.height = video.videoHeight;
-    //     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    //
-    //     // Stop the video stream
-    //     stream.getTracks().forEach(track => track.stop());
-    //
-    //     // Convert the captured frame to a data URL
-    //     const dataUrl = canvas.toDataURL('image/jpeg');
-    //
-    //     // Display the captured image
-    //     const capturedImage = new Image();
-    //     capturedImage.src = dataUrl;
-    //     document.body.appendChild(capturedImage);
-    // });
-</script>
 </body>
 </html>
