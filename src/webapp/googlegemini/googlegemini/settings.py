@@ -27,13 +27,16 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '12345')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', '0').lower() in ['true', 't', '1']
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(' ')
-CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://').split(' ')
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1']
+else:
+    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+    CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://').split(' ')
 
-SECURE_SSL_REDIRECT = \
-    os.getenv('SECURE_SSL_REDIRECT', '0').lower() in ['true', 't', '1']
-if SECURE_SSL_REDIRECT:
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = \
+        os.getenv('SECURE_SSL_REDIRECT', '0').lower() in ['true', 't', '1']
+    if SECURE_SSL_REDIRECT:
+        SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -85,23 +88,24 @@ WSGI_APPLICATION = 'googlegemini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DJANGO_DBNAME'),
-        'HOST': os.environ.get('DJANGO_HOST'),
-        'USER': os.environ.get('DJANGO_USER'),
-        'PASSWORD': os.environ.get('DJANGO_PASS'),
-        'OPTIONS': {'sslmode': 'require'},
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DJANGO_DBNAME'),
+            'HOST': os.environ.get('DJANGO_HOST'),
+            'USER': os.environ.get('DJANGO_USER'),
+            'PASSWORD': os.environ.get('DJANGO_PASS'),
+            'OPTIONS': {'sslmode': 'require'},
+        }
+    }
 
 
 # Password validation

@@ -1,4 +1,5 @@
 import os
+import time
 
 import google.generativeai as genai
 import PIL.Image
@@ -42,6 +43,7 @@ class MenuImageModel:
         :return: the response to the prompt.
         """
         text = ""
+        start_time = time.perf_counter()
         try:
             print(f'menu_image_to_text: analyzing menu image {image}')
             img = PIL.Image.open(image)
@@ -52,4 +54,7 @@ class MenuImageModel:
         except Exception as e:
             print(f'menu_image_to_text: {type(e).__name__}: {e}')
 
+        end_time = time.perf_counter()
+        elapsed_time = end_time - start_time
+        print(f'menu_image_to_text: {elapsed_time} seconds')
         return text
