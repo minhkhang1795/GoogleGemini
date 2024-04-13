@@ -37,7 +37,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '12345')
 DEBUG = os.getenv('DJANGO_DEBUG', '0').lower() in ['true', 't', '1']
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.159', 'localhost']
+    CORS_ALLOWED_ORIGINS = [
+        "http://localhost:3000",  # React app's address
+    ]
 else:
     ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
     CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://').split(' ')
@@ -57,6 +60,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    "corsheaders",
     'snapeat.apps.SnapeatConfig',
     'django_tables2',
     'crispy_forms',
@@ -64,9 +69,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

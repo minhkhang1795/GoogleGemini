@@ -1,6 +1,7 @@
 import logging
 import os
 
+from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
 
@@ -10,6 +11,11 @@ from .models import Image
 from .tables import ImageTable
 
 menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
+
+
+def recommend_view(request):
+    data = {"key": "value"}
+    return JsonResponse(data)
 
 
 def index(request):
