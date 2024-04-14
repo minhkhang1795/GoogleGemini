@@ -13,4 +13,7 @@ export const recommend = (image, user_profile) =>
                 console.log("error");
                 return null;
             }
+        })
+        .catch(rejected => {
+            console.log(rejected);
         });
