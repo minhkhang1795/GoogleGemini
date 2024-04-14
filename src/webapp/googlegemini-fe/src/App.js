@@ -1,28 +1,82 @@
-import { Component } from 'react';
+import {Component} from 'react';
 
 import './App.css';
+import {
+    MDBTabs,
+    MDBTabsItem,
+    MDBTabsLink,
+    MDBTabsContent,
+    MDBTabsPane,
+    MDBIcon,
+    MDBTypography
+} from 'mdb-react-ui-kit';
 import * as SnapEatApi from './SnapEatApi/SnapEatApi';
+import ScanMenuComponent from "./ScanMenuComponent";
+import BrowseRestaurantsComponent from "./BrowseRestaurantsComponent";
 
 class App extends Component {
 
-  state = {
-    userProfile: {},
-    data: {}
-  };
+    state = {
+        pageTitle: 'Scan Menu',
+        fillActive: 'tab1',
+        userProfile: {},
+        data: {}
+    };
 
-  componentDidMount() {
-    SnapEatApi.recommend(null).then(result => {
-      this.setState({ data: result });
-    });
-  }
+    handleFillClick(tab, pageTitle) {
+        if (tab === this.state.fillActive) {
+            return;
+        }
 
-  render() {
-    return (
-      <div role="main">
-        {this.state.data ? <p>{this.state.data.key}</p> : <p>Loading...</p>}
-      </div>
-    )
-  }
+        this.setState({fillActive: tab, pageTitle: pageTitle});
+    };
+
+    componentDidMount() {
+        SnapEatApi.recommend(null).then(result => {
+            this.setState({data: result});
+        });
+    }
+
+    render() {
+        return (
+            <div role="main">
+                <div className='text-center bg-light'>
+                    <MDBTypography tag='div' className='display-5 p-3 border-bottom'>
+                        {this.state.pageTitle}
+                    </MDBTypography>
+                </div>
+
+                <MDBTabsContent>
+                    <MDBTabsPane open={this.state.fillActive === 'tab1'}><ScanMenuComponent/></MDBTabsPane>
+                    <MDBTabsPane open={this.state.fillActive === 'tab2'}><BrowseRestaurantsComponent/></MDBTabsPane>
+                    <MDBTabsPane open={this.state.fillActive === 'tab3'}>Profile</MDBTabsPane>
+                </MDBTabsContent>
+
+                <div style={{bottom: "0px", position: "fixed", width: "100%"}}>
+                    <MDBTabs fill>
+                        <MDBTabsItem>
+                            <MDBTabsLink onClick={() => this.handleFillClick('tab1', 'Scan Menu')}
+                                         active={this.state.fillActive === 'tab1'}>
+                                <MDBIcon fas icon='camera' className='me-2'/>
+                            </MDBTabsLink>
+                        </MDBTabsItem>
+                        <MDBTabsItem>
+                            <MDBTabsLink onClick={() => this.handleFillClick('tab2', 'Browse Restaurants')}
+                                         active={this.state.fillActive === 'tab2'}>
+                                <MDBIcon fas icon='search' className='me-2'/>
+                            </MDBTabsLink>
+                        </MDBTabsItem>
+                        <MDBTabsItem>
+                            <MDBTabsLink onClick={() => this.handleFillClick('tab3', 'Profile')}
+                                         active={this.state.fillActive === 'tab3'}>
+                                <MDBIcon fas icon='user' className='me-2'/>
+                            </MDBTabsLink>
+                        </MDBTabsItem>
+                    </MDBTabs>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default App;
