@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - release
+    paths: ['src/webapp/googlegemini-fe/**']
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:

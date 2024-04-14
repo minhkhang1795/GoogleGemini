@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - release
+    paths: ['src/webapp/googlegemini/**']
   workflow_dispatch:
 
 jobs:
