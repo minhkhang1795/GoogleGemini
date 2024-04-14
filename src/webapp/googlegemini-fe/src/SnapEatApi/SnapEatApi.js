@@ -1,4 +1,4 @@
-const domain = window.location.hostname === 'localhost' ? 'http://localhost:8000' : "https://googlegemini.azurewebsites.net";
+const domain = window.location.hostname === 'localhost' ? 'http://localhost:8000' : "https://snapeat.azurewebsites.net";
 
 
 export const recommend = (image, user_profile) =>
