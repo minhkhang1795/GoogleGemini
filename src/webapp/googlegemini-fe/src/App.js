@@ -11,7 +11,7 @@ import {
     MDBTypography
 } from 'mdb-react-ui-kit';
 import * as SnapEatApi from './SnapEatApi/SnapEatApi';
-import ScanMenuComponent from "./ScanMenuComponent";
+import SnapMenuComponent from "./SnapMenuComponent";
 import BrowseRestaurantsComponent from "./BrowseRestaurantsComponent";
 
 class App extends Component {
@@ -40,14 +40,14 @@ class App extends Component {
     render() {
         return (
             <div role="main">
-                <div className='text-center bg-light'>
-                    <MDBTypography tag='div' className='display-5 p-3 border-bottom'>
+                <div className='text-center'>
+                    <MDBTypography tag='div' className='display-6 p-3 border-bottom'>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
 
                 <MDBTabsContent>
-                    <MDBTabsPane open={this.state.fillActive === 'tab1'}><ScanMenuComponent/></MDBTabsPane>
+                    <MDBTabsPane open={this.state.fillActive === 'tab1'}><SnapMenuComponent/></MDBTabsPane>
                     <MDBTabsPane open={this.state.fillActive === 'tab2'}><BrowseRestaurantsComponent/></MDBTabsPane>
                     <MDBTabsPane open={this.state.fillActive === 'tab3'}>Profile</MDBTabsPane>
                 </MDBTabsContent>
