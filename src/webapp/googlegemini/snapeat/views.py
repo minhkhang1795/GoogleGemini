@@ -3,6 +3,7 @@ import os
 
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
 from .forms import UploadForm
@@ -13,9 +14,18 @@ from .tables import ImageTable
 menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
 
 
+@require_http_methods(["POST"])
+@csrf_exempt
 def recommend_view(request):
-    data = {"key": "value"}
-    return JsonResponse(data)
+    if 'menuImage' not in request.FILES:
+        return JsonResponse({'error': 'Invalid request.'})
+
+    result = menu_image_model.menu_image_to_text(request.FILES['menuImage'])
+    return JsonResponse({"result": result})
+
+
+def get_view(request):
+    return JsonResponse({"success": "OK"})
 
 
 def index(request):

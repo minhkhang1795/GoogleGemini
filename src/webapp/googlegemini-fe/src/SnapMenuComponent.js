@@ -32,12 +32,14 @@ class SnapMenuComponent extends Component {
     };
 
     handleRemovePreview(event) {
-        this.setState({previewImage: null});
         const formData = new FormData();
         formData.append('menuImage', this.state.previewImageFile);
         formData.append('userProfile', this.state.userProfile);
-        SnapEatApi.recommend(this.previewImage).then(result => {
+        SnapEatApi.recommend(formData).then(result => {
             this.setState({data: result});
+            this.setState({previewImage: null});
+        }).catch(rejected => {
+            console.log(rejected);
         });
     }
 
@@ -65,6 +67,7 @@ class SnapMenuComponent extends Component {
                 <div className='text-center'>
                     <MDBBtn onClick={(e) => this.handleRemovePreview(e)}>Submit</MDBBtn>
                 </div>
+                <div>{this.state.data.result}</div>
             </div>
         )
     }

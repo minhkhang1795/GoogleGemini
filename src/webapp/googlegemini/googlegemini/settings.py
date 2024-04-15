@@ -37,10 +37,11 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '12345')
 DEBUG = os.getenv('DJANGO_DEBUG', '0').lower() in ['true', 't', '1']
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.159', 'localhost']
-    CORS_ALLOWED_ORIGINS = [
-        "http://localhost:3000",  # React app's address
-    ]
+    ALLOWED_HOSTS = ['localhost']
+    CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+    CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]  # React app's address
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
 else:
     ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
     CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://').split(' ')

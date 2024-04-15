@@ -2,7 +2,7 @@ const domain = window.location.hostname === 'localhost' ? 'http://localhost:8000
 
 
 export const recommend = (formData) =>
-    fetch(`${domain}/recommend`, {
+    fetch(`${domain}/recommend/`, {
         method: 'POST',
         body: formData // Set the FormData object as the body of the request
     })
@@ -15,7 +15,4 @@ export const recommend = (formData) =>
                 console.log("error");
                 return null;
             }
-        })
-        .catch(rejected => {
-            console.log(rejected);
         });
