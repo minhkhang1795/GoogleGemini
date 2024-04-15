@@ -32,9 +32,6 @@ class App extends Component {
     };
 
     componentDidMount() {
-        SnapEatApi.recommend(null).then(result => {
-            this.setState({data: result});
-        });
     }
 
     render() {
