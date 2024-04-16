@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Seared Scallops",
+    "description": "Tender sea scallops seared to perfection, served with a lemon-herb sauce and roasted vegetables.",
+    "price": "$28",
+    "matchScore": 9.2,
+    "matchScoreExplanation": "Based on your preference for seafood and light dishes.",
+    "imageUrl": "https://example.com/scallops.jpg"
+  },
+  {
+    "name": "Beef Bourguignon",
+    "description": "A classic French stew with tender beef braised in red wine, vegetables, and herbs.",
+    "price": "$32",
+    "matchScore": 8.5,
+    "matchScoreExplanation": "You have indicated a liking for hearty stews and French cuisine.",
+    "imageUrl": "https://example.com/bourguignon.jpg"
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Marinated chicken in a creamy tomato sauce with fragrant spices, served with basmati rice.",
+    "price": "$24",
+    "matchScore": 8.8,
+    "matchScoreExplanation": "Your profile suggests an interest in Indian flavors and moderately spiced dishes.",
+    "imageUrl": "https://example.com/tikka-masala.jpg"
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy risotto with a medley of mushrooms, parmesan cheese, and fresh herbs.",
+    "price": "$26",
+    "matchScore": 9.5,
+    "matchScoreExplanation": "This aligns with your preference for vegetarian options and Italian cuisine.",
+    "imageUrl": "https://example.com/risotto.jpg"
+  },
+  {
+    "name": "Sushi Platter",
+    "description": "An assortment of fresh sushi, including nigiri, sashimi, and maki rolls.",
+    "price": "$35-$45",
+    "matchScore": 8.0,
+    "matchScoreExplanation": "We noticed your interest in Japanese cuisine and seafood.",
+    "imageUrl": "https://example.com/sushi.jpg"
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "description": "A classic Italian pasta dish with spaghetti, pancetta, eggs, and parmesan cheese.",
+    "price": "$22",
+    "matchScore": 9.1,
+    "matchScoreExplanation": "This dish matches your preference for pasta and Italian flavors.",
+    "imageUrl": "https://example.com/carbonara.jpg"
+  },
+  {
+    "name": "Grilled Salmon",
+    "description": "Fresh salmon fillet grilled to perfection, served with your choice of sides.",
+    "price": "$29",
+    "matchScore": 8.7,
+    "matchScoreExplanation": "This healthy and flavorful option aligns with your preference for seafood and grilled dishes.",
+    "imageUrl": "https://example.com/salmon.jpg"
+  },
+  {
+    "name": "Thai Green Curry",
+    "description": "Aromatic green curry with coconut milk, vegetables, and your choice of protein.",
+    "price": "$25",
+    "matchScore": 8.4,
+    "matchScoreExplanation": "Your profile indicates an openness to spicy food and Thai cuisine.",
+    "imageUrl": "https://example.com/green-curry.jpg"
+  },
+  {
+    "name": "Falafel Pita",
+    "description": "Crispy falafel balls served in a warm pita with hummus, tahini, and fresh vegetables.",
+    "price": "$18",
+    "matchScore": 9.0,
+    "matchScoreExplanation": "This vegetarian option aligns with your interest in Mediterranean cuisine and flavorful dishes.",
+    "imageUrl": "https://example.com/falafel.jpg"
+  }
+]

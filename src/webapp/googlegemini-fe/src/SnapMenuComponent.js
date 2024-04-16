@@ -6,7 +6,7 @@ import * as SnapEatApi from "./SnapEatApi/SnapEatApi";
 class SnapMenuComponent extends Component {
     state = {
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
-        data: {},
+        data: [],
         previewImage: null,
         previewImageFile: null,
     };
@@ -35,7 +35,7 @@ class SnapMenuComponent extends Component {
         const formData = new FormData();
         formData.append('menuImage', this.state.previewImageFile);
         formData.append('userProfile', this.state.userProfile);
-        SnapEatApi.recommend(formData).then(result => {
+        SnapEatApi.Recommend(formData).then(result => {
             this.setState({data: result});
             this.setState({previewImage: null});
         }).catch(rejected => {
@@ -67,7 +67,7 @@ class SnapMenuComponent extends Component {
                 <div className='text-center'>
                     <MDBBtn onClick={(e) => this.handleRemovePreview(e)}>Submit</MDBBtn>
                 </div>
-                <div>{this.state.data.result}</div>
+                <div>{JSON.stringify(this.state.data)}</div>
             </div>
         )
     }
