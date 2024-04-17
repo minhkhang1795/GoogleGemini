@@ -1,74 +1,74 @@
 [
   {
-    "name": "Seared Scallops",
-    "description": "Tender sea scallops seared to perfection, served with a lemon-herb sauce and roasted vegetables.",
-    "price": "$28",
-    "matchScore": 9.2,
-    "matchScoreExplanation": "Based on your preference for seafood and light dishes.",
-    "imageUrl": "https://example.com/scallops.jpg"
+    "name": "Crispy Calamari",
+    "description": "Tender calamari rings lightly dusted in seasoned flour and fried to golden perfection, served with a zesty marinara sauce for dipping.",
+    "category": "Appetizer",
+    "price": "$12",
+    "matchScore": 9,
+    "matchExplanation": "This classic appetizer is perfect for seafood lovers and pairs well with a variety of main courses.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.3fc62716a09abdcc64d50e477cb9059f&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   },
   {
-    "name": "Beef Bourguignon",
-    "description": "A classic French stew with tender beef braised in red wine, vegetables, and herbs.",
-    "price": "$32",
-    "matchScore": 8.5,
-    "matchScoreExplanation": "You have indicated a liking for hearty stews and French cuisine.",
-    "imageUrl": "https://example.com/bourguignon.jpg"
+    "name": "Spinach and Artichoke Dip",
+    "description": "A creamy and flavorful blend of spinach, artichoke hearts, and melted cheeses, served warm with tortilla chips for dipping.",
+    "category": "Appetizer",
+    "price": "$10",
+    "matchScore": 8,
+    "matchExplanation": "This crowd-pleasing dip is a great option for sharing and is ideal for those who enjoy rich and savory flavors.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.af086ed44b7b855200a5bd8580e9ca54&w=202&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   },
   {
-    "name": "Chicken Tikka Masala",
-    "description": "Marinated chicken in a creamy tomato sauce with fragrant spices, served with basmati rice.",
-    "price": "$24",
-    "matchScore": 8.8,
-    "matchScoreExplanation": "Your profile suggests an interest in Indian flavors and moderately spiced dishes.",
-    "imageUrl": "https://example.com/tikka-masala.jpg"
-  },
-  {
-    "name": "Mushroom Risotto",
-    "description": "Creamy risotto with a medley of mushrooms, parmesan cheese, and fresh herbs.",
-    "price": "$26",
-    "matchScore": 9.5,
-    "matchScoreExplanation": "This aligns with your preference for vegetarian options and Italian cuisine.",
-    "imageUrl": "https://example.com/risotto.jpg"
-  },
-  {
-    "name": "Sushi Platter",
-    "description": "An assortment of fresh sushi, including nigiri, sashimi, and maki rolls.",
-    "price": "$35-$45",
-    "matchScore": 8.0,
-    "matchScoreExplanation": "We noticed your interest in Japanese cuisine and seafood.",
-    "imageUrl": "https://example.com/sushi.jpg"
+    "name": "Grilled Salmon with Roasted Vegetables",
+    "description": "Fresh salmon fillet grilled to flaky perfection, served with a medley of seasonal roasted vegetables for a healthy and satisfying meal.",
+    "category": "Main Course",
+    "price": "$30",
+    "matchScore": 10,
+    "matchExplanation": "This dish is ideal for health-conscious individuals and those who appreciate fresh, high-quality ingredients.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.1513382cc4bcf803ae96efbdf2b429b3&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   },
   {
     "name": "Spaghetti Carbonara",
-    "description": "A classic Italian pasta dish with spaghetti, pancetta, eggs, and parmesan cheese.",
+    "description": "Classic Italian pasta dish featuring spaghetti tossed in a rich and creamy sauce made with eggs, Parmesan cheese, pancetta, and black pepper.",
+    "category": "Main Course",
     "price": "$22",
-    "matchScore": 9.1,
-    "matchScoreExplanation": "This dish matches your preference for pasta and Italian flavors.",
-    "imageUrl": "https://example.com/carbonara.jpg"
+    "matchScore": 9,
+    "matchExplanation": "This hearty and flavorful pasta dish is perfect for those who enjoy traditional Italian cuisine.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.49f78796495928f663f01aaa00af92a4&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   },
   {
-    "name": "Grilled Salmon",
-    "description": "Fresh salmon fillet grilled to perfection, served with your choice of sides.",
-    "price": "$29",
-    "matchScore": 8.7,
-    "matchScoreExplanation": "This healthy and flavorful option aligns with your preference for seafood and grilled dishes.",
-    "imageUrl": "https://example.com/salmon.jpg"
+    "name": "Beef Bourguignon",
+    "description": "Tender beef braised in a rich red wine sauce with carrots, onions, and mushrooms, served with creamy mashed potatoes.",
+    "category": "Main Course",
+    "price": "$28 - $32",
+    "matchScore": 8,
+    "matchExplanation": "This classic French stew is perfect for a special occasion and is ideal for those who appreciate slow-cooked, flavorful dishes.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.03d68d9c1315a988eeb4f629f9b51f08&w=205&h=136&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   },
   {
-    "name": "Thai Green Curry",
-    "description": "Aromatic green curry with coconut milk, vegetables, and your choice of protein.",
-    "price": "$25",
-    "matchScore": 8.4,
-    "matchScoreExplanation": "Your profile indicates an openness to spicy food and Thai cuisine.",
-    "imageUrl": "https://example.com/green-curry.jpg"
+    "name": "Tiramisu",
+    "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian dessert that is both light and decadent.",
+    "category": "Dessert",
+    "price": "$8 / $10",
+    "matchScore": 10,
+    "matchExplanation": "This popular dessert is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.HERO5qLkxLVf41gMfZr3XgF6_0P2PqLJNHmrVsGZ_d2Z3nQ&w=472&h=280&c=13&rs=2&o=6&dpr=1.5&pid=SANGAM"]
   },
   {
-    "name": "Falafel Pita",
-    "description": "Crispy falafel balls served in a warm pita with hummus, tahini, and fresh vegetables.",
-    "price": "$18",
-    "matchScore": 9.0,
-    "matchScoreExplanation": "This vegetarian option aligns with your interest in Mediterranean cuisine and flavorful dishes.",
-    "imageUrl": "https://example.com/falafel.jpg"
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a molten chocolate center, served with a scoop of vanilla ice cream for the perfect balance of hot and cold.",
+    "category": "Dessert",
+    "price": "$9",
+    "matchScore": 9,
+    "matchExplanation": "This decadent dessert is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.be847f6c9f75f475ac60cce810cebb76&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
+  },
+  {
+    "name": "Cheesecake",
+    "description": "Creamy and smooth New York-style cheesecake with a graham cracker crust, served with your choice of fresh fruit or chocolate sauce.",
+    "category": "Dessert",
+    "price": "$7",
+    "matchScore": 8,
+    "matchExplanation": "This classic dessert is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
+    "imageUrls": ["https://th.bing.com/th?id=OSK.8277f28797958407014cdf02ac65cc04&w=202&h=202&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"]
   }
 ]
