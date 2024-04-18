@@ -6,16 +6,32 @@ import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} f
 class SnapMenuResultComponent extends Component {
     state = {
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
+        currentCategory: "All"
     };
 
     componentDidMount() {
     }
 
     getCategories(items) {
-        let categories = [];
+        let categories = new Set();
         if (items && items.length > 0) {
-            for (const categoriesKey in items) {
+            for (const item of items) { // Use 'of' instead of 'in' to iterate over array elements
+                if (item.category) {
+                    categories.add(item.category);
+                }
+            }
+        }
+        let uniqueCategories = Array.from(categories);
+        uniqueCategories.unshift("All"); // Add "All" to the beginning of the array
 
+        return uniqueCategories;
+    }
+
+    getItemsByCategory(items) {
+        let categories = [];
+        for (const item of items) { // Use 'of' instead of 'in' to iterate over array elements
+            if (this.state.currentCategory === "All" || item.category === this.state.currentCategory) {
+                categories.push(item);
             }
         }
 
@@ -26,31 +42,36 @@ class SnapMenuResultComponent extends Component {
         const result = this.props.result;
 
         return (
-            <div>
+            <div style={{overflowY: 'hidden'}}>
                 {result.data && result.data.constructor === Array && result.data.length > 0 &&
                     <div className="pt-3">
-                        <div>
-                            <MDBBtn rounded className='mx-2' color='dark'>
-                                Dark
-                            </MDBBtn>
-                            <MDBBtn rounded className='text-grey' color='light'>
-                                Light
-                            </MDBBtn>
+                        <div className='responsive'>
+                            <div className='tabs tabs-center'>
+                                {this.getCategories(result.data).map((category) =>
+                                    <MDBBtn rounded className='mx-2 tab'
+                                            style={{boxShadow: 'none', textTransform: 'none'}}
+                                            color={category === this.state.currentCategory ? 'dark' : 'light'}
+                                            onClick={(e) => {this.setState({currentCategory: category})}}>
+                                        {category}
+                                    </MDBBtn>)}
+                            </div>
                         </div>
 
-                        {result.data.map((item) =>
-                        <MDBCard className='m-3'>
-                            <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
-                                          src={item.imageUrls && item.imageUrls.length > 0 ? item.imageUrls[0] : ""}
-                                          position='top'
-                                          alt={item.name}/>
-                            <MDBCardBody>
-                                <MDBCardTitle>{item.name}</MDBCardTitle>
-                                <MDBCardText>
-                                    {item.description}
-                                </MDBCardText>
-                            </MDBCardBody>
-                        </MDBCard>)}
+                        <div>
+                            {this.getItemsByCategory(result.data).map((item) =>
+                                <MDBCard className='m-3'>
+                                    <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
+                                                  src={item.imageUrls && item.imageUrls.length > 0 ? item.imageUrls[0] : ""}
+                                                  position='top'
+                                                  alt={item.name}/>
+                                    <MDBCardBody>
+                                        <MDBCardTitle>{item.name}</MDBCardTitle>
+                                        <MDBCardText>
+                                            {item.description}
+                                        </MDBCardText>
+                                    </MDBCardBody>
+                                </MDBCard>)}
+                        </div>
                     </div>
                 }
                 {result.error && <div>{result.error}</div>}

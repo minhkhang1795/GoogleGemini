@@ -85,6 +85,7 @@ class SnapMenuComponent extends Component {
                         <MDBBtn onClick={(e) => this.handleSubmitMenu(e)}>Submit</MDBBtn>
                     </div>
                 </div>}
+
                 {this.state.currentPage === SnapMenuPage.Result && <div>
                     <SnapMenuResultComponent result={this.state.result}/>
                 </div>}

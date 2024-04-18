@@ -43,3 +43,24 @@
     background-color: black; /* Adjust dot color */
     border-radius: 100%; /* Make it a circle */
 }
+
+.responsive {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.responsive::-webkit-scrollbar {
+    display: none;
+}
+
+.tabs {
+    display: table;
+    border-collapse: separate;
+    table-layout: auto;
+    button.tab {
+        position: relative;
+        display: table-cell;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
