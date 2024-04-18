@@ -22,6 +22,7 @@ generation_config = GenerationConfig(
     top_k=32,
     candidate_count=1,
     max_output_tokens=4096,
+    response_mime_type="application/json",
 )
 
 # Safety config
@@ -33,10 +34,10 @@ safety_config = {
 }
 
 # Model
-image_model = genai.GenerativeModel('gemini-pro-vision',
+image_model = genai.GenerativeModel('gemini-1.5-pro-vision-latest',
                                     generation_config=generation_config,
                                     safety_settings=safety_config)
-text_model = genai.GenerativeModel('gemini-pro',
+text_model = genai.GenerativeModel('gemini-1.5-pro-latest',
                                    generation_config=generation_config,
                                    safety_settings=safety_config)
 
