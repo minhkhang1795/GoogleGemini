@@ -1,6 +1,6 @@
 import * as TestApi from "./TestApi";
 
-const test = window.location.hostname === 'localhost'
+const test = true; // window.location.hostname === 'localhost'
 const domain = test ? 'http://localhost:8000' : "https://snapeat.azurewebsites.net";
 
 export const Recommend = test ? TestApi.testRecommend : recommend;

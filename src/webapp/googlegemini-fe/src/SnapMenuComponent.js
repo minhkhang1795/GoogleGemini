@@ -56,7 +56,7 @@ class SnapMenuComponent extends Component {
     render() {
         return (
             <div>
-                <div className='text-center'>
+                <div className='text-center top-title'>
                     <MDBTypography tag='div' className='display-6 p-3 border-bottom'>
                         {this.state.pageTitle}
                     </MDBTypography>

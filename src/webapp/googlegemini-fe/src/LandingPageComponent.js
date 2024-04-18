@@ -25,12 +25,14 @@ class LandingPageComponent extends Component {
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <MDBRow>
                         <MDBCol size='6'>
-                            <MDBBtn className='w-100' color='dark' style={{textTransform: 'none'}}>
+                            <MDBBtn className='w-100' color='dark' style={{textTransform: 'none'}}
+                                    onClick={() => this.props.handleFillClick('tab2')}>
                                 Scan Menu
                             </MDBBtn>
                         </MDBCol>
                         <MDBCol size='6'>
-                            <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}>
+                            <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}
+                                    onClick={() => this.props.handleFillClick('tab3')}>
                                 Browse Restaurant
                             </MDBBtn>
                         </MDBCol>

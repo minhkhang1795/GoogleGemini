@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './fileupload.css';
-import {MDBCard, MDBCardBody, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
+import {MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
 
 
 class SnapMenuResultComponent extends Component {
@@ -18,7 +18,8 @@ class SnapMenuResultComponent extends Component {
             <div>
                 {result.data && result.data.constructor === Array && result.data.map((item) =>
                     <MDBCard className='m-3'>
-                        <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}} src={item.imageUrls[0]} position='top' alt={item.name} />
+                        <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
+                                      src={item.imageUrls[0]} position='top' alt={item.name} />
                         <MDBCardBody>
                             <MDBCardTitle>{item.name}</MDBCardTitle>
                             <MDBCardText>
