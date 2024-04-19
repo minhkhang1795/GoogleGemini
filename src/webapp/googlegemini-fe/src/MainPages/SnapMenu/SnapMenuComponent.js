@@ -41,14 +41,15 @@ class SnapMenuComponent extends Component {
                     </div>
                 </div>
                 {previewImage &&
-                    <div className='text-center bg-white'
+                    <div className='d-flex text-center bg-white'
                          style={{
                              position: 'absolute',
                              top: 0,
                              width: '100%',
                              height: '100%',
                              zIndex: 9999,
-                             overflow: 'hidden'
+                             overflow: 'hidden',
+                             flexDirection: 'column'
                          }}>
                         <div className='top-title'>
                             <div className='d-flex align-items-center'
