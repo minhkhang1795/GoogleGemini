@@ -19,7 +19,7 @@ class SnapMenuComponent extends Component {
         return (
             <div>
                 <div className="file-upload-wrapper">
-                    <div className="file-upload p-5" style={{height: "85vh"}}>
+                    <div className="file-upload p-5" style={{height: "80vh"}}>
                         {!previewImage &&
                             <div className='w-100 h-100' style={{border: '2px dotted #000'}}>
                                 <div className="file-upload-message">
