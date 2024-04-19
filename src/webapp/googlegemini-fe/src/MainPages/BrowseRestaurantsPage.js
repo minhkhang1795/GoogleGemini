@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {MDBTypography} from "mdb-react-ui-kit";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
+import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
+import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
 
 const BrowseRestaurantsPageEnum = {
     Browse: 'Browse',
@@ -40,7 +42,7 @@ class BrowseRestaurantsPage extends Component {
                 </div>
 
                 {/*{this.state.currentPage === BrowseRestaurantsPage.Browse && <div>*/}
-                {/*    <SnapMenuResultComponent result={this.state.restaurantResult}/>*/}
+                {/*    <BrowseRestaurantsComponent />*/}
                 {/*</div>}*/}
 
                 {/*{this.state.currentPage === BrowseRestaurantsPage.Result && <div>*/}

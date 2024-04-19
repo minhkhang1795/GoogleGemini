@@ -77,7 +77,7 @@ class SnapMenuPage extends Component {
 
                 {this.state.currentPage === SnapMenuPageEnum.Snap && <div>
                     <SnapMenuComponent handleFileChange={(e) => this.handleFileChange(e)}
-                                             handleSubmitMenu={(e) => this.handleSubmitMenu(e)}/>
+                                       handleSubmitMenu={(e) => this.handleSubmitMenu(e)}/>
                 </div>}
 
                 {this.state.currentPage === SnapMenuPageEnum.Result && <div>
