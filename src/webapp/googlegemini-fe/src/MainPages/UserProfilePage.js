@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {MDBTypography} from "mdb-react-ui-kit";
 
-class BrowseRestaurantsComponent extends Component {
+class UserProfilePage extends Component {
     state = {
-        pageTitle: 'Browse Restaurants',
+        pageTitle: 'User Profile',
         userProfile: {},
-        data: {}
     };
 
     componentDidMount() {
@@ -19,10 +18,9 @@ class BrowseRestaurantsComponent extends Component {
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
-                Browse Restaurants
             </div>
         )
     }
 }
 
-export default BrowseRestaurantsComponent
+export default UserProfilePage

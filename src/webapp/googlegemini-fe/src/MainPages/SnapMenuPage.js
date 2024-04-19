@@ -1,21 +1,22 @@
 import React, {Component} from 'react';
-import './fileupload.css';
-import {MDBBtn, MDBTypography} from "mdb-react-ui-kit";
-import * as SnapEatApi from "./SnapEatApi/SnapEatApi";
-import SnapMenuResultComponent from "./ScanMenuResultComponent";
+import '../fileupload.css';
+import {MDBTypography} from "mdb-react-ui-kit";
+import * as SnapEatApi from "../SnapEatApi/SnapEatApi";
+import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import SnapMenuComponent from "./SnapMenu/SnapMenuComponent";
 
-const SnapMenuPage = {
+const SnapMenuPageEnum = {
     Snap: 'Scan',
     Result: 'Result',
 }
 
-class SnapMenuComponent extends Component {
+class SnapMenuPage extends Component {
     state = {
         pageTitle: 'Scan Menu',
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
-        currentPage: SnapMenuPage.Snap,
+        currentPage: SnapMenuPageEnum.Snap,
         result: {data: [], error: ''},
         previewImage: null,
         previewImageFile: null,
@@ -45,7 +46,7 @@ class SnapMenuComponent extends Component {
         const formData = new FormData();
         formData.append('menuImage', this.state.previewImageFile);
         formData.append('userProfile', this.state.userProfile);
-        this.setState({currentPage: SnapMenuPage.Result});
+        this.setState({currentPage: SnapMenuPageEnum.Result});
         SnapEatApi.Recommend(formData).then(result => {
             this.setState({result: {data: result, error: ''}});
             this.setState({previewImage: null, previewImageFile: null});
@@ -61,11 +62,11 @@ class SnapMenuComponent extends Component {
                 <div className='top-title'>
                     <div className='d-flex align-items-center'
                          style={{width: '100%', height: '100%', position: 'absolute'}}>
-                        {this.state.currentPage === SnapMenuPage.Result &&
+                        {this.state.currentPage === SnapMenuPageEnum.Result &&
                             <FontAwesomeIcon className='p-3 fa-lg d-flex'
                                              icon={fas.faAngleLeft}
                                              onClick={(e) => {
-                                                 this.setState({currentPage: SnapMenuPage.Snap})
+                                                 this.setState({currentPage: SnapMenuPageEnum.Snap})
                                              }}/>
                         }
                     </div>
@@ -74,31 +75,12 @@ class SnapMenuComponent extends Component {
                     </MDBTypography>
                 </div>
 
-                {this.state.currentPage === SnapMenuPage.Snap && <div>
-                    <div className="file-upload-wrapper">
-                        <div className="file-upload" style={{height: "70vh"}}>
-                            {!this.state.previewImage && <div>
-                                <div className="file-upload-message"><i
-                                    className="fas fa-cloud-upload-alt file-upload-cloud-icon"></i><p
-                                    className="file-upload-default-message">Click to snap your menu!</p><p
-                                    className="file-upload-main-error"></p></div>
-                                <div className="file-upload-mask"></div>
-                                <ul className="file-upload-errors"></ul>
-                                <input type="file" id="menu-input-file" className="file-upload-input"
-                                       title="Upload your menu image" accept="image/*"
-                                       onChange={(e) => this.handleFileChange(e)}/>
-                            </div>}
-                            {this.state.previewImage && <div className="file-upload-previews">
-                                <img src={this.state.previewImage} className="file-upload-preview-image" alt="Preview"/>
-                            </div>}
-                        </div>
-                    </div>
-                    <div className='text-center'>
-                        <MDBBtn onClick={(e) => this.handleSubmitMenu(e)}>Submit</MDBBtn>
-                    </div>
+                {this.state.currentPage === SnapMenuPageEnum.Snap && <div>
+                    <SnapMenuComponent handleFileChange={(e) => this.handleFileChange(e)}
+                                             handleSubmitMenu={(e) => this.handleSubmitMenu(e)}/>
                 </div>}
 
-                {this.state.currentPage === SnapMenuPage.Result && <div>
+                {this.state.currentPage === SnapMenuPageEnum.Result && <div>
                     <SnapMenuResultComponent result={this.state.result}/>
                 </div>}
             </div>
@@ -106,4 +88,4 @@ class SnapMenuComponent extends Component {
     }
 }
 
-export default SnapMenuComponent
+export default SnapMenuPage

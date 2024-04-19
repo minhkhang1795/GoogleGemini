@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './fileupload.css';
+import '../../fileupload.css';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
 
 

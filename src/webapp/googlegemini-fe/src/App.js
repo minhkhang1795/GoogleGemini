@@ -11,10 +11,10 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
-import SnapMenuComponent from "./SnapMenuComponent";
-import BrowseRestaurantsComponent from "./BrowseRestaurantsComponent";
-import LandingPageComponent from "./LandingPageComponent";
-import UserProfileComponent from "./UserProfileComponent";
+import SnapMenuPage from "./MainPages/SnapMenuPage";
+import BrowseRestaurantsPage from "./MainPages/BrowseRestaurantsPage";
+import LandingPage from "./MainPages/LandingPage";
+import UserProfilePage from "./MainPages/UserProfilePage";
 
 class App extends Component {
 
@@ -40,16 +40,16 @@ class App extends Component {
             <div role="main">
                 <MDBTabsContent className='pb-5'>
                     <MDBTabsPane open={this.state.fillActive === 'tab1'}>
-                        <LandingPageComponent handleFillClick={(tab) => this.handleFillClick(tab)}/>
+                        <LandingPage handleFillClick={(tab) => this.handleFillClick(tab)}/>
                     </MDBTabsPane>
                     <MDBTabsPane open={this.state.fillActive === 'tab2'}>
-                        <SnapMenuComponent/>
+                        <SnapMenuPage/>
                     </MDBTabsPane>
                     <MDBTabsPane open={this.state.fillActive === 'tab3'}>
-                        <BrowseRestaurantsComponent/>
+                        <BrowseRestaurantsPage/>
                     </MDBTabsPane>
                     <MDBTabsPane open={this.state.fillActive === 'tab4'}>
-                        <UserProfileComponent/>
+                        <UserProfilePage/>
                     </MDBTabsPane>
                 </MDBTabsContent>
 

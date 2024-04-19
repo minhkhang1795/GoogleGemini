@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBCol, MDBRow, MDBTypography} from "mdb-react-ui-kit";
 
-class LandingPageComponent extends Component {
+class LandingPage extends Component {
     state = {
         pageTitle: 'SnapEat',
         userProfile: {},
@@ -43,4 +43,4 @@ class LandingPageComponent extends Component {
     }
 }
 
-export default LandingPageComponent
+export default LandingPage
