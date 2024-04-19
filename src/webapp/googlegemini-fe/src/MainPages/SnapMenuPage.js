@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../fileupload.css';
 import {MDBTypography} from "mdb-react-ui-kit";
-import * as SnapEatApi from "../SnapEatApi/SnapEatApi";
-import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import * as SnapEatApi from "../SnapEatApi/SnapEatApi";
+import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
 import SnapMenuComponent from "./SnapMenu/SnapMenuComponent";
 
 const SnapMenuPageEnum = {
