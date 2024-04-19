@@ -12,9 +12,9 @@ class LandingPageComponent extends Component {
 
     render() {
         return (
-            <div className='text-center'>
+            <div>
                 <div>
-                    <MDBTypography tag='div' className='display-6 p-3 border-bottom'>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>

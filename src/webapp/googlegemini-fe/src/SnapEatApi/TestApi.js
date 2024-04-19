@@ -9,7 +9,7 @@ export const testRecommend = (formData) => {
                 console.log(data);
                 return data;
             } else {
-                console.log("error");
+                console.log("data is null.");
                 return null;
             }
         });

@@ -13,8 +13,8 @@ class UserProfileComponent extends Component {
     render() {
         return (
             <div>
-                <div className='text-center'>
-                    <MDBTypography tag='div' className='display-6 p-3 border-bottom'>
+                <div>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>

@@ -48,10 +48,13 @@ class SnapMenuResultComponent extends Component {
                         <div className='responsive'>
                             <div className='tabs tabs-center'>
                                 {this.getCategories(result.data).map((category) =>
-                                    <MDBBtn rounded className='mx-2 tab'
+                                    <MDBBtn key={category}
+                                            rounded className='mx-2 tab'
                                             style={{boxShadow: 'none', textTransform: 'none'}}
                                             color={category === this.state.currentCategory ? 'dark' : 'light'}
-                                            onClick={(e) => {this.setState({currentCategory: category})}}>
+                                            onClick={(e) => {
+                                                this.setState({currentCategory: category})
+                                            }}>
                                         {category}
                                     </MDBBtn>)}
                             </div>
@@ -59,7 +62,7 @@ class SnapMenuResultComponent extends Component {
 
                         <div>
                             {this.getItemsByCategory(result.data).map((item) =>
-                                <MDBCard className='m-3'>
+                                <MDBCard className='m-3' key={item.name}>
                                     <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
                                                   src={item.imageUrls && item.imageUrls.length > 0 ? item.imageUrls[0] : ""}
                                                   position='top'
@@ -74,7 +77,7 @@ class SnapMenuResultComponent extends Component {
                         </div>
                     </div>
                 }
-                {result.error && <div>{result.error}</div>}
+                {result.error && <div className="text-bg-danger text-center text-light">{result.error}</div>}
             </div>
         )
     }

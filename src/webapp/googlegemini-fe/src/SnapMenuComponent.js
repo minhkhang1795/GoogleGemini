@@ -3,9 +3,11 @@ import './fileupload.css';
 import {MDBBtn, MDBTypography} from "mdb-react-ui-kit";
 import * as SnapEatApi from "./SnapEatApi/SnapEatApi";
 import SnapMenuResultComponent from "./ScanMenuResultComponent";
+import {fas} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const SnapMenuPage = {
-    Scan: 'Scan',
+    Snap: 'Scan',
     Result: 'Result',
 }
 
@@ -13,7 +15,7 @@ class SnapMenuComponent extends Component {
     state = {
         pageTitle: 'Scan Menu',
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
-        currentPage: SnapMenuPage.Scan,
+        currentPage: SnapMenuPage.Snap,
         result: {data: [], error: ''},
         previewImage: null,
         previewImageFile: null,
@@ -56,13 +58,23 @@ class SnapMenuComponent extends Component {
     render() {
         return (
             <div>
-                <div className='text-center top-title'>
-                    <MDBTypography tag='div' className='display-6 p-3 border-bottom'>
+                <div className='top-title'>
+                    <div className='d-flex align-items-center'
+                         style={{width: '100%', height: '100%', position: 'absolute'}}>
+                        {this.state.currentPage === SnapMenuPage.Result &&
+                            <FontAwesomeIcon className='p-3 fa-lg d-flex'
+                                             icon={fas.faAngleLeft}
+                                             onClick={(e) => {
+                                                 this.setState({currentPage: SnapMenuPage.Snap})
+                                             }}/>
+                        }
+                    </div>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
 
-                {this.state.currentPage === SnapMenuPage.Scan && <div>
+                {this.state.currentPage === SnapMenuPage.Snap && <div>
                     <div className="file-upload-wrapper">
                         <div className="file-upload" style={{height: "70vh"}}>
                             {!this.state.previewImage && <div>
