@@ -18,7 +18,7 @@ class LandingPage extends Component {
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
-                <div className='py-5 px-4'>
+                <div className='py-5 px-4 text-center'>
                     <h1 className='pb-3'><b>Find your new fav place</b></h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
