@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import '../../fileupload.css';
-import {MDBBtn} from "mdb-react-ui-kit";
-import {fas} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {MDBBtn, MDBCol, MDBRow, MDBTypography} from "mdb-react-ui-kit";
 
 
 class SnapMenuComponent extends Component {
@@ -16,6 +14,7 @@ class SnapMenuComponent extends Component {
 
     render() {
         const previewImage = this.props.previewImage;
+        const pageTitle = this.props.pageTitle;
 
         return (
             <div>
@@ -39,14 +38,40 @@ class SnapMenuComponent extends Component {
                                        title="Upload your menu image" accept="image/*"
                                        onChange={(e) => this.props.handleFileChange(e)}/>
                             </div>}
-                        {previewImage && <div className="file-upload-previews">
-                            <img src={previewImage} className="file-upload-preview-image" alt="Preview"/>
-                        </div>}
                     </div>
                 </div>
-                <div className='text-center'>
-                    <MDBBtn onClick={(e) => this.props.handleSubmitMenu(e)}>Submit</MDBBtn>
-                </div>
+                {previewImage &&
+                    <div className='text-center bg-white'
+                         style={{
+                             position: 'absolute',
+                             top: 0,
+                             width: '100%',
+                             height: '100%',
+                             zIndex: 9999,
+                             overflow: 'hidden'
+                         }}>
+                        <div className='top-title'>
+                            <div className='d-flex align-items-center'
+                                 style={{width: '100%', height: '100%', position: 'absolute'}}>
+                            </div>
+                            <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                                {pageTitle}
+                            </MDBTypography>
+                        </div>
+                        <img src={previewImage} className="p-3 file-upload-preview-image" alt="Preview"/>
+                        <div className='py-2 px-4'>
+                            <MDBRow>
+                                <MDBCol size='6'>
+                                    <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}
+                                            onClick={(e) => this.props.handleCancelMenu(e)}>Cancel</MDBBtn>
+                                </MDBCol>
+                                <MDBCol size='6'>
+                                    <MDBBtn className='w-100' color='dark' style={{textTransform: 'none'}}
+                                            onClick={(e) => this.props.handleSubmitMenu(e)}>Submit</MDBBtn>
+                                </MDBCol>
+                            </MDBRow>
+                        </div>
+                    </div>}
             </div>
         )
     }

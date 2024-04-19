@@ -19,7 +19,7 @@ class SnapMenuPage extends Component {
         currentPage: SnapMenuPageEnum.Snap,
         result: {data: [], error: ''},
         previewImage: null,
-        previewImageFile: null,
+        previewImageFile: null
     };
 
     componentDidMount() {
@@ -34,7 +34,7 @@ class SnapMenuPage extends Component {
 
         const reader = new FileReader();
         reader.onload = (e) => {
-            this.setState({previewImage: e.target.result, previewImageFile: file}); // Update preview src with new image
+            this.setState({previewImage: e.target.result, previewImageFile: file});
             console.log(e.target.result);
             console.log(this.state.previewImage);
         };
@@ -54,6 +54,10 @@ class SnapMenuPage extends Component {
             console.log(ex);
             this.setState({result: {data: [], error: 'Server is busy right now. Please try again!'}});
         });
+    }
+
+    handleCancelMenu(event) {
+        this.setState({previewImage: null, previewImageFile: null});
     }
 
     render() {
@@ -76,8 +80,11 @@ class SnapMenuPage extends Component {
                 </div>
 
                 {this.state.currentPage === SnapMenuPageEnum.Snap && <div>
-                    <SnapMenuComponent handleFileChange={(e) => this.handleFileChange(e)}
-                                       handleSubmitMenu={(e) => this.handleSubmitMenu(e)}/>
+                    <SnapMenuComponent previewImage={this.state.previewImage}
+                                       pageTitle={this.state.pageTitle}
+                                       handleFileChange={(e) => this.handleFileChange(e)}
+                                       handleSubmitMenu={(e) => this.handleSubmitMenu(e)}
+                                       handleCancelMenu={(e) => this.handleCancelMenu(e)}/>
                 </div>}
 
                 {this.state.currentPage === SnapMenuPageEnum.Result && <div>
