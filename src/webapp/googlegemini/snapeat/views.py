@@ -6,25 +6,38 @@ from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
+from .apis.google_place_api import GooglePlaceApi
 from .forms import UploadForm
-from .gemini.menu_image_model import MenuImageModel
+from .apis.menu_image_model import MenuImageModel
 from .models import Image
 from .tables import ImageTable
 
-menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
+DEFAULT_LOCATION = "Manhattan, New York, NY"
 
+menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
+google_place_api = GooglePlaceApi(os.getenv('GOOGLE_PLACE_API_KEY'))
 
 @require_http_methods(["POST"])
 @csrf_exempt
-def recommend_view(request):
+def recommend_from_menu(request):
     if 'menuImage' not in request.FILES:
-        return JsonResponse({'error': 'Invalid request.'})
+        return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
 
     result = menu_image_model.menu_image_to_text(request.FILES['menuImage'])
     return JsonResponse({"result": result})
 
 
-def get_view(request):
+def get_nearby_restaurant(request):
+    location = request.GET.get('location')
+
+    if not location:
+        location = DEFAULT_LOCATION
+
+    places = google_place_api.get_nearby_restaurant(location)
+    return JsonResponse({"result": [place.to_dict() for place in places]})
+
+
+def ping(request):
     return JsonResponse({"success": "OK"})
 
 

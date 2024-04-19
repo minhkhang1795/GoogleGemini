@@ -3,7 +3,8 @@ django-tables2==2.7.0
 django-crispy-forms==2.1
 crispy-bootstrap4==2024.1
 Pillow==10.3.0
-google-generativeai==0.5.1
+google-generativeai==0.5.2
+googlemaps==4.10.0
 python-dotenv==1.0.1
 psycopg2-binary==2.9.9
 gunicorn==21.2.0
