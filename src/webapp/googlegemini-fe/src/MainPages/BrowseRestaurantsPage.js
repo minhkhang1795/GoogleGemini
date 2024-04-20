@@ -14,7 +14,7 @@ const BrowseRestaurantsPageEnum = {
 class BrowseRestaurantsPage extends Component {
     state = {
         pageTitle: 'Browse Restaurants',
-        currentPage: '',
+        currentPage: BrowseRestaurantsPageEnum.Browse,
         userProfile: {},
         restaurantResult: {}
     };
@@ -41,9 +41,9 @@ class BrowseRestaurantsPage extends Component {
                     </MDBTypography>
                 </div>
 
-                {/*{this.state.currentPage === BrowseRestaurantsPage.Browse && <div>*/}
-                {/*    <BrowseRestaurantsComponent />*/}
-                {/*</div>}*/}
+                {this.state.currentPage === BrowseRestaurantsPageEnum.Browse && <div>
+                    <BrowseRestaurantsComponent />
+                </div>}
 
                 {/*{this.state.currentPage === BrowseRestaurantsPage.Result && <div>*/}
                 {/*    <SnapMenuResultComponent result={this.state.restaurantResult}/>*/}

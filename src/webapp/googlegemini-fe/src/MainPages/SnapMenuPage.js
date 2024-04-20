@@ -47,9 +47,20 @@ class SnapMenuPage extends Component {
         formData.append('menuImage', this.state.previewImageFile);
         formData.append('userProfile', this.state.userProfile);
         this.setState({currentPage: SnapMenuPageEnum.Result});
-        SnapEatApi.Recommend(formData).then(result => {
-            this.setState({result: {data: result, error: ''}});
-            this.setState({previewImage: null, previewImageFile: null});
+        SnapEatApi.Recommend(formData).then(data => {
+            if (data && data.result) {
+                this.setState({result: {data: data.result, error: ''}});
+                this.setState({previewImage: null, previewImageFile: null});
+                return;
+            }
+
+            let error = 'Server is busy right now. Please try again!';
+            if (data && data.error) {
+                console.log(data.error);
+                error = data.error
+            }
+
+            this.setState({result: {data: [], error: error}});
         }).catch(ex => {
             console.log(ex);
             this.setState({result: {data: [], error: 'Server is busy right now. Please try again!'}});

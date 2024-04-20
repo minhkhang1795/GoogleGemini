@@ -48,7 +48,7 @@ class GooglePlaceApi:
                         continue
 
                     result.append(Place(place_id, place_name, lat, lng, vicinity, price_level, rating, photo_url))
-                    # break
+                    break
         except Exception as e:
             logging.error(f'{type(e).__name__}: {e}')
 

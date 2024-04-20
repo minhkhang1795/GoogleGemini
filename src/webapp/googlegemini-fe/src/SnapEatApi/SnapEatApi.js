@@ -1,9 +1,13 @@
 import * as TestApi from "./TestApi";
 
-const test = true; // window.location.hostname === 'localhost'
-const domain = test ? 'http://localhost:8000' : "https://snapeat.azurewebsites.net";
+// If there is a ?demo=true query, use test APIs. Otherwise, use the backend APIs.
+const searchParams = new URLSearchParams(window.location.search);
+const demo = searchParams.get('demo') === 'true';
+const isLocal = window.location.hostname === 'localhost';
+const domain = isLocal ? 'http://localhost:8000' : "https://snapeat.azurewebsites.net";
 
-export const Recommend = test ? TestApi.testRecommend : recommend;
+export const Recommend = demo ? TestApi.testRecommend : recommend;
+export const GetNearbyRestaurants = demo ? TestApi.testGetNearbyRestaurant : getNearbyRestaurants;
 
 function recommend(formData) {
     return fetch(`${domain}/recommend/`, {
@@ -11,13 +15,11 @@ function recommend(formData) {
         body: formData // Set the FormData object as the body of the request
     })
         .then(res => res.json())
-        .then(data => {
-            if (data) {
-                console.log(data);
-                return data;
-            } else {
-                console.log("error");
-                return null;
-            }
-        });
+}
+
+function getNearbyRestaurants(location) {
+    return fetch(`${domain}/restaurants/nearby/?location=${location}`, {
+        method: 'GET',
+    })
+        .then(res => res.json())
 }

@@ -1,0 +1,224 @@
+{
+  "result": [
+    {
+      "google_place_id": "ChIJZ-wCRohYwokRvnOFofo8F7A",
+      "name": "Hotel Belleclaire",
+      "description": "",
+      "lat": 40.782425,
+      "lng": -73.9811603,
+      "address": "2175 Broadway, New York",
+      "price_level": null,
+      "rating": 4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJq3tH0I5YwokRfL6Y8j8E6DM",
+      "name": "Shake Shack Upper West Side",
+      "description": "",
+      "lat": 40.78086709999999,
+      "lng": -73.9765697,
+      "address": "366 Columbus Avenue, New York",
+      "price_level": 2,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Jing Fong",
+      "description": "",
+      "lat": 40.78288919999999,
+      "lng": -73.9788567,
+      "address": "380 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJm17AB5pYwokRWLJ6lEtXKOA",
+      "name": "The Central Park Boathouse",
+      "description": "",
+      "lat": 40.7752927,
+      "lng": -73.96876929999999,
+      "address": "Park Drive North, East 72nd Street, New York",
+      "price_level": 3,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJJWjnqYhYwokRXKDyQj71TzA",
+      "name": "Sarabeth's",
+      "description": "",
+      "lat": 40.78387970000001,
+      "lng": -73.97742439999999,
+      "address": "423 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4.2,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJFUX_0YtYwokRYh_7Fcn3opI",
+      "name": "Alice's Tea Cup",
+      "description": "",
+      "lat": 40.77804099999999,
+      "lng": -73.978683,
+      "address": "102 West 73rd Street, New York",
+      "price_level": 2,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJgw4RkYhYwokRhBFpraTWNwM",
+      "name": "Blondies Sports",
+      "description": "",
+      "lat": 40.7832617,
+      "lng": -73.9791073,
+      "address": "212 West 79th Street, New York",
+      "price_level": 2,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJ8U_VmoZYwokR4g5HIK6dYso",
+      "name": "5 Napkin Burger",
+      "description": "",
+      "lat": 40.787122,
+      "lng": -73.9780435,
+      "address": "2315 Broadway, New York",
+      "price_level": 2,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJ29UL34VYwokR1G92GClLcCE",
+      "name": "Peacefood - Upper West Side",
+      "description": "",
+      "lat": 40.785275,
+      "lng": -73.977012,
+      "address": "460 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4.4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJrXva_oJYwokROtv_EdGJgH0",
+      "name": "Carmine's Italian Restaurant - Upper West Side",
+      "description": "",
+      "lat": 40.7911087,
+      "lng": -73.9739812,
+      "address": "2450 Broadway, New York",
+      "price_level": 2,
+      "rating": 4.4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJ_bV3X4hYwokRr6gTpaJMeVI",
+      "name": "Stand Up NY",
+      "description": "",
+      "lat": 40.78296239999999,
+      "lng": -73.9802485,
+      "address": "236 West 78th Street, New York",
+      "price_level": 3,
+      "rating": 4.2,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJSc_3GIVYwokRh6OzVnCnh6g",
+      "name": "Prohibition",
+      "description": "",
+      "lat": 40.7852428,
+      "lng": -73.972764,
+      "address": "503 Columbus Avenue, New York",
+      "price_level": 2,
+      "rating": 4.4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJZ996e4RYwokR2kEubU7CVhA",
+      "name": "Barney Greengrass",
+      "description": "",
+      "lat": 40.7879654,
+      "lng": -73.9745734,
+      "address": "541 Amsterdam Avenue, New York",
+      "price_level": 3,
+      "rating": 4.4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJqRPppYhYwokR1b3Al-cGgi0",
+      "name": "Saravanaa Bhavan",
+      "description": "",
+      "lat": 40.7835508,
+      "lng": -73.9777266,
+      "address": "413 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4.2,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJuxMTB4lYwokRzfHnU2YRcsM",
+      "name": "Amsterdam Ale House",
+      "description": "",
+      "lat": 40.7814235,
+      "lng": -73.9799412,
+      "address": "340 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJ35dPk4pYwokRbcEIZeGqtvg",
+      "name": "Noi Due Cafe",
+      "description": "",
+      "lat": 40.7849326,
+      "lng": -73.97305949999999,
+      "address": "491 Columbus Avenue, New York",
+      "price_level": 3,
+      "rating": 4.5,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJz6FFoYZYwokRt03EmEnqlhQ",
+      "name": "Deli Kasbah Kosher Grill",
+      "description": "",
+      "lat": 40.7879977,
+      "lng": -73.9774279,
+      "address": "Kosher Steak House Restaurant, 251 West 85th Street #3221, New York",
+      "price_level": 3,
+      "rating": 4.4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJRyfaCIZYwokRd1gVsI1fa0Q",
+      "name": "The Gin Mill",
+      "description": "",
+      "lat": 40.784754,
+      "lng": -73.977537,
+      "address": "442 Amsterdam Avenue, New York",
+      "price_level": 1,
+      "rating": 4.3,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJc6GIBIZYwokRd_xjvFrHhbU",
+      "name": "Jake's Dilemma",
+      "description": "",
+      "lat": 40.7843586,
+      "lng": -73.9777082,
+      "address": "430 Amsterdam Avenue, New York",
+      "price_level": 2,
+      "rating": 4,
+      "image_urls": []
+    },
+    {
+      "google_place_id": "ChIJOb-eH4VYwokRkyzosmvD_sk",
+      "name": "Osteria Cotta",
+      "description": "",
+      "lat": 40.7855246,
+      "lng": -73.9726719,
+      "address": "513 Columbus Avenue, New York",
+      "price_level": 2,
+      "rating": 4.4,
+      "image_urls": []
+    }
+  ]
+}

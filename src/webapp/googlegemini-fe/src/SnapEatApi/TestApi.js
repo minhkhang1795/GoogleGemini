@@ -1,16 +1,19 @@
 import recommendSample from "./recommend-sample.json"
+import nearbyRestaurantSample from "./nearby-restaurant.json"
 
 
 export const testRecommend = (formData) => {
-    return fetch(`./recommend-sample.json`)
-        .then(res => recommendSample)
-        .then(data => {
-            if (data) {
-                console.log(data);
-                return data;
-            } else {
-                console.log("data is null.");
-                return null;
-            }
-        });
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(recommendSample);
+        }, 3000);
+    });
+}
+
+export const testGetNearbyRestaurant = (location) => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(nearbyRestaurantSample);
+        }, 3000);
+    });
 }
