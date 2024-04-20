@@ -5,7 +5,7 @@ import {fas} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SnapEatApi from "../SnapEatApi/SnapEatApi";
 import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
-import SnapMenuComponent from "./SnapMenu/SnapMenuComponent";
+import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
 
 const SnapMenuPageEnum = {
     Snap: 'Scan',
@@ -91,11 +91,11 @@ class SnapMenuPage extends Component {
                 </div>
 
                 {this.state.currentPage === SnapMenuPageEnum.Snap && <div>
-                    <SnapMenuComponent previewImage={this.state.previewImage}
-                                       pageTitle={this.state.pageTitle}
-                                       handleFileChange={(e) => this.handleFileChange(e)}
-                                       handleSubmitMenu={(e) => this.handleSubmitMenu(e)}
-                                       handleCancelMenu={(e) => this.handleCancelMenu(e)}/>
+                    <SnapMenuUploadAndPreviewComponent previewImage={this.state.previewImage}
+                                                       pageTitle={this.state.pageTitle}
+                                                       handleFileChange={(e) => this.handleFileChange(e)}
+                                                       handleSubmitMenu={(e) => this.handleSubmitMenu(e)}
+                                                       handleCancelMenu={(e) => this.handleCancelMenu(e)}/>
                 </div>}
 
                 {this.state.currentPage === SnapMenuPageEnum.Result && <div>

@@ -3,7 +3,7 @@ import '../../fileupload.css';
 import {MDBBtn, MDBCol, MDBRow, MDBTypography} from "mdb-react-ui-kit";
 
 
-class SnapMenuComponent extends Component {
+class SnapMenuUploadAndPreviewComponent extends Component {
     state = {
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
         currentCategory: "All"
@@ -39,6 +39,8 @@ class SnapMenuComponent extends Component {
                             </div>}
                     </div>
                 </div>
+
+                {/* Preview component covers the entire screen */}
                 {previewImage &&
                     <div className='d-flex text-center bg-white'
                          style={{
@@ -77,4 +79,4 @@ class SnapMenuComponent extends Component {
     }
 }
 
-export default SnapMenuComponent
+export default SnapMenuUploadAndPreviewComponent
