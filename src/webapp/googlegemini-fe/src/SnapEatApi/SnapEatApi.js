@@ -40,3 +40,10 @@ function getTrendingRestaurants(location) {
     })
         .then(res => res.json())
 }
+
+function searchRestaurants(query, location) {
+    return fetch(`${domain}/restaurants/search/?location=${location}&query=${query}`, {
+        method: 'GET',
+    })
+        .then(res => res.json())
+}

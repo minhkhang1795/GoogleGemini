@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
+import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle, MDBInput} from "mdb-react-ui-kit";
 import * as SnapEatApi from "../../SnapEatApi/SnapEatApi";
 import {IsList} from "../../Utils/Utils";
 import LoadingComponent from "../../Utils/LoadingComponent";
@@ -24,7 +24,13 @@ class BrowseRestaurantsComponent extends Component {
     componentDidMount() {
         console.log('a')
         if (!this.state.nearbyResult.isLoading) {
-            this.setState({nearbyResult: {data: this.state.nearbyResult.data, error: this.state.nearbyResult.error, isLoading: true}});
+            this.setState({
+                nearbyResult: {
+                    data: this.state.nearbyResult.data,
+                    error: this.state.nearbyResult.error,
+                    isLoading: true
+                }
+            });
             SnapEatApi.GetNearbyRestaurants('').then(data => {
                 if (data && data.result) {
                     this.setState({nearbyResult: {data: data.result, error: '', isLoading: false}});
@@ -36,12 +42,24 @@ class BrowseRestaurantsComponent extends Component {
                 this.setState({nearbyResult: {data: [], error: error, isLoading: false}});
             }).catch(ex => {
                 console.log(ex);
-                this.setState({nearbyResult: {data: [], error: 'Server is busy right now. Please try again!', isLoading: false}});
+                this.setState({
+                    nearbyResult: {
+                        data: [],
+                        error: 'Server is busy right now. Please try again!',
+                        isLoading: false
+                    }
+                });
             });
         }
 
         if (!this.state.savedResult.isLoading) {
-            this.setState({savedResult: {data: this.state.savedResult.data, error: this.state.savedResult.error, isLoading: true}});
+            this.setState({
+                savedResult: {
+                    data: this.state.savedResult.data,
+                    error: this.state.savedResult.error,
+                    isLoading: true
+                }
+            });
             SnapEatApi.GetSavedRestaurants('').then(data => {
                 if (data && data.result) {
                     this.setState({savedResult: {data: data.result, error: '', isLoading: false}});
@@ -53,12 +71,24 @@ class BrowseRestaurantsComponent extends Component {
                 this.setState({savedResult: {data: [], error: error, isLoading: false}});
             }).catch(ex => {
                 console.log(ex);
-                this.setState({savedResult: {data: [], error: 'Server is busy right now. Please try again!', isLoading: false}});
+                this.setState({
+                    savedResult: {
+                        data: [],
+                        error: 'Server is busy right now. Please try again!',
+                        isLoading: false
+                    }
+                });
             });
         }
 
         if (!this.state.trendingResult.isLoading) {
-            this.setState({trendingResult: {data: this.state.trendingResult.data, error: this.state.trendingResult.error, isLoading: true}});
+            this.setState({
+                trendingResult: {
+                    data: this.state.trendingResult.data,
+                    error: this.state.trendingResult.error,
+                    isLoading: true
+                }
+            });
             SnapEatApi.GetTrendingRestaurants('').then(data => {
                 if (data && data.result) {
                     this.setState({trendingResult: {data: data.result, error: '', isLoading: false}});
@@ -70,7 +100,13 @@ class BrowseRestaurantsComponent extends Component {
                 this.setState({trendingResult: {data: [], error: error, isLoading: false}});
             }).catch(ex => {
                 console.log(ex);
-                this.setState({trendingResult: {data: [], error: 'Server is busy right now. Please try again!', isLoading: false}});
+                this.setState({
+                    trendingResult: {
+                        data: [],
+                        error: 'Server is busy right now. Please try again!',
+                        isLoading: false
+                    }
+                });
             });
         }
     }
@@ -84,20 +120,24 @@ class BrowseRestaurantsComponent extends Component {
             return this.state.trendingResult;
         }
     }
+
     getRestaurantsByCategory() {
         let result = this.getResultByCategory();
-        return IsList(result.data) ? result.data: [];
+        return IsList(result.data) ? result.data : [];
     }
 
     render() {
         return (
             <div style={{overflowY: 'hidden'}}>
-                <div className="pt-3">
+                <div>
+                    <div className='m-3'>
+                        <input className="form-control rounded-pill" placeholder="Search"/>
+                    </div>
                     <div className='responsive'>
-                        <div className='tabs tabs-center'>
+                        <div className='tabs ms-3'>
                             {this.state.restaurantCategories.map((category) =>
                                 <MDBBtn key={category}
-                                        rounded className='mx-2 tab'
+                                        rounded className='me-2 tab'
                                         style={{boxShadow: 'none', textTransform: 'none'}}
                                         color={category === this.state.currentCategory ? 'dark' : 'light'}
                                         onClick={(e) => {
@@ -127,9 +167,10 @@ class BrowseRestaurantsComponent extends Component {
                 {this.getResultByCategory() && this.getResultByCategory().error &&
                     <div className="text-bg-danger text-center text-light">{this.getRestaurantsByCategory().error}
                     </div>}
-                {this.getResultByCategory() && this.getResultByCategory().isLoading && <LoadingComponent className="text-center"
-                                                  style={{marginTop: '50%'}}
-                                                  loadingMessage='Looking for your fav place!'/>}
+                {this.getResultByCategory() && this.getResultByCategory().isLoading &&
+                    <LoadingComponent className="text-center"
+                                      style={{marginTop: '50%'}}
+                                      loadingMessage='Looking for your fav place!'/>}
             </div>
         )
     }

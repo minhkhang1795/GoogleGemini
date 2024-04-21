@@ -48,10 +48,10 @@ class SnapMenuResultComponent extends Component {
                 {result.data && result.data.constructor === Array && result.data.length > 0 &&
                     <div className="pt-3">
                         <div className='responsive'>
-                            <div className='tabs tabs-center'>
+                            <div className='tabs ms-3'>
                                 {this.getCategories(result.data).map((category) =>
                                     <MDBBtn key={category}
-                                            rounded className='mx-2 tab'
+                                            rounded className='me-2 tab'
                                             style={{textTransform: 'none'}}
                                             color={category === this.state.currentCategory ? 'dark' : 'light'}
                                             onClick={(e) => {
