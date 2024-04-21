@@ -79,18 +79,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.dish, .utensils, .fork {
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-.dish {
-    height: 100px; /* adjust size as needed */
-    border-radius: 50%;
-    animation: rotate 2s infinite; /* animation added */
+    flex-direction: row;
+    gap: 10px;
 }
 
 @keyframes rotate {
@@ -101,45 +91,35 @@ button {
         transform: rotate(360deg);
     }
 }
-
-.utensils {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.fork, .knife {
-    height: 110px; /* adjust size as needed */
-    animation: moveUpDown 1s ease-in-out infinite alternate; /* animation added */
-}
-
 @keyframes moveUpDown {
     0% {
-        transform: translateY(0);
+        transform: translateY(3px);
     }
     100% {
         transform: translateY(-20px);
     }
 }
 
+.dish {
+    border-radius: 50%;
+    animation: rotate 2s infinite; /* animation added */
+    flex-grow: 8
+}
+
+.fork, .knife {
+    animation: moveUpDown 1s ease-in-out infinite alternate; /* animation added */
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.fork, .dish, .knife {
+    img {
+        width: 100%;
+    }
+}
+
 .fork::before, .knife::before {
     content: '';
     position: absolute;
-}
-
-.fork::before {
-    width: 5px; /* adjust size as needed */
-    height: 50px; /* adjust size as needed */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.knife::before {
-    width: 5px; /* adjust size as needed */
-    height: 70px; /* adjust size as needed */
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 }
