@@ -14,6 +14,12 @@ class GooglePlaceApi:
         self.maps = googlemaps.Client(key=apikey)
 
     def get_nearby_restaurant(self, location: str):
+        """
+        Get nearby restaurant within 1km based on location. Skip restaurants that do not
+        have any photos.
+        @param location: the location to search.
+        @return: a list of nearby restaurants. Empty list if no restaurant found or API fails.
+        """
         result = []
         try:
             # Geocoding an address
@@ -48,7 +54,6 @@ class GooglePlaceApi:
                         continue
 
                     result.append(Place(place_id, place_name, lat, lng, vicinity, price_level, rating, photo_url))
-                    break
         except Exception as e:
             logging.error(f'{type(e).__name__}: {e}')
 

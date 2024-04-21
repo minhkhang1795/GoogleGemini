@@ -43,9 +43,9 @@ class MenuImageModel:
 
     def menu_image_to_text(self, image):
         """
-        Tell Gemini to look at a menu image and answer the prompt question.
-        :param image: the menu image
-        :return: the response to the prompt.
+        Tell Gemini to look at a menu image and return the menu text in json format.
+        @param image: the menu image
+        @return: the menu text in json format.
         """
         text = None
         start_time = time.perf_counter()

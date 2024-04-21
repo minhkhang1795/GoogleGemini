@@ -7,5 +7,7 @@ urlpatterns = [
     path('ping/', views.ping, name='ping'),
     path('upload/', views.upload_view, name='upload'),
     path('recommend/', views.recommend_from_menu, name='recommend'),
-    path('get_nearby_restaurant/', views.get_nearby_restaurant, name='get_nearby_restaurant'),
+    path('restaurants/nearby/', views.get_nearby_restaurants, name='get_nearby_restaurants'),
+    path('restaurants/saved/', views.get_saved_restaurants, name='get_saved_restaurants'),
+    path('restaurants/trending/', views.get_trending_restaurants, name='get_trending_restaurants'),
 ]

@@ -41,7 +41,7 @@ class SnapMenuResultComponent extends Component {
 
     render() {
         const result = this.props.result;
-        const showLoading = this.props.showLoading;
+        const isLoading = this.props.isLoading;
 
         return (
             <div style={{overflowY: 'hidden'}}>
@@ -80,9 +80,9 @@ class SnapMenuResultComponent extends Component {
                     </div>
                 }
                 {result.error && <div className="text-bg-danger text-center text-light">{result.error}</div>}
-                {showLoading && <LoadingComponent className="text-center"
-                                                  style={{marginTop: '50%'}}
-                                                  loadingMessage='Our chef is preparing your menu!'/>}
+                {isLoading && <LoadingComponent className="text-center"
+                                                style={{marginTop: '50%'}}
+                                                loadingMessage='Our chef is preparing your menu!'/>}
             </div>
         )
     }

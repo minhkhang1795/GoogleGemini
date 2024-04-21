@@ -27,13 +27,41 @@ def recommend_from_menu(request):
     return JsonResponse({"result": result})
 
 
-def get_nearby_restaurant(request):
+def get_nearby_restaurants(request):
     location = request.GET.get('location')
 
     if not location:
         location = DEFAULT_LOCATION
 
     places = google_place_api.get_nearby_restaurant(location)
+    return JsonResponse({"result": [place.to_dict() for place in places]})
+
+
+def get_saved_restaurants(request):
+    """
+    Returns a list of all saved restaurants.
+    This is just a static function for demo.
+    """
+    location = request.GET.get('location')
+
+    if not location:
+        location = DEFAULT_LOCATION
+
+    places = []
+    return JsonResponse({"result": [place.to_dict() for place in places]})
+
+
+def get_trending_restaurants(request):
+    """
+    Returns a list of all saved restaurants.
+    This is just a static function for demo.
+    """
+    location = request.GET.get('location')
+
+    if not location:
+        location = DEFAULT_LOCATION
+
+    places = []
     return JsonResponse({"result": [place.to_dict() for place in places]})
 
 

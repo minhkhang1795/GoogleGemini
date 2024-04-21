@@ -17,7 +17,7 @@ class SnapMenuPage extends Component {
         pageTitle: 'Scan Menu',
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
         currentPage: SnapMenuPageEnum.Snap,
-        result: {data: [], error: ''},
+        result: {data: [], error: '', isLoading: false},
         previewImage: null,
         previewImageFile: null,
         showLoading: false,
@@ -49,24 +49,30 @@ class SnapMenuPage extends Component {
         formData.append('userProfile', this.state.userProfile);
         this.setState({showLoading: true, currentPage: SnapMenuPageEnum.Result});
         this.setState({previewImage: null, previewImageFile: null});
+        if (this.state.result.isLoading) {
+            this.setState({result: {data: [], error: 'Please wait until your previous request to complete before sending a new one.', isLoading: false}});
+            return;
+        }
+
+        this.setState({result: {data: [], error: '', isLoading: true}});
         SnapEatApi.Recommend(formData).then(data => {
-            if (data && data.result) {
-                this.setState({result: {data: data.result, error: ''}});
+            if (this.state.currentPage === SnapMenuPageEnum.Snap) {
+                console.log('User goes back to Snap page, ignore the data.')
+                this.setState({result: {data: [], error: '', isLoading: false}});
                 return;
             }
 
-            let error = 'Server is busy right now. Please try again!';
-            if (data && data.error) {
-                console.log(data.error);
-                error = data.error
+            if (data && data.result) {
+                this.setState({result: {data: data.result, error: '', isLoading: false}});
+                return;
             }
 
-            this.setState({result: {data: [], error: error}});
+            let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
+            console.log(data)
+            this.setState({result: {data: [], error: error, isLoading: false}});
         }).catch(ex => {
             console.log(ex);
-            this.setState({result: {data: [], error: 'Server is busy right now. Please try again!'}});
-        }).finally(e => {
-            this.setState({showLoading: false});
+            this.setState({result: {data: [], error: 'Server is busy right now. Please try again!', isLoading: false}});
         });
     }
 
@@ -78,6 +84,7 @@ class SnapMenuPage extends Component {
         return (
             <div>
                 <div className='top-title'>
+                    {/* Back button */}
                     <div className='d-flex align-items-center'
                          style={{width: '100%', height: '100%', position: 'absolute'}}>
                         {this.state.currentPage === SnapMenuPageEnum.Result &&
@@ -103,7 +110,7 @@ class SnapMenuPage extends Component {
 
                 {this.state.currentPage === SnapMenuPageEnum.Result && <div>
                     <SnapMenuResultComponent result={this.state.result}
-                                             showLoading={this.state.showLoading}/>
+                                             isLoading={this.state.result.isLoading}/>
                 </div>}
             </div>
         )
