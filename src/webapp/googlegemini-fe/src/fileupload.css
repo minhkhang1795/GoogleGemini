@@ -5,7 +5,8 @@
 .file-upload {
     position: relative;
     width: 100%;
-    height: 200px
+    height: 80vh;
+    height: calc(var(--vh, 1vh) * 80);
 }
 
 .file-upload-input.has-multiple~.file-upload-previews .file-upload-preview:hover .file-upload-preview-details,.file-upload.has-error:hover .file-upload-errors,.file-upload:hover .file-upload-input:not(.has-multiple)~.file-upload-previews .file-upload-preview-details {

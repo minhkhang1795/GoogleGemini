@@ -19,7 +19,8 @@ class SnapMenuPage extends Component {
         currentPage: SnapMenuPageEnum.Snap,
         result: {data: [], error: ''},
         previewImage: null,
-        previewImageFile: null
+        previewImageFile: null,
+        showLoading: false,
     };
 
     componentDidMount() {
@@ -46,11 +47,11 @@ class SnapMenuPage extends Component {
         const formData = new FormData();
         formData.append('menuImage', this.state.previewImageFile);
         formData.append('userProfile', this.state.userProfile);
-        this.setState({currentPage: SnapMenuPageEnum.Result});
+        this.setState({showLoading: true, currentPage: SnapMenuPageEnum.Result});
+        this.setState({previewImage: null, previewImageFile: null});
         SnapEatApi.Recommend(formData).then(data => {
             if (data && data.result) {
                 this.setState({result: {data: data.result, error: ''}});
-                this.setState({previewImage: null, previewImageFile: null});
                 return;
             }
 
@@ -64,6 +65,8 @@ class SnapMenuPage extends Component {
         }).catch(ex => {
             console.log(ex);
             this.setState({result: {data: [], error: 'Server is busy right now. Please try again!'}});
+        }).finally(e => {
+            this.setState({showLoading: false});
         });
     }
 
@@ -99,7 +102,8 @@ class SnapMenuPage extends Component {
                 </div>}
 
                 {this.state.currentPage === SnapMenuPageEnum.Result && <div>
-                    <SnapMenuResultComponent result={this.state.result}/>
+                    <SnapMenuResultComponent result={this.state.result}
+                                             showLoading={this.state.showLoading}/>
                 </div>}
             </div>
         )

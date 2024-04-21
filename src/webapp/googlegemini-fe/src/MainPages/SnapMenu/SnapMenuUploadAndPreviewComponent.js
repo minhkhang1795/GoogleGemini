@@ -54,14 +54,14 @@ class SnapMenuUploadAndPreviewComponent extends Component {
                          }}>
                         <div className='top-title'>
                             <div className='d-flex align-items-center'
-                                 style={{width: '100%', height: '100%', position: 'absolute'}}>
+                                 style={{width: '100%', height: '100%', position: 'absolute', flexShrink: 0}}>
                             </div>
                             <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
                                 {pageTitle}
                             </MDBTypography>
                         </div>
                         <img src={previewImage} className="p-3 file-upload-preview-image" alt="Preview"/>
-                        <div className='py-2 px-4'>
+                        <div className='py-4 px-4' style={{flexShrink: 0}}>
                             <MDBRow>
                                 <MDBCol size='6'>
                                     <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}

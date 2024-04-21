@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../fileupload.css';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
+import LoadingComponent from "../../Utils/LoadingComponent";
 
 
 class SnapMenuResultComponent extends Component {
@@ -40,6 +41,7 @@ class SnapMenuResultComponent extends Component {
 
     render() {
         const result = this.props.result;
+        const showLoading = this.props.showLoading;
 
         return (
             <div style={{overflowY: 'hidden'}}>
@@ -78,6 +80,9 @@ class SnapMenuResultComponent extends Component {
                     </div>
                 }
                 {result.error && <div className="text-bg-danger text-center text-light">{result.error}</div>}
+                {showLoading && <LoadingComponent className="text-center"
+                                                  style={{marginTop: '50%'}}
+                                                  loadingMessage='Our chef is preparing your menu!'/>}
             </div>
         )
     }

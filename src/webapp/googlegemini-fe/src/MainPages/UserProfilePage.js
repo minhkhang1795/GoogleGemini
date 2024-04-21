@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {MDBTypography} from "mdb-react-ui-kit";
+import LoadingComponent from "../Utils/LoadingComponent";
 
 class UserProfilePage extends Component {
     state = {
@@ -18,6 +19,8 @@ class UserProfilePage extends Component {
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
+
+                <LoadingComponent className='p-5'/>
             </div>
         )
     }
