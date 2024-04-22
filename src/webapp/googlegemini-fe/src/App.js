@@ -19,11 +19,13 @@ class App extends Component {
     }
 
     handleSkipProfile() {
+        console.log("here")
         this.setState({userProfile: {}, currentPage: AppPageEnum.MainPage});
     }
 
     handleFinishOnboarding(userProfile) {
         this.setState({userProfile: userProfile, currentPage: AppPageEnum.MainPage});
+        console.log("User profile: " + userProfile);
     }
 
     render() {
@@ -31,7 +33,7 @@ class App extends Component {
             <div role="main">
                 {this.state.currentPage === AppPageEnum.OnBoarding &&
                     <OnBoardingHolder handleSkipProfile={() => this.handleSkipProfile()}
-                                      handleFinishOnboarding={() => this.handleFinishOnboarding()}/>}
+                                      handleFinishOnboarding={(userProfile) => this.handleFinishOnboarding(userProfile)}/>}
                 {this.state.currentPage === AppPageEnum.MainPage &&
                     <MainAppPageContainer/>}
             </div>
