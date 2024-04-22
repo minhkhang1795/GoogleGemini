@@ -68,43 +68,93 @@ def menu_image_to_text(prompt: str, image_path: str):
     return text
 
 
-#!pip install google_images_search 
+
+#!pip install google_images_search
+
+import json
+from multiprocessing import Pool
 from google_images_search import GoogleImagesSearch
-import os 
-def retrieve_img_from_menu(item_name: str, output_path: str = "menu_item.jpg"):
-  """
-  Searches Google Images for the given menu item and saves the first result to the specified path.
+import os
 
-  :param item_name: The name of the menu item to search for.
-  :param output_path: The path where the downloaded image should be saved. Defaults to "menu_item.jpg".
-  """
-  YOUR_API_KEY = ""
-  YOUR_PROJECT_CX = ""
-  try:
-    # Configure Google Images Search
-    gis = GoogleImagesSearch(YOUR_API_KEY, YOUR_PROJECT_CX)  # Replace with your credentials
+YOUR_PROJECT_CX = "40fb6dfab8dad4cfc"
 
-    # Search for the menu item
-    _search_params = {
-        'q': f"{item_name}",  # Search query
-        "cx": "542ef1a094b8046a7",
-        'searchType': 'image',
-        'fileType': 'jpg',
-        'imgType': 'photo'
-    }
-    gis.search(search_params=_search_params)
+def retrieve_img_from_menu(item_name):
+    """
+    Retrieve image URLs for a menu item.
 
-    # Get the URL of the first image result
-    if gis.results():
-      first_image = gis.results()[0]
-      image_url = first_image.url
-      return image_url
-    else:
-      return None  # Return None if no results
+    :param item_name: The name of the menu item.
+    :return: A tuple containing the item name and a list of image URLs, or None if an error occurs.
+    """
 
-  except Exception as e:
-    print(f"retrieve_img_from_menu: {type(e).__name__}: {e}")
-    return None
+    try:
+        # Configure Google Images Search
+        gis = GoogleImagesSearch(GOOGLE_API_KEY, YOUR_PROJECT_CX)
+
+        # Search for the menu item
+        _search_params = {
+            'q': f"{item_name}",
+            "cx": YOUR_PROJECT_CX,
+            'searchType': 'image',
+            'fileType': 'jpg',
+            'imgType': 'photo',
+            'imgSize': 'large',
+            'num': 2
+        }
+        gis.search(search_params=_search_params)
+
+        # Get the URLs of the first two unique image results
+        image_urls = []
+        for result in gis.results():
+            image_urls.append(result.url)
+
+        return item_name, image_urls
+
+    except Exception as e:
+        print(f"Error retrieving image URLs for '{item_name}': {type(e).__name__}: {e}")
+        return None  # Return None if an error occurs
+
+
+
+def populate_img_urls(json_file_path):
+    """
+    Populate the 'imageUrls' field in a JSON file with new image URLs obtained from retrieve_img_urls function.
+
+    :param json_file_path: The path to the JSON file.
+    :return: The updated JSON data with new image URLs.
+    """
+    try:
+        # Read JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        # Retrieve image URLs in parallel
+        with Pool() as pool:
+            results = pool.map(retrieve_img_from_menu, [item["name"] for item in data])
+
+        # Update data with retrieved image URLs
+        for item_name, image_urls in results:
+            for item in data:
+                if item["name"] == item_name:
+                    item["imageUrls"] = image_urls
+
+        return data
+
+    except Exception as e:
+        print(f"Error populating image URLs: {type(e).__name__}: {e}")
+        return None
+
+# Example usage:
+json_file_path = "recommend-sample.json"
+updated_data = populate_img_urls(json_file_path)
+if updated_data:
+    # Print updated JSON data
+    print(json.dumps(updated_data, indent=2))
+    # Write updated JSON data back to the file (optional)
+    with open(json_file_path, 'w') as file:
+        json.dump(updated_data, file, indent=2)
+else:
+    print("Failed to update JSON data.")
+
 
 # Example usage:
 image_url = retrieve_img_from_menu("dry pot sauteed chiba tofu")
