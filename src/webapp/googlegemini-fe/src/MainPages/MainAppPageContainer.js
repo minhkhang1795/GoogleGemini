@@ -18,13 +18,11 @@ import UserProfilePage from "./UserProfilePage";
 class MainAppPageContainer extends Component {
 
     state = {
-        fillActive: 'tab1',
-        userProfile: {},
-        data: {}
+        activeTab: 'tab1',
     };
 
-    handleFillClick(tab) {
-        if (tab === this.state.fillActive) {
+    handleLandingTabs(tab) {
+        if (tab === this.state.activeTab) {
             return;
         }
 
@@ -38,58 +36,58 @@ class MainAppPageContainer extends Component {
         return (
             <div>
                 <MDBTabsContent className='pb-5'>
-                    <MDBTabsPane open={this.state.fillActive === 'tab1'}>
-                        <LandingPage handleFillClick={(tab) => this.handleFillClick(tab)}/>
+                    <MDBTabsPane open={this.state.activeTab === 'tab1'}>
+                        <LandingPage handleLandingTabs={(tab) => this.handleLandingTabs(tab)}/>
                     </MDBTabsPane>
-                    <MDBTabsPane open={this.state.fillActive === 'tab2'}>
-                        <SnapMenuPage/>
+                    <MDBTabsPane open={this.state.activeTab === 'tab2'}>
+                        <SnapMenuPage userProfile={this.props.userProfile}/>
                     </MDBTabsPane>
-                    <MDBTabsPane open={this.state.fillActive === 'tab3'}>
-                        <BrowseRestaurantsPage/>
+                    <MDBTabsPane open={this.state.activeTab === 'tab3'}>
+                        <BrowseRestaurantsPage userProfile={this.props.userProfile}/>
                     </MDBTabsPane>
-                    <MDBTabsPane open={this.state.fillActive === 'tab4'}>
-                        <UserProfilePage/>
+                    <MDBTabsPane open={this.state.activeTab === 'tab4'}>
+                        <UserProfilePage userProfile={this.props.userProfile}/>
                     </MDBTabsPane>
                 </MDBTabsContent>
 
                 <div className='bottom-tab'>
                     <MDBTabs fill>
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
-                            <MDBTabsLink className={this.state.fillActive === 'tab1' ? 'text-black' : 'text-body'}
+                            <MDBTabsLink className={this.state.activeTab === 'tab1' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleFillClick('tab1')}
-                                         active={this.state.fillActive === 'tab1'}>
+                                         onClick={() => this.handleLandingTabs('tab1')}
+                                         active={this.state.activeTab === 'tab1'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faHouse}/>
-                                {this.state.fillActive === 'tab1' && <div className="dot"></div>}
+                                {this.state.activeTab === 'tab1' && <div className="dot"></div>}
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
-                            <MDBTabsLink className={this.state.fillActive === 'tab2' ? 'text-black' : 'text-body'}
+                            <MDBTabsLink className={this.state.activeTab === 'tab2' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleFillClick('tab2')}
-                                         active={this.state.fillActive === 'tab2'}>
+                                         onClick={() => this.handleLandingTabs('tab2')}
+                                         active={this.state.activeTab === 'tab2'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faTableCellsLarge}/>
-                                {this.state.fillActive === 'tab2' && <div className="dot"></div>}
+                                {this.state.activeTab === 'tab2' && <div className="dot"></div>}
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
-                            <MDBTabsLink className={this.state.fillActive === 'tab3' ? 'text-black' : 'text-body'}
+                            <MDBTabsLink className={this.state.activeTab === 'tab3' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleFillClick('tab3')}
-                                         active={this.state.fillActive === 'tab3'}>
+                                         onClick={() => this.handleLandingTabs('tab3')}
+                                         active={this.state.activeTab === 'tab3'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faMagnifyingGlass}/>
-                                {this.state.fillActive === 'tab3' && <div className="dot"></div>}
+                                {this.state.activeTab === 'tab3' && <div className="dot"></div>}
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
-                            <MDBTabsLink className={this.state.fillActive === 'tab4' ? 'text-black' : 'text-body'}
+                            <MDBTabsLink className={this.state.activeTab === 'tab4' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleFillClick('tab4')}
-                                         active={this.state.fillActive === 'tab4'}>
-                                {this.state.fillActive === 'tab4' ?
+                                         onClick={() => this.handleLandingTabs('tab4')}
+                                         active={this.state.activeTab === 'tab4'}>
+                                {this.state.activeTab === 'tab4' ?
                                     <FontAwesomeIcon className='fa-lg' icon={fas.faUser}/> :
                                     <FontAwesomeIcon className='fa-lg' icon={far.faUser}/>}
-                                {this.state.fillActive === 'tab4' && <div className="dot"></div>}
+                                {this.state.activeTab === 'tab4' && <div className="dot"></div>}
                             </MDBTabsLink>
                         </MDBTabsItem>
                     </MDBTabs>

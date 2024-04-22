@@ -9,7 +9,6 @@ import OnBoarding4CuisinePage from "./OnBoarding4CusinePage";
 class OnBoardingPageContainer extends Component {
 
     state = {
-        userProfile: {},
         userDiets: new Set(),
         userAllergies: new Set(),
         userCuisines: new Set(),
@@ -39,16 +38,15 @@ class OnBoardingPageContainer extends Component {
 
     handleNextClick() {
         if (this.state.onboardingStep === 5) {
-            this.setState({
-                userProfile:
+            let userProfile =
                     {
                         diets: this.state.userDiets,
                         allergies: this.state.userAllergies,
                         cuisines: this.state.userCuisines,
                         flavors: this.state.userFlavors,
-                    }
-            })
-            this.props.handleFinishOnboarding(this.state.userProfile);
+                    };
+            this.props.handleFinishOnboarding(userProfile);
+            console.log(this.state);
             return;
         }
 

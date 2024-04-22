@@ -11,7 +11,7 @@ const AppPageEnum = {
 class App extends Component {
 
     state = {
-        userProfile: {},
+        userProfile: {diets: new Set(), allergies: new Set(), cuisine: new Set(), users: new Set()},
         currentPage: AppPageEnum.OnBoarding,
     };
 
@@ -19,13 +19,11 @@ class App extends Component {
     }
 
     handleSkipProfile() {
-        console.log("here")
-        this.setState({userProfile: {}, currentPage: AppPageEnum.MainPage});
+        this.setState({currentPage: AppPageEnum.MainPage});
     }
 
     handleFinishOnboarding(userProfile) {
         this.setState({userProfile: userProfile, currentPage: AppPageEnum.MainPage});
-        console.log("User profile: " + userProfile);
     }
 
     render() {
@@ -35,7 +33,7 @@ class App extends Component {
                     <OnBoardingHolder handleSkipProfile={() => this.handleSkipProfile()}
                                       handleFinishOnboarding={(userProfile) => this.handleFinishOnboarding(userProfile)}/>}
                 {this.state.currentPage === AppPageEnum.MainPage &&
-                    <MainAppPageContainer/>}
+                    <MainAppPageContainer userProfile={this.state.userProfile}/>}
             </div>
         )
     }
