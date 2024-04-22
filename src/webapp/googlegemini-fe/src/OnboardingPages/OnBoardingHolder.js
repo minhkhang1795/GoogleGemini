@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {MDBBtn} from "mdb-react-ui-kit";
 import OnBoarding1WelcomePage from "./OnBoarding1WelcomePage";
+import OnBoarding2DietPage from "./OnBoarding2DietPage";
 
 class OnBoardingPageContainer extends Component {
 
@@ -25,7 +26,7 @@ class OnBoardingPageContainer extends Component {
         if (this.state.onboardingStep === 1)
             return <OnBoarding1WelcomePage />;
         else if (this.state.onboardingStep === 2)
-            return <OnBoarding1WelcomePage />;
+            return <OnBoarding2DietPage />;
         else if (this.state.onboardingStep === 3)
             return <OnBoarding1WelcomePage />;
         else
@@ -38,7 +39,9 @@ class OnBoardingPageContainer extends Component {
                 {this.getOnboardingPage()}
                 <div className="d-flex flex-row w-100 justify-content-between align-items-stretch"
                      style={{gap: "10px", position: "absolute", bottom: "0", left: "0", padding: "3rem"}}>
-                    <MDBBtn outline color='dark' style={{textTransform: 'none'}}
+                    <MDBBtn outline color='dark'
+                            style={{textTransform: 'none', opacity: `${this.state.onboardingStep === 1 ? "1":"0"}`}}
+                            disabled={this.state.onboardingStep !== 1}
                             onClick={() => this.props.handleSkipProfile()}>
                         Skip
                     </MDBBtn>

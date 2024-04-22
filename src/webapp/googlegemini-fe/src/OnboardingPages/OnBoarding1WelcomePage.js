@@ -20,7 +20,7 @@ class OnBoarding1WelcomePage extends Component {
             <div>
                 <div className="mt-5">
                 </div>
-                <h1 className="my-3 text-dark">Build your foodie profile</h1>
+                <h2 className="my-3 text-dark">Build your foodie profile</h2>
                 <p className="my-4 text-dark">Let's build your food preferences to personalize your recommendation.</p>
                 <div className="d-flex flex-column align-items-stretch" style={{gap: "10px"}}>
                     <div className="d-flex justify-content-center align-items-center flex-row flex-grow-1"
