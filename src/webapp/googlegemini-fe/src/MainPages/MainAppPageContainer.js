@@ -21,12 +21,12 @@ class MainAppPageContainer extends Component {
         activeTab: 'tab1',
     };
 
-    handleLandingTabs(tab) {
+    handleTabChange(tab) {
         if (tab === this.state.activeTab) {
             return;
         }
 
-        this.setState({fillActive: tab});
+        this.setState({activeTab: tab});
     };
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class MainAppPageContainer extends Component {
             <div>
                 <MDBTabsContent className='pb-5'>
                     <MDBTabsPane open={this.state.activeTab === 'tab1'}>
-                        <LandingPage handleLandingTabs={(tab) => this.handleLandingTabs(tab)}/>
+                        <LandingPage handleLandingTabs={(tab) => this.handleTabChange(tab)}/>
                     </MDBTabsPane>
                     <MDBTabsPane open={this.state.activeTab === 'tab2'}>
                         <SnapMenuPage userProfile={this.props.userProfile}/>
@@ -55,7 +55,7 @@ class MainAppPageContainer extends Component {
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
                             <MDBTabsLink className={this.state.activeTab === 'tab1' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleLandingTabs('tab1')}
+                                         onClick={() => this.handleTabChange('tab1')}
                                          active={this.state.activeTab === 'tab1'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faHouse}/>
                                 {this.state.activeTab === 'tab1' && <div className="dot"></div>}
@@ -64,7 +64,7 @@ class MainAppPageContainer extends Component {
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
                             <MDBTabsLink className={this.state.activeTab === 'tab2' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleLandingTabs('tab2')}
+                                         onClick={() => this.handleTabChange('tab2')}
                                          active={this.state.activeTab === 'tab2'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faTableCellsLarge}/>
                                 {this.state.activeTab === 'tab2' && <div className="dot"></div>}
@@ -73,7 +73,7 @@ class MainAppPageContainer extends Component {
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
                             <MDBTabsLink className={this.state.activeTab === 'tab3' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleLandingTabs('tab3')}
+                                         onClick={() => this.handleTabChange('tab3')}
                                          active={this.state.activeTab === 'tab3'}>
                                 <FontAwesomeIcon className='fa-lg' icon={fas.faMagnifyingGlass}/>
                                 {this.state.activeTab === 'tab3' && <div className="dot"></div>}
@@ -82,7 +82,7 @@ class MainAppPageContainer extends Component {
                         <MDBTabsItem style={{backgroundColor: 'white'}}>
                             <MDBTabsLink className={this.state.activeTab === 'tab4' ? 'text-black' : 'text-body'}
                                          style={{borderBottom: 'none'}}
-                                         onClick={() => this.handleLandingTabs('tab4')}
+                                         onClick={() => this.handleTabChange('tab4')}
                                          active={this.state.activeTab === 'tab4'}>
                                 {this.state.activeTab === 'tab4' ?
                                     <FontAwesomeIcon className='fa-lg' icon={fas.faUser}/> :

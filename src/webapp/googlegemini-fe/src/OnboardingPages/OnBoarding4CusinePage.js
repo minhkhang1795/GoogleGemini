@@ -17,8 +17,8 @@ class OnBoarding4CuisinePage extends Component {
             <div>
                 <div className="mt-5">
                 </div>
-                <h2 className="my-3 text-dark">Let's select your dietary if applicable</h2>
-                <p className="my-4 text-dark">You can select one of multiple dietaries.</p>
+                <h2 className="my-3 text-dark">Share with us your favorite cuisine</h2>
+                <p className="my-4 text-dark">Please select three or more to proceed.</p>
                 <div className="d-flex flex-wrap justify-content-between m-2 align-items-stretch"
                      style={{overflow: "auto", maxHeight: "50vh"}}>
                     {Allergies.map((diet) =>

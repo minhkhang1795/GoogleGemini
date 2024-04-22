@@ -1,18 +1,8 @@
-import * as TestApi from "./TestApi";
-import {testGetSavedRestaurants} from "./TestApi";
-
-// If there is a ?demo=true query, use test APIs. Otherwise, use the backend APIs.
-const searchParams = new URLSearchParams(window.location.search);
-const demo = searchParams.get('demo') === 'true';
+import {FetchWithCatch} from "../Utils/Utils";
 const isLocal = window.location.hostname === 'localhost';
 const domain = isLocal ? 'http://localhost:8000' : "https://snapeat.azurewebsites.net";
 
-export const Recommend = demo ? TestApi.testRecommend : recommend;
-export const GetNearbyRestaurants = demo ? TestApi.testGetNearbyRestaurants : getNearbyRestaurants;
-export const GetSavedRestaurants = demo ? TestApi.testGetSavedRestaurants : getSavedRestaurants;
-export const GetTrendingRestaurants = demo ? TestApi.testGetTrendingRestaurants : getTrendingRestaurants;
-
-function recommend(formData) {
+export const recommend = (formData) => {
     return fetch(`${domain}/recommend/`, {
         method: 'POST',
         body: formData // Set the FormData object as the body of the request
@@ -20,30 +10,39 @@ function recommend(formData) {
         .then(res => res.json())
 }
 
-function getNearbyRestaurants(location) {
-    return fetch(`${domain}/restaurants/nearby/?location=${location}`, {
-        method: 'GET',
-    })
-        .then(res => res.json())
+export const getNearbyRestaurants = (location) => {
+    let query = `${domain}/restaurants/nearby/?location=${location}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
 }
 
-function getSavedRestaurants(userId) {
-    return fetch(`${domain}/restaurants/saved/?userId=${userId}`, {
-        method: 'GET',
-    })
-        .then(res => res.json())
+export const getSavedRestaurants = (userId) => {
+    let query = `${domain}/restaurants/saved/?userId=${userId}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
 }
 
-function getTrendingRestaurants(location) {
-    return fetch(`${domain}/restaurants/trending/?location=${location}`, {
-        method: 'GET',
-    })
-        .then(res => res.json())
+export const getTrendingRestaurants = (location) => {
+    let query = `${domain}/restaurants/trending/?location=${location}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
 }
 
-function searchRestaurants(query, location) {
-    return fetch(`${domain}/restaurants/search/?location=${location}&query=${query}`, {
-        method: 'GET',
-    })
-        .then(res => res.json())
+export const searchRestaurants = (prompt, location) => {
+    let query = `${domain}/restaurants/search/?location=${location}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
+}
+
+// Function to fetch data from the network
+function fetchDataFromNetwork(query) {
+    return fetch(query)
+        .then(response => {
+            // Cache the response
+            if (response.ok) {
+                console.log("adding to cache: ", query)
+                const clonedResponse = response.clone();
+                caches.open('SnapEatCache')
+                    .then(cache => {
+                        cache.put(query, clonedResponse);
+                    });
+            }
+            return response.json();
+        });
 }

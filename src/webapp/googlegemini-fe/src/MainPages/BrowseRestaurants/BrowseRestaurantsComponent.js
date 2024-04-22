@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle, MDBInput} from "mdb-react-ui-kit";
-import * as SnapEatApi from "../../SnapEatApi/SnapEatApi";
+import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
+import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
 import {IsList} from "../../Utils/Utils";
 import LoadingComponent from "../../Utils/LoadingComponent";
 
@@ -22,86 +22,31 @@ class BrowseRestaurantsComponent extends Component {
     };
 
     componentDidMount() {
-        console.log('a')
-        if (!this.state.nearbyResult.isLoading) {
+        this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
+    }
+
+    updateDataForTab(tabName, updateFunction) {
+        if (!this.state[tabName].isLoading) {
             this.setState({
-                nearbyResult: {
-                    data: this.state.nearbyResult.data,
-                    error: this.state.nearbyResult.error,
+                [tabName]: {
+                    data: this.state[tabName].data,
+                    error: this.state[tabName].error,
                     isLoading: true
                 }
             });
-            SnapEatApi.GetNearbyRestaurants('').then(data => {
+            updateFunction.then(data => {
                 if (data && data.result) {
-                    this.setState({nearbyResult: {data: data.result, error: '', isLoading: false}});
+                    this.setState({[tabName]: {data: data.result, error: '', isLoading: false}});
                     return;
                 }
 
                 let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-                console.log(data)
-                this.setState({nearbyResult: {data: [], error: error, isLoading: false}});
+                console.log(tabName, data)
+                this.setState({[tabName]: {data: [], error: error, isLoading: false}});
             }).catch(ex => {
-                console.log(ex);
+                console.log(tabName, ex);
                 this.setState({
-                    nearbyResult: {
-                        data: [],
-                        error: 'Server is busy right now. Please try again!',
-                        isLoading: false
-                    }
-                });
-            });
-        }
-
-        if (!this.state.savedResult.isLoading) {
-            this.setState({
-                savedResult: {
-                    data: this.state.savedResult.data,
-                    error: this.state.savedResult.error,
-                    isLoading: true
-                }
-            });
-            SnapEatApi.GetSavedRestaurants('').then(data => {
-                if (data && data.result) {
-                    this.setState({savedResult: {data: data.result, error: '', isLoading: false}});
-                    return;
-                }
-
-                let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-                console.log(data)
-                this.setState({savedResult: {data: [], error: error, isLoading: false}});
-            }).catch(ex => {
-                console.log(ex);
-                this.setState({
-                    savedResult: {
-                        data: [],
-                        error: 'Server is busy right now. Please try again!',
-                        isLoading: false
-                    }
-                });
-            });
-        }
-
-        if (!this.state.trendingResult.isLoading) {
-            this.setState({
-                trendingResult: {
-                    data: this.state.trendingResult.data,
-                    error: this.state.trendingResult.error,
-                    isLoading: true
-                }
-            });
-            SnapEatApi.GetTrendingRestaurants('').then(data => {
-                if (data && data.result) {
-                    this.setState({trendingResult: {data: data.result, error: '', isLoading: false}});
-                    return;
-                }
-
-                let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-                console.log(data)
-                this.setState({trendingResult: {data: [], error: error, isLoading: false}});
-            }).catch(ex => {
-                console.log(ex);
-                this.setState({
-                    trendingResult: {
+                    [tabName]: {
                         data: [],
                         error: 'Server is busy right now. Please try again!',
                         isLoading: false
@@ -126,6 +71,17 @@ class BrowseRestaurantsComponent extends Component {
         return IsList(result.data) ? result.data : [];
     }
 
+    changeCategory(category) {
+        if (category === RestaurantCategoryEnum.Nearby) {
+            this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
+        } else if (category === RestaurantCategoryEnum.Saved) {
+            this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
+        } else if (category === RestaurantCategoryEnum.Trending) {
+            this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
+        }
+        this.setState({currentCategory: category});
+    }
+
     render() {
         return (
             <div style={{overflowY: 'hidden'}}>
@@ -140,9 +96,7 @@ class BrowseRestaurantsComponent extends Component {
                                         rounded className='me-2 tab'
                                         style={{boxShadow: 'none', textTransform: 'none'}}
                                         color={category === this.state.currentCategory ? 'dark' : 'light'}
-                                        onClick={(e) => {
-                                            this.setState({currentCategory: category})
-                                        }}>
+                                        onClick={(e) => this.changeCategory(category)}>
                                     {category}
                                 </MDBBtn>)}
                         </div>

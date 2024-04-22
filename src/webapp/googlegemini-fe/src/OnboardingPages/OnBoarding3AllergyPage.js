@@ -17,7 +17,7 @@ class OnBoarding3AllergyPage extends Component {
             <div>
                 <div className="mt-5">
                 </div>
-                <h2 className="my-3 text-dark">Let's select your dietary if applicable</h2>
+                <h2 className="my-3 text-dark">Let's select your allergies if applicable</h2>
                 <p className="my-4 text-dark">You can select one of multiple dietaries.</p>
                 <div className="d-flex flex-wrap justify-content-between m-2 align-items-stretch"
                      style={{overflow: "auto", maxHeight: "50vh"}}>

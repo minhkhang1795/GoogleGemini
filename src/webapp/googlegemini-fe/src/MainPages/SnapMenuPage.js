@@ -3,7 +3,7 @@ import '../fileupload.css';
 import {MDBTypography} from "mdb-react-ui-kit";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import * as SnapEatApi from "../SnapEatApi/SnapEatApi";
+import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
 import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
 
