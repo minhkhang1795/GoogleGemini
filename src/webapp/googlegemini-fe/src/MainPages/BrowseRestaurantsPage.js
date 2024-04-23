@@ -3,7 +3,7 @@ import {MDBTypography} from "mdb-react-ui-kit";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
-import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
+import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 
 const BrowseRestaurantsPageEnum = {
     Browse: 'Browse',
@@ -13,7 +13,7 @@ const BrowseRestaurantsPageEnum = {
 
 class BrowseRestaurantsPage extends Component {
     state = {
-        pageTitle: 'Browse Restaurants',
+        pageTitle: 'Find Restaurants',
         currentPage: BrowseRestaurantsPageEnum.Browse,
         userProfile: {},
         restaurantResult: {}
@@ -36,7 +36,8 @@ class BrowseRestaurantsPage extends Component {
                                              }}/>
                         }
                     </div>
-                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
+                                   style={{fontWeight: '700'}}>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>

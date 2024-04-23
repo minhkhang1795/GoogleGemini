@@ -14,26 +14,28 @@ class LandingPage extends Component {
         return (
             <div>
                 <div>
-                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
+                                   style={{fontWeight: '700'}}>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>
-                <div className='py-5 px-4 text-center'>
-                    <h1 className='pb-3'><b>Find your new fav place</b></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                <div className='py-4 px-4 text-center'>
+                    <h2 className='my-3 text-dark'>Your perfect plate.<br/>One Snap away!</h2>
+                    <p className="my-4 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <MDBRow>
+                    <MDBRow className="my-5">
                         <MDBCol size='6'>
-                            <MDBBtn className='w-100' color='dark' style={{textTransform: 'none'}}
+                            <MDBBtn className='w-100' rounded color='dark' style={{textTransform: 'none'}}
                                     onClick={() => this.props.handleLandingTabs('tab2')}>
-                                Scan Menu
+                                Snap Menu
                             </MDBBtn>
                         </MDBCol>
                         <MDBCol size='6'>
-                            <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}
+                            <MDBBtn outline rounded className='w-100' color='dark' style={{textTransform: 'none'}}
                                     onClick={() => this.props.handleLandingTabs('tab3')}>
-                                Browse Restaurant
+                                Find Restaurants
                             </MDBBtn>
                         </MDBCol>
                     </MDBRow>

@@ -103,7 +103,7 @@ class OnBoardingPageContainer extends Component {
                        style={{position: 'absolute', opacity: `${this.shouldDisableNext() ? "1" : "0"}`, zIndex: 0}}>
                         {this.getItemCount()} of 3 selected
                     </p>
-                    <MDBBtn outline color='dark'
+                    <MDBBtn outline rounded color='dark'
                             style={{
                                 textTransform: 'none',
                                 opacity: `${this.shouldDisableSkip() ? "0" : "1"}`,
@@ -113,7 +113,7 @@ class OnBoardingPageContainer extends Component {
                             onClick={() => this.props.handleSkipProfile()}>
                         Skip
                     </MDBBtn>
-                    <MDBBtn color='dark' style={{textTransform: 'none'}}
+                    <MDBBtn rounded color='dark' style={{textTransform: 'none'}}
                             disabled={this.shouldDisableNext()}
                             onClick={() => this.handleNextClick()}>
                         Next

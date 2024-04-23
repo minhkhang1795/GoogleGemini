@@ -56,22 +56,19 @@ class SnapMenuUploadAndPreviewComponent extends Component {
                             <div className='d-flex align-items-center'
                                  style={{width: '100%', height: '100%', position: 'absolute', flexShrink: 0}}>
                             </div>
-                            <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                            <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
+                                           style={{fontWeight: '700'}}>
                                 {pageTitle}
                             </MDBTypography>
                         </div>
-                        <img src={previewImage} className="p-3 file-upload-preview-image" alt="Preview"/>
-                        <div className='py-4 px-4' style={{flexShrink: 0}}>
-                            <MDBRow>
-                                <MDBCol size='6'>
-                                    <MDBBtn outline className='w-100' color='dark' style={{textTransform: 'none'}}
-                                            onClick={(e) => this.props.handleCancelMenu(e)}>Cancel</MDBBtn>
-                                </MDBCol>
-                                <MDBCol size='6'>
-                                    <MDBBtn className='w-100' color='dark' style={{textTransform: 'none'}}
-                                            onClick={(e) => this.props.handleSubmitMenu(e)}>Submit</MDBBtn>
-                                </MDBCol>
-                            </MDBRow>
+                        <img src={previewImage} className="px-4 file-upload-preview-image" alt="Preview"/>
+                        <div className="d-flex flex-row w-100 justify-content-between align-items-stretch"
+                             style={{gap: "10px", position: "absolute", bottom: "0", left: "0", padding: "3rem"}}>
+                            <MDBBtn outline rounded color='dark'
+                                    style={{textTransform: 'none'}}
+                                    onClick={(e) => this.props.handleCancelMenu(e)}>Cancel</MDBBtn>
+                            <MDBBtn rounded color='dark' style={{textTransform: 'none'}}
+                                    onClick={(e) => this.props.handleSubmitMenu(e)}>Submit</MDBBtn>
                         </div>
                     </div>}
             </div>

@@ -4,17 +4,17 @@ import {MDBTypography} from "mdb-react-ui-kit";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
-import SnapMenuResultComponent from "./SnapMenu/ScanMenuResultComponent";
+import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
 
 const SnapMenuPageEnum = {
-    Snap: 'Scan',
+    Snap: 'Snap',
     Result: 'Result',
 }
 
 class SnapMenuPage extends Component {
     state = {
-        pageTitle: 'Scan Menu',
+        pageTitle: 'Snap Menu',
         userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
         currentPage: SnapMenuPageEnum.Snap,
         result: {data: [], error: '', isLoading: false},
@@ -95,7 +95,8 @@ class SnapMenuPage extends Component {
                                              }}/>
                         }
                     </div>
-                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
+                                   style={{fontWeight: '700'}}>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>

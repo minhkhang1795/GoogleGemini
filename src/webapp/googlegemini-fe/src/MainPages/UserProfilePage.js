@@ -15,7 +15,8 @@ class UserProfilePage extends Component {
         return (
             <div>
                 <div>
-                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom'>
+                    <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
+                                   style={{fontWeight: '700'}}>
                         {this.state.pageTitle}
                     </MDBTypography>
                 </div>

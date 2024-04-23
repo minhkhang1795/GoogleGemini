@@ -25,7 +25,11 @@ class BrowseRestaurantsComponent extends Component {
         this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
     }
 
-    updateDataForTab(tabName, updateFunction) {
+    updateDataForTab(tabName, updateFunction, force=false) {
+        if (this.state[tabName].data && this.state[tabName].data.length > 0) {
+            return;
+        }
+
         if (!this.state[tabName].isLoading) {
             this.setState({
                 [tabName]: {
@@ -79,6 +83,7 @@ class BrowseRestaurantsComponent extends Component {
         } else if (category === RestaurantCategoryEnum.Trending) {
             this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
         }
+
         this.setState({currentCategory: category});
     }
 
@@ -103,7 +108,7 @@ class BrowseRestaurantsComponent extends Component {
                     </div>
 
                     <div>
-                        {this.getRestaurantsByCategory().length > 0 && this.getRestaurantsByCategory().map((place) =>
+                        {!this.getResultByCategory().isLoading && this.getRestaurantsByCategory().length > 0 && this.getRestaurantsByCategory().map((place) =>
                             <MDBCard className='m-3' key={place.name}>
                                 <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
                                               src={place.image_urls && place.image_urls.length > 0 ? place.image_urls[0] : ""}
@@ -118,7 +123,7 @@ class BrowseRestaurantsComponent extends Component {
                             </MDBCard>)}
                     </div>
                 </div>
-                {this.getResultByCategory() && this.getResultByCategory().error &&
+                {!this.getResultByCategory().isLoading && this.getResultByCategory() && this.getResultByCategory().error &&
                     <div className="text-bg-danger text-center text-light">{this.getRestaurantsByCategory().error}
                     </div>}
                 {this.getResultByCategory() && this.getResultByCategory().isLoading &&
