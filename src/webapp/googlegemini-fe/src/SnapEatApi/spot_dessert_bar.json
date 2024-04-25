@@ -1,0 +1,74 @@
+[
+  {
+    "name": "DURIAN DE-LUXE",
+    "description": "crispy tart, jackfruit, nata de coco, tapioca pudding. durian soft cheesecake, passion fruit foam",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The user strongly dislikes fruity flavor. Too many fruits and fruit foams in this dish which makes it impossible for the user to enjoy it."
+  },
+  {
+    "name": "PITAYA BOWL",
+    "description": "crunchy cookie shell, fresh dragon fruit, strawberry jam, chiffon cake, coconut cream",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The user strongly dislikes fruity flavor. This dish contains too much fruit, which is not suitable for the user's preference"
+  },
+  {
+    "name": "WATERMELON DACQUOISE",
+    "description": "pumpkin seeds, diplomat cream, coconut custard, rose syrup infused watermelon cake, fresh strawberries",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The user strongly dislikes fruity flavor. This dish contains too much fruit, which is not suitable for the user's preference.."
+  },
+  {
+    "name": "RED WINE HIBBY",
+    "description": "steamed hibiscus cake, mixed berries, hibiscus red wine vinegar caramel sauce, coconut sorbet",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The drink contains red wine, which is not suitable for the user's preference."
+  },
+  {
+    "name": "HARVEST",
+    "description": "layers of strawberries, soft cheesecake, chiffon cake, whipped cream, oreo crumbs, earl grey milk tea, rasberry sorbet",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 80,
+    "matchExplanation": "The dish is sweet, which is one of the user's preferences. The dish also has a buttery flavor, which is another of the user's preferences. The flavor of strawberries and earl grey milk tea might be too extreme, but the dish contains at least one of the user's preferred flavors, so the score is scaled down by 20%."
+  },
+  {
+    "name": "GOLDEN TOAST",
+    "description": "honey buttered toast, strawberries, whipped cream, honey, powered sugar, cookie crumbs, condensed milk ice cream",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 40,
+    "matchExplanation": "The dish is sweet, which is one of the user's preferences. The dish also has a buttery flavor, which is another of the user's preferences. The flavor of strawberries might be too extreme, but the dish contains at least one of the user's preferred flavors, so the score is scaled down by 20%."
+  },
+  {
+    "name": "MATCHA LAVA",
+    "description": "dark chocolate cake, matcha powder. chocolate pearls, cookie crumbs green tea ice cream",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The user strongly dislikes chocolate flavor, which makes this dish unsuitable for the user."
+  },
+  {
+    "name": "MILKY PUFF",
+    "description": "chour-puff pastry, broken burana, white chocolate honeycomb corn flakes, condensed milk ice cream",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 0,
+    "matchExplanation": "The dish contains chocolate flavor, which is not suitable for the user's preference."
+  },
+  {
+    "name": "COOKIE CAMP",
+    "description": "fresh half baked marshmallow cookie, pretzels, cookie crumbs served with condensed milk ice cream",
+    "category": "Dessert",
+    "price": "$14.45",
+    "matchScore": 60,
+    "matchExplanation": "The dish contains cookie, which resembles buttery flavor. The dish is also sweet. Both are the user's preferences."
+  }
+]
