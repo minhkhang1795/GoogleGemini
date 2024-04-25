@@ -1,0 +1,59 @@
+{
+  "result": [
+    {
+      "google_place_id": "ChIJ0QCeh5tZwokRh9J_3uvSPjU",
+      "name of the place": "Spot Dessert Bar",
+      "description of the place": "Trendy outpost mixing Asian elements like green tea & yuzu into cookies, cakes & boba drinks. Known for unique & over-the-top creations.",
+      "latitude": 40.731392,
+      "longitude": -73.9884,
+      "address": "13 St Marks Pl, New York, NY 10003",
+      "price_level": "2",
+      "rating": 4.5,
+      "image_urls": [https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/images/CarinaFinn_CookieCAmp_SpotDessertBar_ig7hon]
+    },
+    {
+      "google_place_id": "ChIJP0KOWoxZwokRmvPiQAIaH1A",
+      "name of the place": "Dominique Ansel Bakery",
+      "description of the place": "Home of the cronut, a croissant-doughnut pastry that took the world by storm. Offers other delicious pastries and baked goods.",
+      "latitude": 40.72528340941101,
+      "longitude": -74.002873737354,
+      "address": "189 Spring St, New York, NY 10012",
+      "price_level": "2",
+      "rating": 4.3,
+      "image_urls": [https://www.dominiqueansel.com/wp-content/uploads/2018/07/soho.jpg]
+    },
+    {
+      "google_place_id": "ChIJM7IS9YVZwokRRglCG_PV92E",
+      "name of the place": "Milk Bar",
+      "description of the place": "Known for their delicious cookies, cereal milk soft serve, and birthday cake truffles.",
+      "latitude": 40.72342293024312,
+      "longitude": -73.99462203231559,
+      "address": "246 Mott St, New York, NY 10012",
+      "price_level": "2",
+      "rating": 4.0,
+      "image_urls": [https://milkbarstore.com/cdn/shop/files/interior.jpg?format=pjpg&v=1614291632&width=1440]
+    },
+    {
+      "google_place_id": "ChIJdXpUxMtZwokRq904Bbqnuw0",
+      "name of the place": "Levain Bakery",
+      "description of the place": "Famous for their giant, gooey cookies.",
+      "latitude": 40.72755772075343,
+      "longitude": -73.99451703940173,
+      "address": "340 Lafayette St, New York, NY 10012",
+      "price_level": "2",
+      "rating": 4.7,
+      "image_urls": [https://www.modernhoney.com/wp-content/uploads/2015/12/Levain-Bakery-Chocolate-Chip-Copycat-Cookie-Recipe-3-1200x1020.jpg]
+    },
+    {
+      "google_place_id": "ChIJaeKcEaRZwokRcllXm5cM7J0",
+      "name of the place": "Eataly NYC",
+      "description of the place": "Italian marketplace with a variety of vendors selling prepared foods, groceries, and household goods. Not a dessert place specifically, but offers a great selection of Italian desserts.",
+      "latitude": 40.74342296806882,
+      "longitude": -73.98996802375184,
+      "address": "200 Fifth Ave, New York, NY 10010",
+      "price_level": "2",
+      "rating": 4.5,
+      "image_urls": 
+    }
+  ]
+}
