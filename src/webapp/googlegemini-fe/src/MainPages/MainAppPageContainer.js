@@ -66,7 +66,7 @@ class MainAppPageContainer extends Component {
                                          style={{borderBottom: 'none'}}
                                          onClick={() => this.handleTabChange('tab2')}
                                          active={this.state.activeTab === 'tab2'}>
-                                <FontAwesomeIcon className='fa-lg' icon={fas.faTableCellsLarge}/>
+                                <FontAwesomeIcon className='fa-lg' icon={fas.faCamera}/>
                                 {this.state.activeTab === 'tab2' && <div className="dot"></div>}
                             </MDBTabsLink>
                         </MDBTabsItem>

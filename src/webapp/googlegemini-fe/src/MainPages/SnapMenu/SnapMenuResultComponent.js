@@ -70,7 +70,7 @@ class SnapMenuResultComponent extends Component {
                                                   position='top'
                                                   alt={item.name}/>
                                     <MDBCardBody>
-                                        <MDBCardTitle>{item.name}</MDBCardTitle>
+                                        <MDBCardTitle className="text-dark">{item.name}</MDBCardTitle>
                                         <MDBCardText>
                                             {item.description}
                                         </MDBCardText>

@@ -23,6 +23,8 @@ class BrowseRestaurantsComponent extends Component {
 
     componentDidMount() {
         this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
+        this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
+        this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
     }
 
     updateDataForTab(tabName, updateFunction, force=false) {
@@ -115,7 +117,7 @@ class BrowseRestaurantsComponent extends Component {
                                               position='top'
                                               alt={place.name}/>
                                 <MDBCardBody>
-                                    <MDBCardTitle>{place.name}</MDBCardTitle>
+                                    <MDBCardTitle className="text-dark">{place.name}</MDBCardTitle>
                                     <MDBCardText>
                                         {place.address}
                                     </MDBCardText>
