@@ -145,7 +145,7 @@ class BrowseRestaurantsResultComponent extends Component {
 
                 {result.errorCode === "NoMenu" && <div>
                     <div className="file-upload-wrapper">
-                        <div className="file-upload p-5" style={{height: "60vh"}}>
+                        <div className="file-upload p-5" style={{height: "70vh"}}>
                             <div className='w-100 h-100' style={{border: '2px dotted #000'}}>
                                 <div className="file-upload-message">
                                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none"

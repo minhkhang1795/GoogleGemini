@@ -46,7 +46,8 @@ class MainAppPageContainer extends Component {
                         <BrowseRestaurantsPage userProfile={this.props.userProfile}/>
                     </MDBTabsPane>
                     <MDBTabsPane open={this.state.activeTab === 'tab4'}>
-                        <UserProfilePage userProfile={this.props.userProfile}/>
+                        <UserProfilePage userProfile={this.props.userProfile}
+                                         updateProfile={() => this.props.updateProfile()}/>
                     </MDBTabsPane>
                 </MDBTabsContent>
 

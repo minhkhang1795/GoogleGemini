@@ -8,6 +8,7 @@ const AppPageEnum = {
     OnBoarding: 'OnBoarding',
     MainPage: 'MainPage',
 }
+
 class App extends Component {
 
     state = {
@@ -26,6 +27,10 @@ class App extends Component {
             });
     }
 
+    updateProfile() {
+        this.setState({currentPage: AppPageEnum.OnBoarding});
+    }
+
     handleSkipProfile() {
         this.setState({currentPage: AppPageEnum.MainPage});
     }
@@ -41,7 +46,8 @@ class App extends Component {
                     <OnBoardingHolder handleSkipProfile={() => this.handleSkipProfile()}
                                       handleFinishOnboarding={(userProfile) => this.handleFinishOnboarding(userProfile)}/>}
                 {this.state.currentPage === AppPageEnum.MainPage &&
-                    <MainAppPageContainer userProfile={this.state.userProfile}/>}
+                    <MainAppPageContainer userProfile={this.state.userProfile}
+                                          updateProfile={() => this.updateProfile()}/>}
             </div>
         )
     }

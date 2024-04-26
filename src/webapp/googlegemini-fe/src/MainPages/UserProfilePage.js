@@ -1,17 +1,26 @@
 import React, {Component} from 'react';
-import {MDBTypography} from "mdb-react-ui-kit";
+import {MDBBtn, MDBTypography} from "mdb-react-ui-kit";
 import LoadingComponent from "../Utils/LoadingComponent";
 
 class UserProfilePage extends Component {
     state = {
-        pageTitle: 'User Profile',
-        userProfile: {},
+        pageTitle: 'Your Profile',
     };
 
     componentDidMount() {
     }
 
+    getArrayStringOrNone(set) {
+        if (!set || set.size === 0) {
+            return "None";
+        }
+
+        return Array.from(set).join(", ");
+    }
+
     render() {
+        const userProfile = this.props.userProfile;
+
         return (
             <div>
                 <div>
@@ -21,7 +30,24 @@ class UserProfilePage extends Component {
                     </MDBTypography>
                 </div>
 
-                <LoadingComponent className='p-5'/>
+                <div className="p-4 text-dark">
+                    <div>
+                        <b>Diets: </b>{this.getArrayStringOrNone(userProfile.diets)}.
+                        <br/>
+                        <b>Allergies: </b>{this.getArrayStringOrNone(userProfile.allergies)}.
+                        <br/>
+                        <b>Cuisines: </b>{this.getArrayStringOrNone(userProfile.cuisines)}.
+                        <br/>
+                        <b>Flavors: </b>{this.getArrayStringOrNone(userProfile.flavors)}.
+                    </div>
+
+                    <div className="mt-5 text-center">
+                        <MDBBtn outline rounded color='dark' className="w-100" style={{textTransform: 'none'}}
+                            onClick={() => this.props.updateProfile()}>
+                            Update Profile
+                        </MDBBtn>
+                    </div>
+                </div>
             </div>
         )
     }
