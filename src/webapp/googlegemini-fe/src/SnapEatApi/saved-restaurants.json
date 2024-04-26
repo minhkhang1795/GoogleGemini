@@ -1,0 +1,30 @@
+{
+    "result": [
+      {
+        "google_place_id": "ChIJq3tH0I5YwokRfL6Y8j8E6DM",
+        "name": "SEOUL SALON NYC",
+        "description": "Casual chic vibe for modern take on Korean cusine in a vibrant Ktown",
+        "lat": 40.748382926053, 
+        "lng": -73.98661059915997,
+        "address": "28 W 33rd St, New York, NY 10001",
+        "price_level": 2,
+        "rating": 4.6,
+        "image_urls": [
+          "https://blog.resy.com/wp-content/uploads/2023/08/LKJ_2950-800x533.jpg"
+        ]
+      },
+      {
+        "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+        "name": "Nam Sơn",
+        "description": "Roomy, casual dining room specializing in noodle soups & other classic Vietnamese dishes.",
+        "lat": 40.719099355875635,
+        "lng": -73.99406083764009,
+        "address": "245 Grand St #1, New York, NY 10002",
+        "price_level": 2,
+        "rating": 4.2,
+        "image_urls": [
+          "https://s3-media0.fl.yelpcdn.com/bphoto/uMpDkOnPh1rD5R8TDg9w6w/348s.jpg"
+        ]
+      }
+    ]
+}

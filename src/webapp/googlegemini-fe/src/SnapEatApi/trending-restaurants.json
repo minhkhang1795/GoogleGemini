@@ -1,0 +1,138 @@
+Error retrieving image URLs for 'While We Were Young Kitchen & Cocktails': HttpError: <HttpError 500 when requesting https://customsearch.googleapis.com/customsearch/v1?cx=40fb6dfab8dad4cfc&q=While+We+Were+Young+Kitchen+%26+Cocktails&searchType=image&num=1&start=1&imgType=photo&imgSize=LARGE&fileType=jpg&safe=off&key=AIzaSyDbFZ7wyVbIfcpwshoqUAQ5Q4CWvXdTLO4&alt=json returned "Internal error encountered.". Details: "[{'message': 'Internal error encountered.', 'domain': 'global', 'reason': 'backendError'}]">
+Error retrieving image URLs for 'Bea': HttpError: <HttpError 500 when requesting https://customsearch.googleapis.com/customsearch/v1?cx=40fb6dfab8dad4cfc&q=Bea&searchType=image&num=1&start=1&imgType=photo&imgSize=LARGE&fileType=jpg&safe=off&key=AIzaSyDbFZ7wyVbIfcpwshoqUAQ5Q4CWvXdTLO4&alt=json returned "Internal error encountered.". Details: "[{'message': 'Internal error encountered.', 'domain': 'global', 'reason': 'backendError'}]">
+Error retrieving image URLs for 'Kochi': HttpError: <HttpError 500 when requesting https://customsearch.googleapis.com/customsearch/v1?cx=40fb6dfab8dad4cfc&q=Kochi&searchType=image&num=1&start=1&imgType=photo&imgSize=LARGE&fileType=jpg&safe=off&key=AIzaSyDbFZ7wyVbIfcpwshoqUAQ5Q4CWvXdTLO4&alt=json returned "Internal error encountered.". Details: "[{'message': 'Internal error encountered.', 'domain': 'global', 'reason': 'backendError'}]">
+{
+  "result": [
+    {
+      "google_place_id": "ChIJq3tH0I5YwokRfL6Y8j8E6DM",
+      "name": "SEOUL SALON NYC",
+      "description": "Casual chic vibe for modern take on Korean cusine in a vibrant Ktown",
+      "lat": 40.748382926053,
+      "lng": -73.98661059915997,
+      "address": "28 W 33rd St, New York, NY 10001",
+      "price_level": 2,
+      "rating": 4.6,
+      "image_urls": [
+        "https://blog.resy.com/wp-content/uploads/2023/08/LKJ_2950-800x533.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Hortus NYC",
+      "description": "Fixed-price and \u00e0 la carte menus with elevated plating and dishes inspired by Asian comfort cuisine.",
+      "lat": 40.74575590760974,
+      "lng": -73.98560600324002,
+      "address": "271 5th Ave, New York, NY 10016",
+      "price_level": 2,
+      "rating": 4.5,
+      "image_urls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/19/e0/29/2f/dinner.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Osamil",
+      "description": "Roomy, casual dining room specializing in noodle soups & other classic Vietnamese dishes.",
+      "lat": 40.74717021835489,
+      "lng": -73.98652868316621,
+      "address": "5 W 31st St, New York, NY 10001",
+      "price_level": 2,
+      "rating": 4.6,
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/W--6hJWRPY0kmf_pPg1qcA/348s.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Gramercy Tavern",
+      "description": "Danny Meyer's Flatiron District tavern with a fixed-price-only dining room & a bustling bar area.",
+      "lat": 40.73870750476302,
+      "lng": -73.98842056919024,
+      "address": "42 E 20th St, New York, NY 10003",
+      "price_level": 4,
+      "rating": 4.6,
+      "image_urls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/15/ea/82/6e/gramercy-tavern.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Gotham Restaurant",
+      "description": "A West Village fixture still serving standout New American plates in a stylish yet relaxed setting.",
+      "lat": 40.73459735515778,
+      "lng": -73.99369419988109,
+      "address": "12 E 12th St, New York, NY 10003",
+      "price_level": 4,
+      "rating": 4.5,
+      "image_urls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/29/ce/c3/2c/main-dining-room.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Atoboy",
+      "description": "Korean restaurant serving a 4-course prix-fixe menu with a selection of wines in a minimalist space.",
+      "lat": 40.74396765556553,
+      "lng": -73.98444728891413,
+      "address": "43 E 28th St, New York, NY 10016",
+      "price_level": 2,
+      "rating": 4.5,
+      "image_urls": [
+        "https://static01.nyt.com/images/2017/05/10/dining/10REST-ATOBOY-slide-MTNI/10REST-ATOBOY-slide-MTNI-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "While We Were Young Kitchen & Cocktails",
+      "description": "Stylish, airy bar & restaurant presenting refined New American fare & inventive craft cocktails.",
+      "lat": 40.73481761323008,
+      "lng": -74.0025028808268,
+      "address": "183 W 10th St, New York, NY 10014",
+      "price_level": 3,
+      "rating": 4.3,
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/uMpDkOnPh1rD5R8TDg9w6w/348s.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Upland",
+      "description": "Spacious, casually chic brasserie with hearty dishes featuring Californian & Italian influences.",
+      "lat": 40.74205726730613,
+      "lng": -73.98460108790316,
+      "address": "345 Park Ave S, New York, NY 10010",
+      "price_level": 3,
+      "rating": 4.5,
+      "image_urls": [
+        "https://www.allaboutbirds.org/guide/assets/photo/301229901-480px.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Bea",
+      "description": "Intimate, brick-walled eatery & bar with handcrafted cocktails, eclectic small plates & a courtyard.",
+      "lat": 40.75991582311961,
+      "lng": -73.99235721151751,
+      "address": "403 W 43rd St, New York, NY 10036",
+      "price_level": 2,
+      "rating": 4.4,
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/uMpDkOnPh1rD5R8TDg9w6w/348s.jpg"
+      ]
+    },
+    {
+      "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
+      "name": "Kochi",
+      "description": "Sleek space serving multi course Korean tasting menu made from seasonal ingredients",
+      "lat": 40.76243954633442,
+      "lng": -73.99342628453569,
+      "address": "652 10th Ave, New York, NY 10036",
+      "price_level": 2,
+      "rating": 4.6,
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/uMpDkOnPh1rD5R8TDg9w6w/348s.jpg"
+      ]
+    }
+  ]
+}
+
