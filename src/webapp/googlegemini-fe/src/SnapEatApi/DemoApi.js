@@ -11,16 +11,16 @@ const SpotDessertBarId = "ChIJ0QCeh5tZwokRh9J_3uvSPjU";
 
 export const recommend = (formData) => {
     let query = `./recommend-sample.json`;
-    return simulateNetworkCall(query, recommendSample, 4000);
+    return simulateNetworkCall(query, recommendSample, 3500);
 }
 
 export const recommendByRestaurant = (restaurantId, userProfile) => {
     let query = `./spot-dessert-bar.json?restaurantId=${restaurantId}`;
     if (restaurantId !== SpotDessertBarId) {
-        return simulateNetworkCall(query, noMenuSample, 0);
+        return simulateNetworkCall(query, noMenuSample, 500);
     }
 
-    return simulateNetworkCall(query, dessertRecommendSample, 4000);
+    return simulateNetworkCall(query, dessertRecommendSample, 3500);
 }
 
 export const searchRestaurants = (searchPrompt, location, userProfile) => {
@@ -46,11 +46,11 @@ export const getTrendingRestaurants = (location) => {
 function simulateNetworkCallByQuery(query) {
     switch (query) {
         case './nearby-restaurants.json':
-            return simulateNetworkCall(query, nearbyRestaurantsSample, 3000);
+            return simulateNetworkCall(query, nearbyRestaurantsSample, 1000);
         case './saved-restaurants.json':
-            return simulateNetworkCall(query, savedRestaurantsSample, 1000);
+            return simulateNetworkCall(query, savedRestaurantsSample, 0);
         case `./trending-restaurants.json`:
-            return simulateNetworkCall(query, trendingRestaurantsSample, 1000);
+            return simulateNetworkCall(query, trendingRestaurantsSample, 0);
         case `./search-dessert-restaurants.json`:
             return simulateNetworkCall(query, searchRestaurantsSample, 3000);
         default:
