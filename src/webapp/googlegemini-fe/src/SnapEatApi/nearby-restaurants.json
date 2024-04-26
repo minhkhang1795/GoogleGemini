@@ -1,247 +1,217 @@
 {
   "result": [
     {
-      "google_place_id": "ChIJZ-wCRohYwokRvnOFofo8F7A",
-      "name": "Hotel Belleclaire",
-      "description": "",
-      "lat": 40.782425,
-      "lng": -73.9811603,
-      "address": "2175 Broadway, New York",
-      "price_level": null,
-      "rating": 4,
-      "image_urls": [],
-      "imageUrls": [
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5a/fe/49/hotel-belleclaire.jpg?w=700&h=-1&s=1"
-      ]
-    },
-    {
       "google_place_id": "ChIJq3tH0I5YwokRfL6Y8j8E6DM",
       "name": "Shake Shack Upper West Side",
-      "description": "",
+      "description": "Hip, counter-serve chain for gourmet takes on fast-food classics like burgers & frozen custard.",
       "lat": 40.78086709999999,
       "lng": -73.9765697,
       "address": "366 Columbus Avenue, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://assets-global.website-files.com/5d537d1201f72a56d4fd8c96/5d695d62d8ae7a7d8b43afbd_standard_2012M23.404.jpg"
       ]
     },
     {
       "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
       "name": "Jing Fong",
-      "description": "",
+      "description": "Cantonese restaurant draws crowds on weekends for dim sums.",
       "lat": 40.78288919999999,
       "lng": -73.9788567,
       "address": "380 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://static01.nyt.com/images/2019/06/26/t-magazine/food/jing-fong-slide-NIDA/jing-fong-slide-NIDA-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
       ]
     },
     {
       "google_place_id": "ChIJm17AB5pYwokRWLJ6lEtXKOA",
       "name": "The Central Park Boathouse",
-      "description": "",
+      "description": "American restaurant & bar notable for its prime lakeside setting in the middle of Central Park.",
       "lat": 40.7752927,
       "lng": -73.96876929999999,
       "address": "Park Drive North, East 72nd Street, New York",
       "price_level": 3,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://images.otstatic.com/prod1/54183377/3/large.jpg"
       ]
     },
     {
       "google_place_id": "ChIJJWjnqYhYwokRXKDyQj71TzA",
       "name": "Sarabeth's",
-      "description": "",
+      "description": "Classy chain serving American cuisine and creative cocktails, with a private dining option.",
       "lat": 40.78387970000001,
       "lng": -73.97742439999999,
       "address": "423 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.2,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.sarabeth.com/assets/images/Restaurants%20images/Park%20Ave%20South.jpg"
       ]
     },
     {
       "google_place_id": "ChIJFUX_0YtYwokRYh_7Fcn3opI",
       "name": "Alice's Tea Cup",
-      "description": "",
+      "description": "Literary-themed shop serving scones & sandwiches for teatime, ladies' lunches & birthday parties.",
       "lat": 40.77804099999999,
       "lng": -73.978683,
       "address": "102 West 73rd Street, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.westsiderag.com/wp-content/uploads/2020/12/IMG_3721.jpg"
       ]
     },
     {
       "google_place_id": "ChIJgw4RkYhYwokRhBFpraTWNwM",
       "name": "Blondies Sports",
-      "description": "",
+      "description": "Popular sports bar with big-screen TVs, barmaids & a pub food menu highlighted by wings.",
       "lat": 40.7832617,
       "lng": -73.9791073,
       "address": "212 West 79th Street, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://lasvegas.simpleviewcrm.com/images/listings/original_9714_Blondies-Sports-Bar-Grill-1.jpg"
       ]
     },
     {
       "google_place_id": "ChIJ8U_VmoZYwokR4g5HIK6dYso",
       "name": "5 Napkin Burger",
-      "description": "",
+      "description": "Modern bistro chain serving gourmet meat & veggie burgers.",
       "lat": 40.787122,
       "lng": -73.9780435,
       "address": "2315 Broadway, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://media-cdn.tripadvisor.com/media/photo-s/04/01/d5/ea/five-napkin-burger.jpg"
       ]
     },
     {
       "google_place_id": "ChIJ29UL34VYwokR1G92GClLcCE",
       "name": "Peacefood - Upper West Side",
-      "description": "",
+      "description": "Casual, stylish cafe with an arty vibe serving creative vegan fare, plus desserts & smoothies.",
       "lat": 40.785275,
       "lng": -73.977012,
       "address": "460 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://media.timeout.com/images/102718596/750/422/image.jpg"
       ]
     },
     {
       "google_place_id": "ChIJrXva_oJYwokROtv_EdGJgH0",
       "name": "Carmine's Italian Restaurant - Upper West Side",
-      "description": "",
+      "description": "Relaxed, family-friendly restaurant serving a menu of homestyle Southern Italian meals.",
       "lat": 40.7911087,
       "lng": -73.9739812,
       "address": "2450 Broadway, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://media-cdn.tripadvisor.com/media/photo-s/0f/87/d7/c8/photo0jpg.jpg"
       ]
     },
     {
       "google_place_id": "ChIJ_bV3X4hYwokRr6gTpaJMeVI",
       "name": "Stand Up NY",
-      "description": "",
+      "description": "Modest comedy club presenting young & seasoned performers plus occasional big names.",
       "lat": 40.78296239999999,
       "lng": -73.9802485,
       "address": "236 West 78th Street, New York",
       "price_level": 3,
       "rating": 4.2,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.spottedbylocals.com/newyork/files/stand-up-ny-new-york-by-ghd.jpg"
       ]
     },
     {
       "google_place_id": "ChIJZ996e4RYwokR2kEubU7CVhA",
       "name": "Barney Greengrass",
-      "description": "",
+      "description": "Jewish deli institution since 1908, known for smoked fish & not taking credit cards.",
       "lat": 40.7879654,
       "lng": -73.9745734,
       "address": "541 Amsterdam Avenue, New York",
       "price_level": 3,
       "rating": 4.4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://static01.nyt.com/images/2019/06/06/t-magazine/food/barney-greengrass-slide-67Y7/barney-greengrass-slide-67Y7-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
       ]
     },
     {
       "google_place_id": "ChIJqRPppYhYwokR1b3Al-cGgi0",
       "name": "Saravanaa Bhavan",
-      "description": "",
+      "description": "Long-running international chain serving up South Indian vegetarian dishes, including dosas.",
       "lat": 40.7835508,
       "lng": -73.9777266,
       "address": "413 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.2,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://media-cdn.tripadvisor.com/media/photo-s/12/66/dc/ed/thali.jpg"
       ]
     },
     {
       "google_place_id": "ChIJuxMTB4lYwokRzfHnU2YRcsM",
       "name": "Amsterdam Ale House",
-      "description": "",
+      "description": "No-frills brewpub with a sizable craft beer lineup, a bar food menu & several TVs airing sports.",
       "lat": 40.7814235,
       "lng": -73.9799412,
       "address": "340 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://images.squarespace-cdn.com/content/v1/569d5264841aba3e9734db38/1455679187156-5YVS92Z22Z5ZNTPOBL4P/ny_upper_westside_nightshots_09_amsterdam_ale_house_826.jpg?format=2500w"
       ]
     },
     {
       "google_place_id": "ChIJ35dPk4pYwokRbcEIZeGqtvg",
       "name": "Noi Due Cafe",
-      "description": "",
+      "description": "Kosher Italian fare & brick-oven pizzas are the focus of this eatery with indoor/outdoor seating.",
       "lat": 40.7849326,
       "lng": -73.97305949999999,
       "address": "491 Columbus Avenue, New York",
       "price_level": 3,
       "rating": 4.5,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.greatkosherrestaurants.com/wp-content/uploads/2023/08/139851227_NOI_DUE.jpg"
       ]
     },
     {
       "google_place_id": "ChIJz6FFoYZYwokRt03EmEnqlhQ",
       "name": "Deli Kasbah Kosher Grill",
-      "description": "",
+      "description": "Casual exposed-brick dining room featuring grilled Glatt kosher meats, burgers, BBQ, sushi & more.",
       "lat": 40.7879977,
       "lng": -73.9774279,
       "address": "Kosher Steak House Restaurant, 251 West 85th Street #3221, New York",
       "price_level": 3,
       "rating": 4.4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.greatkosherrestaurants.com/wp-content/uploads/2023/08/2036886042_kasbah2_Slide_2.jpg"
       ]
     },
     {
       "google_place_id": "ChIJRyfaCIZYwokRd1gVsI1fa0Q",
       "name": "The Gin Mill",
-      "description": "",
+      "description": "Fans (especially Florida Gators) cheer their teams on TV at this tavern with pub food & beer pong.",
       "lat": 40.784754,
       "lng": -73.977537,
       "address": "442 Amsterdam Avenue, New York",
       "price_level": 1,
       "rating": 4.3,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://media.timeout.com/images/100494089/750/422/image.jpg"
       ]
     },
     {
       "google_place_id": "ChIJc6GIBIZYwokRd_xjvFrHhbU",
       "name": "Jake's Dilemma",
-      "description": "",
+      "description": "Basic bar along the Amsterdam Avenue strip frequented by a young crowd for beer & foosball.",
       "lat": 40.7843586,
       "lng": -73.9777082,
       "address": "430 Amsterdam Avenue, New York",
@@ -254,14 +224,13 @@
     {
       "google_place_id": "ChIJOb-eH4VYwokRkyzosmvD_sk",
       "name": "Osteria Cotta",
-      "description": "",
+      "description": "Rustic Italian eatery serving small plates & pizza in a main-floor wine bar or a cozy upstairs room.",
       "lat": 40.7855246,
       "lng": -73.9726719,
       "address": "513 Columbus Avenue, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": [],
-      "imageUrls": [
+      "image_urls": [
         "https://www.glenwoodnyc.com/wp-content/uploads/2013/04/osteria-cotta-uws-italian.jpg"
       ]
     }
