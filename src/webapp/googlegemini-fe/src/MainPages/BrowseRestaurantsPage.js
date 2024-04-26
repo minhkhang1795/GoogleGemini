@@ -3,7 +3,6 @@ import {MDBTypography} from "mdb-react-ui-kit";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
-import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 import BrowseRestaurantsResultComponent from "./BrowseRestaurants/BrowseRestaurantsResultComponent";
 
 const BrowseRestaurantsPageEnum = {
@@ -16,7 +15,6 @@ class BrowseRestaurantsPage extends Component {
     state = {
         pageTitle: 'Find Restaurants',
         currentPage: BrowseRestaurantsPageEnum.Browse,
-        userProfile: {},
         restaurant: null,
         restaurantResultsCache: {}
     };
@@ -66,7 +64,8 @@ class BrowseRestaurantsPage extends Component {
                 </div>
 
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Browse && <div>
-                    <BrowseRestaurantsComponent setRestaurant={(restaurant) => this.setRestaurant(restaurant)}/>
+                    <BrowseRestaurantsComponent setRestaurant={(restaurant) => this.setRestaurant(restaurant)}
+                                                userProfile={this.props.userProfile}/>
                 </div>}
 
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>

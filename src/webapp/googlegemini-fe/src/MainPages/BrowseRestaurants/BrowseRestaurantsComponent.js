@@ -14,7 +14,6 @@ const RestaurantCategoryEnum = {
 class BrowseRestaurantsComponent extends Component {
     state = {
         pageTitle: 'Browse Restaurants',
-        userProfile: {},
         searchTerm: '',
         currentCategory: RestaurantCategoryEnum.Nearby,
         restaurantCategories: [RestaurantCategoryEnum.Nearby, RestaurantCategoryEnum.Saved, RestaurantCategoryEnum.Trending],
@@ -90,7 +89,7 @@ class BrowseRestaurantsComponent extends Component {
         } else if (category === RestaurantCategoryEnum.Trending) {
             this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
         } else if (category === RestaurantCategoryEnum.Search) {
-            this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', this.state.userProfile))
+            this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', this.props.userProfile))
         }
 
         this.setState({currentCategory: category});
