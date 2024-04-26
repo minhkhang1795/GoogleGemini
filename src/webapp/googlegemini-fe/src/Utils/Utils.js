@@ -1,4 +1,4 @@
-export const IsList = (array) => {
+export const IsArray = (array) => {
     if (array && array.constructor === Array && array.length > 0) {
         return true;
     }

@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
-import {IsInArray, IsList} from "../../Utils/Utils";
+import {IsInArray, IsArray} from "../../Utils/Utils";
 import LoadingComponent from "../../Utils/LoadingComponent";
-import {SearchRestaurants} from "../../SnapEatApi/ApiWrapper";
 
 const RestaurantCategoryEnum = {
     Nearby: 'Near Me',
@@ -27,11 +26,11 @@ class BrowseRestaurantsComponent extends Component {
 
     componentDidMount() {
         this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
-        this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
-        this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
+        this.updateDataForTab('savedResult', SnapEatApi.GetTrendingRestaurants(''));
+        this.updateDataForTab('trendingResult', SnapEatApi.GetNearbyRestaurants(''));
     }
 
-    updateDataForTab(tabName, updateFunction, force=false) {
+    updateDataForTab(tabName, updateFunction, force = false) {
         if (this.state[tabName].data && this.state[tabName].data.length > 0) {
             return;
         }
@@ -80,7 +79,7 @@ class BrowseRestaurantsComponent extends Component {
 
     getRestaurantsByCategory() {
         let result = this.getResultByCategory();
-        return IsList(result.data) ? result.data : [];
+        return IsArray(result.data) ? result.data : [];
     }
 
     changeCategory(category) {
@@ -126,7 +125,7 @@ class BrowseRestaurantsComponent extends Component {
                         </form>
                     </div>
                     <div className='responsive'>
-                    <div className='tabs ms-3'>
+                        <div className='tabs ms-3'>
                             {this.state.restaurantCategories.map((category) =>
                                 <MDBBtn key={category}
                                         rounded className='me-2 tab'
@@ -140,7 +139,8 @@ class BrowseRestaurantsComponent extends Component {
 
                     <div>
                         {!this.getResultByCategory().isLoading && this.getRestaurantsByCategory().length > 0 && this.getRestaurantsByCategory().map((place) =>
-                            <MDBCard className='m-3' key={place.name}>
+                            <MDBCard className='m-3' key={place.name}
+                                     onClick={() => this.props.setRestaurant(place)}>
                                 <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
                                               src={place.image_urls && place.image_urls.length > 0 ? place.image_urls[0] : ""}
                                               position='top'

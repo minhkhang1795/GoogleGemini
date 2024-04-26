@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
 import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
+import BrowseRestaurantsResultComponent from "./BrowseRestaurants/BrowseRestaurantsResultComponent";
 
 const BrowseRestaurantsPageEnum = {
     Browse: 'Browse',
@@ -16,10 +17,32 @@ class BrowseRestaurantsPage extends Component {
         pageTitle: 'Find Restaurants',
         currentPage: BrowseRestaurantsPageEnum.Browse,
         userProfile: {},
-        restaurantResult: {}
+        restaurant: null,
+        restaurantResultsCache: {}
     };
 
     componentDidMount() {
+    }
+
+    getPageTitle() {
+        if (this.state.currentPage === BrowseRestaurantsPageEnum.Result && this.state.restaurant?.name) {
+            return this.state.restaurant.name.substring(0, 15);
+        }
+
+        return this.state.pageTitle;
+    }
+
+    setRestaurant(restaurant) {
+        console.log("Recommending menu for restaurant", restaurant);
+        this.setState({restaurant: restaurant, currentPage: BrowseRestaurantsPageEnum.Result});
+    }
+
+    updateRestaurantResultsCache(id, restaurantResult) {
+        this.setState(prevState => {
+            let cache = prevState.restaurantResultsCache;
+            cache[id] = restaurantResult;
+            return {restaurantResultsCache: cache};
+        });
     }
 
     render() {
@@ -38,17 +61,19 @@ class BrowseRestaurantsPage extends Component {
                     </div>
                     <MDBTypography tag='div' className='text-center display-6 p-3 border-bottom text-dark'
                                    style={{fontWeight: '700'}}>
-                        {this.state.pageTitle}
+                        {this.getPageTitle()}
                     </MDBTypography>
                 </div>
 
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Browse && <div>
-                    <BrowseRestaurantsComponent />
+                    <BrowseRestaurantsComponent setRestaurant={(restaurant) => this.setRestaurant(restaurant)}/>
                 </div>}
 
-                {/*{this.state.currentPage === BrowseRestaurantsPage.Result && <div>*/}
-                {/*    <SnapMenuResultComponent result={this.state.restaurantResult}/>*/}
-                {/*</div>}*/}
+                {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>
+                    <BrowseRestaurantsResultComponent restaurantId={this.state.restaurant.google_place_id}
+                                                      restaurantResultsCache={this.state.restaurantResultsCache}
+                                                      updateRestaurantResultsCache={(id, r) => this.updateRestaurantResultsCache(id, r)}/>
+                </div>}
             </div>
         )
     }

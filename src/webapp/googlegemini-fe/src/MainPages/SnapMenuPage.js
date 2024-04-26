@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
+import {IsArray} from "../Utils/Utils";
 
 const SnapMenuPageEnum = {
     Snap: 'Snap',
@@ -50,7 +51,7 @@ class SnapMenuPage extends Component {
         this.setState({showLoading: true, currentPage: SnapMenuPageEnum.Result});
         this.setState({previewImage: null, previewImageFile: null});
         if (this.state.result.isLoading) {
-            this.setState({result: {data: [], error: 'Please wait until your previous request to complete before sending a new one.', isLoading: false}});
+            this.setState({result: {data: [], error: 'Please wait until your previous request to complete before sending a new one.', isLoading: true}});
             return;
         }
 
@@ -62,13 +63,13 @@ class SnapMenuPage extends Component {
                 return;
             }
 
-            if (data && data.result) {
+            console.log(data)
+            if (data && IsArray(data.result)) {
                 this.setState({result: {data: data.result, error: '', isLoading: false}});
                 return;
             }
 
             let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-            console.log(data)
             this.setState({result: {data: [], error: error, isLoading: false}});
         }).catch(ex => {
             console.log(ex);

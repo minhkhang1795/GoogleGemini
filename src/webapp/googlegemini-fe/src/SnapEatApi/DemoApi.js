@@ -1,14 +1,26 @@
 import recommendSample from "./recommend-sample.json"
+import dessertRecommendSample from "./recommend-spot-dessert-bar.json"
+import noMenuSample from "./recommend-no-menu.json"
 import nearbyRestaurantsSample from "./nearby-restaurants.json"
 import savedRestaurantsSample from "./saved-restaurants.json"
 import trendingRestaurantsSample from "./trending-restaurants.json"
 import searchRestaurantsSample from "./search-dessert-restaurants.json"
 import {FetchWithCatch} from "../Utils/Utils";
 
+const SpotDessertBarId = "ChIJ0QCeh5tZwokRh9J_3uvSPjU";
 
 export const recommend = (formData) => {
     let query = `./recommend-sample.json`;
     return simulateNetworkCall(query, recommendSample, 4000);
+}
+
+export const recommendByRestaurant = (restaurantId, userProfile) => {
+    let query = `./spot-dessert-bar.json?restaurantId=${restaurantId}`;
+    if (restaurantId !== SpotDessertBarId) {
+        return simulateNetworkCall(query, noMenuSample, 0);
+    }
+
+    return simulateNetworkCall(query, dessertRecommendSample, 4000);
 }
 
 export const searchRestaurants = (searchPrompt, location, userProfile) => {

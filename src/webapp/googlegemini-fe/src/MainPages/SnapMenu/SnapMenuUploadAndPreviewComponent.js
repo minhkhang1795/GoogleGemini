@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../fileupload.css';
-import {MDBBtn, MDBCol, MDBRow, MDBTypography} from "mdb-react-ui-kit";
+import {MDBBtn, MDBTypography} from "mdb-react-ui-kit";
 
 
 class SnapMenuUploadAndPreviewComponent extends Component {
@@ -18,9 +18,9 @@ class SnapMenuUploadAndPreviewComponent extends Component {
 
         return (
             <div>
-                <div className="file-upload-wrapper">
+                {!previewImage && <div className="file-upload-wrapper">
                     <div className="file-upload p-5" style={{height: "80vh"}}>
-                        {!previewImage &&
+
                             <div className='w-100 h-100' style={{border: '2px dotted #000'}}>
                                 <div className="file-upload-message">
                                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
@@ -36,9 +36,9 @@ class SnapMenuUploadAndPreviewComponent extends Component {
                                 <input type="file" id="menu-input-file" className="file-upload-input"
                                        title="Upload your menu image" accept="image/*"
                                        onChange={(e) => this.props.handleFileChange(e)}/>
-                            </div>}
+                            </div>
                     </div>
-                </div>
+                </div>}
 
                 {/* Preview component covers the entire screen */}
                 {previewImage &&

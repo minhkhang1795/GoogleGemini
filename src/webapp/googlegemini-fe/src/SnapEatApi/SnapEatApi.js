@@ -10,6 +10,11 @@ export const recommend = (formData) => {
         .then(res => res.json())
 }
 
+export const recommendByRestaurant = (restaurantId, userProfile) => {
+    let query = `${domain}/recommendByRestaurant/?restaurantId=${restaurantId}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
+}
+
 export const searchRestaurants = (searchPrompt, location, userProfile) => {
     let query = `${domain}/restaurants/search/?searchPrompt=${searchPrompt}&location=${location}`;
     return FetchWithCatch(query, fetchDataFromNetwork);
