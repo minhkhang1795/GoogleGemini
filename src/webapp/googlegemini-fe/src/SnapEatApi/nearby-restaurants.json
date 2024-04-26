@@ -9,7 +9,10 @@
       "address": "2175 Broadway, New York",
       "price_level": null,
       "rating": 4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5a/fe/49/hotel-belleclaire.jpg?w=700&h=-1&s=1"
+      ]
     },
     {
       "google_place_id": "ChIJq3tH0I5YwokRfL6Y8j8E6DM",
@@ -20,7 +23,10 @@
       "address": "366 Columbus Avenue, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://assets-global.website-files.com/5d537d1201f72a56d4fd8c96/5d695d62d8ae7a7d8b43afbd_standard_2012M23.404.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJJWt4pCdawokRFcDubKrCgRE",
@@ -31,7 +37,10 @@
       "address": "380 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://static01.nyt.com/images/2019/06/26/t-magazine/food/jing-fong-slide-NIDA/jing-fong-slide-NIDA-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+      ]
     },
     {
       "google_place_id": "ChIJm17AB5pYwokRWLJ6lEtXKOA",
@@ -42,7 +51,10 @@
       "address": "Park Drive North, East 72nd Street, New York",
       "price_level": 3,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://images.otstatic.com/prod1/54183377/3/large.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJJWjnqYhYwokRXKDyQj71TzA",
@@ -53,7 +65,10 @@
       "address": "423 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.2,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.sarabeth.com/assets/images/Restaurants%20images/Park%20Ave%20South.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJFUX_0YtYwokRYh_7Fcn3opI",
@@ -64,7 +79,10 @@
       "address": "102 West 73rd Street, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.westsiderag.com/wp-content/uploads/2020/12/IMG_3721.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJgw4RkYhYwokRhBFpraTWNwM",
@@ -75,7 +93,10 @@
       "address": "212 West 79th Street, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://lasvegas.simpleviewcrm.com/images/listings/original_9714_Blondies-Sports-Bar-Grill-1.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJ8U_VmoZYwokR4g5HIK6dYso",
@@ -86,7 +107,10 @@
       "address": "2315 Broadway, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/04/01/d5/ea/five-napkin-burger.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJ29UL34VYwokR1G92GClLcCE",
@@ -97,7 +121,10 @@
       "address": "460 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://media.timeout.com/images/102718596/750/422/image.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJrXva_oJYwokROtv_EdGJgH0",
@@ -108,7 +135,10 @@
       "address": "2450 Broadway, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/87/d7/c8/photo0jpg.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJ_bV3X4hYwokRr6gTpaJMeVI",
@@ -119,18 +149,10 @@
       "address": "236 West 78th Street, New York",
       "price_level": 3,
       "rating": 4.2,
-      "image_urls": []
-    },
-    {
-      "google_place_id": "ChIJSc_3GIVYwokRh6OzVnCnh6g",
-      "name": "Prohibition",
-      "description": "",
-      "lat": 40.7852428,
-      "lng": -73.972764,
-      "address": "503 Columbus Avenue, New York",
-      "price_level": 2,
-      "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.spottedbylocals.com/newyork/files/stand-up-ny-new-york-by-ghd.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJZ996e4RYwokR2kEubU7CVhA",
@@ -141,7 +163,10 @@
       "address": "541 Amsterdam Avenue, New York",
       "price_level": 3,
       "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://static01.nyt.com/images/2019/06/06/t-magazine/food/barney-greengrass-slide-67Y7/barney-greengrass-slide-67Y7-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+      ]
     },
     {
       "google_place_id": "ChIJqRPppYhYwokR1b3Al-cGgi0",
@@ -152,7 +177,10 @@
       "address": "413 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.2,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/12/66/dc/ed/thali.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJuxMTB4lYwokRzfHnU2YRcsM",
@@ -163,7 +191,10 @@
       "address": "340 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://images.squarespace-cdn.com/content/v1/569d5264841aba3e9734db38/1455679187156-5YVS92Z22Z5ZNTPOBL4P/ny_upper_westside_nightshots_09_amsterdam_ale_house_826.jpg?format=2500w"
+      ]
     },
     {
       "google_place_id": "ChIJ35dPk4pYwokRbcEIZeGqtvg",
@@ -174,7 +205,10 @@
       "address": "491 Columbus Avenue, New York",
       "price_level": 3,
       "rating": 4.5,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.greatkosherrestaurants.com/wp-content/uploads/2023/08/139851227_NOI_DUE.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJz6FFoYZYwokRt03EmEnqlhQ",
@@ -185,7 +219,10 @@
       "address": "Kosher Steak House Restaurant, 251 West 85th Street #3221, New York",
       "price_level": 3,
       "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.greatkosherrestaurants.com/wp-content/uploads/2023/08/2036886042_kasbah2_Slide_2.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJRyfaCIZYwokRd1gVsI1fa0Q",
@@ -196,7 +233,10 @@
       "address": "442 Amsterdam Avenue, New York",
       "price_level": 1,
       "rating": 4.3,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://media.timeout.com/images/100494089/750/422/image.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJc6GIBIZYwokRd_xjvFrHhbU",
@@ -207,7 +247,9 @@
       "address": "430 Amsterdam Avenue, New York",
       "price_level": 2,
       "rating": 4,
-      "image_urls": []
+      "image_urls": [
+        "https://nyc.thedrinknation.com/images/bars/jakesdilemma.jpg"
+      ]
     },
     {
       "google_place_id": "ChIJOb-eH4VYwokRkyzosmvD_sk",
@@ -218,7 +260,11 @@
       "address": "513 Columbus Avenue, New York",
       "price_level": 2,
       "rating": 4.4,
-      "image_urls": []
+      "image_urls": [],
+      "imageUrls": [
+        "https://www.glenwoodnyc.com/wp-content/uploads/2013/04/osteria-cotta-uws-italian.jpg"
+      ]
     }
   ]
 }
+
