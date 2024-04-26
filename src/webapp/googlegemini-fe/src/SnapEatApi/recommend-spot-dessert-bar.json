@@ -1,76 +1,103 @@
 {
   "result": [
     {
-      "name": "DURIAN DE-LUXE",
-      "description": "crispy tart, jackfruit, nata de coco, tapioca pudding. durian soft cheesecake, passion fruit foam",
-      "category": "Dessert",
-      "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The user strongly dislikes fruity flavor. Too many fruits and fruit foams in this dish which makes it impossible for the user to enjoy it."
-    },
-    {
-      "name": "PITAYA BOWL",
-      "description": "crunchy cookie shell, fresh dragon fruit, strawberry jam, chiffon cake, coconut cream",
-      "category": "Dessert",
-      "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The user strongly dislikes fruity flavor. This dish contains too much fruit, which is not suitable for the user's preference"
-    },
-    {
-      "name": "WATERMELON DACQUOISE",
-      "description": "pumpkin seeds, diplomat cream, coconut custard, rose syrup infused watermelon cake, fresh strawberries",
-      "category": "Dessert",
-      "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The user strongly dislikes fruity flavor. This dish contains too much fruit, which is not suitable for the user's preference.."
-    },
-    {
-      "name": "RED WINE HIBBY",
-      "description": "steamed hibiscus cake, mixed berries, hibiscus red wine vinegar caramel sauce, coconut sorbet",
-      "category": "Dessert",
-      "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The drink contains red wine, which is not suitable for the user's preference."
-    },
-    {
-      "name": "HARVEST",
-      "description": "layers of strawberries, soft cheesecake, chiffon cake, whipped cream, oreo crumbs, earl grey milk tea, rasberry sorbet",
-      "category": "Dessert",
-      "price": "$14.45",
-      "match_score": 80,
-      "match_explanation": "The dish is sweet, which is one of the user's preferences. The dish also has a buttery flavor, which is another of the user's preferences. The flavor of strawberries and earl grey milk tea might be too extreme, but the dish contains at least one of the user's preferred flavors, so the score is scaled down by 20%."
-    },
-    {
-      "name": "GOLDEN TOAST",
-      "description": "honey buttered toast, strawberries, whipped cream, honey, powered sugar, cookie crumbs, condensed milk ice cream",
+      "name": "Durian De-luxe",
+      "description": "Crispy tart, jackfruit, nata de coco, tapioca pudding. durian soft cheesecake, passion fruit foam",
       "category": "Dessert",
       "price": "$14.45",
       "match_score": 40,
-      "match_explanation": "The dish is sweet, which is one of the user's preferences. The dish also has a buttery flavor, which is another of the user's preferences. The flavor of strawberries might be too extreme, but the dish contains at least one of the user's preferred flavors, so the score is scaled down by 20%."
+      "match_explanation": "The dish has an interesting combination of textures and flavors, which may appeal to the user.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/FeM7RKppfo5Cv9Hx3zUPoQ/o.jpg"
+      ]
     },
     {
-      "name": "MATCHA LAVA",
-      "description": "dark chocolate cake, matcha powder. chocolate pearls, cookie crumbs green tea ice cream",
+      "name": "Pitaya Bowl",
+      "description": "Crunchy cookie shell, fresh dragon fruit, strawberry jam, chiffon cake, coconut cream",
       "category": "Dessert",
       "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The user strongly dislikes chocolate flavor, which makes this dish unsuitable for the user."
+      "match_score": 30,
+      "match_explanation": "The dish offers a variety of flavors and textures, which could be enjoyable for the user.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/lcgc3fC-sJAY_KobH-Vw-A/o.jpg"
+      ]
     },
     {
-      "name": "MILKY PUFF",
-      "description": "chour-puff pastry, broken burana, white chocolate honeycomb corn flakes, condensed milk ice cream",
+      "name": "Watermelon Dacquoise",
+      "description": "Pumpkin seeds, diplomat cream, coconut custard, rose syrup infused watermelon cake, fresh strawberries",
       "category": "Dessert",
       "price": "$14.45",
-      "match_score": 0,
-      "match_explanation": "The dish contains chocolate flavor, which is not suitable for the user's preference."
+      "match_score": 35,
+      "match_explanation": "The dish features a unique combination of ingredients, including rose syrup infused watermelon cake, which might intrigue the user.",
+      "image_urls": [
+        "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/94673360-1070-4A57-B265-9E1D26CDE5FF/Derivates/0B248865-221A-4B9A-BEDB-86D4809B6A30.jpg"
+      ]
     },
     {
-      "name": "COOKIE CAMP",
-      "description": "fresh half baked marshmallow cookie, pretzels, cookie crumbs served with condensed milk ice cream",
+      "name": "Red Wine Hibby",
+      "description": "Steamed hibiscus cake, mixed berries, hibiscus red wine vinegar caramel sauce, coconut sorbet",
+      "category": "Dessert",
+      "price": "$14.45",
+      "match_score": 70,
+      "match_explanation": "The dish offers a refreshing blend of flavors with hibiscus and mixed berries, which could be pleasant for the user.",
+      "image_urls": [
+        "https://thealmondeater.com/wp-content/uploads/2017/09/Mini-Vegan-Chocolate-Hibiscus-Cake-2.jpg"
+      ]
+    },
+    {
+      "name": "Harvest",
+      "description": "Layers of strawberries, soft cheesecake, chiffon cake, whipped cream, oreo crumbs, earl grey milk tea, rasberry sorbet",
+      "category": "Dessert",
+      "price": "$14.45",
+      "match_score": 90,
+      "match_explanation": "The dish encompasses a delightful combination of flavors and textures, including sweet strawberries and creamy cheesecake, which align with the user's preferences.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/Yze_44LexvqV5d2JTldAlw/o.jpg"
+      ]
+    },
+    {
+      "name": "Golden Toast",
+      "description": "Honey buttered toast, strawberries, whipped cream, honey, powered sugar, cookie crumbs, condensed milk ice cream",
       "category": "Dessert",
       "price": "$14.45",
       "match_score": 60,
-      "match_explanation": "The dish contains cookie, which resembles buttery flavor. The dish is also sweet. Both are the user's preferences."
+      "match_explanation": "The dish offers a delightful mix of sweet and buttery flavors, with strawberries complementing the overall taste, which could be pleasing for the user.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/e4aAw_zHoZjpFOvNJ1-c_w/o.jpg"
+      ]
+    },
+    {
+      "name": "Matcha Lava",
+      "description": "Dark chocolate cake, matcha powder. chocolate pearls, cookie crumbs green tea ice cream",
+      "category": "Dessert",
+      "price": "$14.45",
+      "match_score": 0,
+      "match_explanation": "The user strongly dislikes chocolate flavor, which makes this dish unsuitable for the user.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/6TrZF_F5T7tb6ATHjdVZPg/o.jpg"
+      ]
+    },
+    {
+      "name": "Milky Puff",
+      "description": "Chour-puff pastry, broken burana, white chocolate honeycomb corn flakes, condensed milk ice cream",
+      "category": "Dessert",
+      "price": "$14.45",
+      "match_score": 0,
+      "match_explanation": "The dish contains chocolate flavor, which is not suitable for the user's preference.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/ZdSQyzLveuf_D-qb-IWakw/o.jpg"
+      ]
+    },
+    {
+      "name": "Cookie Camp",
+      "description": "Fresh half baked marshmallow cookie, pretzels, cookie crumbs served with condensed milk ice cream",
+      "category": "Dessert",
+      "price": "$14.45",
+      "match_score": 70,
+      "match_explanation": "The dish presents a delightful mix of textures with the marshmallow cookie and cookie crumbs, along with the sweetness of condensed milk ice cream, which could appeal to the user.",
+      "image_urls": [
+        "https://s3-media0.fl.yelpcdn.com/bphoto/ObUBS1malyPEUR2NPkIyCw/o.jpg"
+      ]
     }
   ]
 }

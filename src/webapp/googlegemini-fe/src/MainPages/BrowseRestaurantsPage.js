@@ -26,7 +26,7 @@ class BrowseRestaurantsPage extends Component {
 
     getPageTitle() {
         if (this.state.currentPage === BrowseRestaurantsPageEnum.Result && this.state.restaurant?.name) {
-            return this.state.restaurant.name.substring(0, 15);
+            return this.state.restaurant.name.substring(0, 16);
         }
 
         return this.state.pageTitle;

@@ -13,6 +13,7 @@ import {
 import LoadingComponent from "../../Utils/LoadingComponent";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
 import {IsArray} from "../../Utils/Utils";
+import {FilterItems} from "../../SnapEatApi/ApiUtils";
 
 
 class BrowseRestaurantsResultComponent extends Component {
@@ -41,24 +42,17 @@ class BrowseRestaurantsResultComponent extends Component {
         SnapEatApi.RecommendByRestaurant(id).then(data => {
             console.log(data);
             if (data && IsArray(data.result)) {
-                this.props.updateRestaurantResultsCache(id, {data: data.result, error: '', isLoading: false})
+                this.props.updateRestaurantResultsCache(id, {data: FilterItems(data.result), error: '', isLoading: false})
                 return;
             }
 
             let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-            this.props.updateRestaurantResultsCache(id, {
-                data: [],
-                error: error,
-                errorCode: data.errorCode,
-                isLoading: false
-            });
+            this.props.updateRestaurantResultsCache(id,
+                {data: [], error: error, errorCode: data.errorCode, isLoading: false});
         }).catch(ex => {
             console.log(ex);
-            this.props.updateRestaurantResultsCache(id, {
-                data: [],
-                error: 'Server is busy right now. Please try again!',
-                isLoading: false
-            });
+            this.props.updateRestaurantResultsCache(id,
+                {data: [], error: 'Server is busy right now. Please try again!', isLoading: false});
         });
     }
 
@@ -132,7 +126,7 @@ class BrowseRestaurantsResultComponent extends Component {
                                 <MDBCard className='m-3' key={item.name}
                                          onClick={() => this.popUpItemDetails(item)}>
                                     <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
-                                                  src={item.imag_urls && item.imag_urls.length > 0 ? item.imag_urls[0] : ""}
+                                                  src={item.image_urls && item.image_urls.length > 0 ? item.image_urls[0] : ""}
                                                   position='top'
                                                   alt={item.name}/>
                                     <MDBCardBody>
@@ -181,7 +175,7 @@ class BrowseRestaurantsResultComponent extends Component {
                     <MDBModalDialog centered scrollable>
                         <MDBModalContent>
                             <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
-                                          src={this.state.currentItem?.imag_urls && this.state.currentItem?.imag_urls.length > 0 ? this.state.currentItem?.imag_urls[0] : ""}
+                                          src={this.state.currentItem?.image_urls && this.state.currentItem?.image_urls.length > 0 ? this.state.currentItem?.image_urls[0] : ""}
                                           position='top'
                                           alt={this.state.currentItem?.name}/>
                             {/*<MDBBtn className='btn-close' color='none' onClick={() => this.toggleModal()}></MDBBtn>*/}
