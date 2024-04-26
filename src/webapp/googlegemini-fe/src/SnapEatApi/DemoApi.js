@@ -1,7 +1,7 @@
 import recommendSample from "./recommend-sample.json"
 import nearbyRestaurantsSample from "./nearby-restaurants.json"
-import savedRestaurantsSample from "./nearby-restaurants.json"
-import trendingRestaurantsSample from "./nearby-restaurants.json"
+import savedRestaurantsSample from "./saved-restaurants.json"
+import trendingRestaurantsSample from "./trending-restaurants.json"
 import {FetchWithCatch} from "../Utils/Utils";
 
 

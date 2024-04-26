@@ -9,7 +9,7 @@
       "address": "13 St Marks Pl, New York, NY 10003",
       "price_level": "2",
       "rating": 4.5,
-      "image_urls": [https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/images/CarinaFinn_CookieCAmp_SpotDessertBar_ig7hon]
+      "image_urls": ["https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/images/CarinaFinn_CookieCAmp_SpotDessertBar_ig7hon"]
     },
     {
       "google_place_id": "ChIJP0KOWoxZwokRmvPiQAIaH1A",
@@ -20,7 +20,7 @@
       "address": "189 Spring St, New York, NY 10012",
       "price_level": "2",
       "rating": 4.3,
-      "image_urls": [https://www.dominiqueansel.com/wp-content/uploads/2018/07/soho.jpg]
+      "image_urls": ["https://www.dominiqueansel.com/wp-content/uploads/2018/07/soho.jpg"]
     },
     {
       "google_place_id": "ChIJM7IS9YVZwokRRglCG_PV92E",
@@ -31,7 +31,7 @@
       "address": "246 Mott St, New York, NY 10012",
       "price_level": "2",
       "rating": 4.0,
-      "image_urls": [https://milkbarstore.com/cdn/shop/files/interior.jpg?format=pjpg&v=1614291632&width=1440]
+      "image_urls": ["https://milkbarstore.com/cdn/shop/files/interior.jpg?format=pjpg&v=1614291632&width=1440"]
     },
     {
       "google_place_id": "ChIJdXpUxMtZwokRq904Bbqnuw0",
@@ -42,18 +42,18 @@
       "address": "340 Lafayette St, New York, NY 10012",
       "price_level": "2",
       "rating": 4.7,
-      "image_urls": [https://www.modernhoney.com/wp-content/uploads/2015/12/Levain-Bakery-Chocolate-Chip-Copycat-Cookie-Recipe-3-1200x1020.jpg]
+      "image_urls": ["https://www.modernhoney.com/wp-content/uploads/2015/12/Levain-Bakery-Chocolate-Chip-Copycat-Cookie-Recipe-3-1200x1020.jpg"]
     },
     {
       "google_place_id": "ChIJaeKcEaRZwokRcllXm5cM7J0",
-      "name of the place": "Eataly NYC",
+      "name of the place": "Eataly NYC Flatiron",
       "description of the place": "Italian marketplace with a variety of vendors selling prepared foods, groceries, and household goods. Not a dessert place specifically, but offers a great selection of Italian desserts.",
       "latitude": 40.74342296806882,
       "longitude": -73.98996802375184,
       "address": "200 Fifth Ave, New York, NY 10010",
       "price_level": "2",
       "rating": 4.5,
-      "image_urls": 
+      "image_urls": ["https://th.bing.com/th?id=OLC.zDye4YXs6Rb3PQ480x360&w=210&h=140&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"]
     }
   ]
 }
