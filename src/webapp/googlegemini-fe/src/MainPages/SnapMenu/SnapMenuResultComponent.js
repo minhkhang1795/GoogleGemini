@@ -22,10 +22,10 @@ class SnapMenuResultComponent extends Component {
                 }
             }
         }
-        let uniqueCategories = Array.from(categories);
-        uniqueCategories.unshift("All"); // Add "All" to the beginning of the array
+        let categoriesWithAll = Array.from(categories);
+        categoriesWithAll.unshift("All"); // Add "All" to the beginning of the array
 
-        return uniqueCategories;
+        return categoriesWithAll;
     }
 
     getItemsByCategory(items) {

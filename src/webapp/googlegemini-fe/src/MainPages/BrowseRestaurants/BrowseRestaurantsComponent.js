@@ -1,24 +1,28 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
-import {IsList} from "../../Utils/Utils";
+import {IsInArray, IsList} from "../../Utils/Utils";
 import LoadingComponent from "../../Utils/LoadingComponent";
+import {SearchRestaurants} from "../../SnapEatApi/ApiWrapper";
 
 const RestaurantCategoryEnum = {
     Nearby: 'Near Me',
     Saved: 'Saved',
-    Trending: 'Trending'
+    Trending: 'Trending',
+    Search: 'Search'
 }
 
 class BrowseRestaurantsComponent extends Component {
     state = {
         pageTitle: 'Browse Restaurants',
         userProfile: {},
+        searchTerm: '',
         currentCategory: RestaurantCategoryEnum.Nearby,
         restaurantCategories: [RestaurantCategoryEnum.Nearby, RestaurantCategoryEnum.Saved, RestaurantCategoryEnum.Trending],
         nearbyResult: {data: [], error: null, isLoading: false},
         savedResult: {data: [], error: null, isLoading: false},
         trendingResult: {data: [], error: null, isLoading: false},
+        searchResult: {data: [], error: null, isLoading: false},
     };
 
     componentDidMount() {
@@ -67,8 +71,10 @@ class BrowseRestaurantsComponent extends Component {
             return this.state.nearbyResult;
         } else if (this.state.currentCategory === RestaurantCategoryEnum.Saved) {
             return this.state.savedResult;
-        } else {
+        } else if (this.state.currentCategory === RestaurantCategoryEnum.Trending) {
             return this.state.trendingResult;
+        } else {
+            return this.state.searchResult;
         }
     }
 
@@ -84,9 +90,29 @@ class BrowseRestaurantsComponent extends Component {
             this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
         } else if (category === RestaurantCategoryEnum.Trending) {
             this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
+        } else if (category === RestaurantCategoryEnum.Search) {
+            this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', this.state.userProfile))
         }
 
         this.setState({currentCategory: category});
+    }
+
+    onSearchSubmit(e) {
+        e.preventDefault();
+        if (!e.target[0] || !e.target[0].value) {
+            return;
+        }
+
+        console.log('Search term:', e.target[0].value);
+        this.setState({searchTerm: e.target[0].value});
+        this.setState(prevState => {
+            if (IsInArray(prevState.restaurantCategories, RestaurantCategoryEnum.Search))
+                return;
+            const newCategories = prevState.restaurantCategories;
+            newCategories.push(RestaurantCategoryEnum.Search);
+            return {restaurantCategories: newCategories};
+        });
+        this.changeCategory(RestaurantCategoryEnum.Search);
     }
 
     render() {
@@ -94,10 +120,13 @@ class BrowseRestaurantsComponent extends Component {
             <div style={{overflowY: 'hidden'}}>
                 <div>
                     <div className='m-3'>
-                        <input className="form-control rounded-pill" placeholder="Search"/>
+                        <form noValidate autoComplete="off" onSubmit={(e) => this.onSearchSubmit(e)}>
+                            <input className="form-control rounded-pill" placeholder="Search" minLength="4"
+                                   maxLength="50"/>
+                        </form>
                     </div>
                     <div className='responsive'>
-                        <div className='tabs ms-3'>
+                    <div className='tabs ms-3'>
                             {this.state.restaurantCategories.map((category) =>
                                 <MDBBtn key={category}
                                         rounded className='me-2 tab'

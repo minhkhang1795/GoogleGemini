@@ -16,6 +16,14 @@ class App extends Component {
     };
 
     componentDidMount() {
+        caches.open('SnapEatCache')
+            .then(cache => {
+                cache.keys().then(keys => {
+                    keys.forEach(key => {
+                        cache.delete(key);
+                    });
+                });
+            });
     }
 
     handleSkipProfile() {

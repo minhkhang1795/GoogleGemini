@@ -7,6 +7,7 @@ const demo = searchParams.get('demo') === 'true';
 const api = demo ? TestApi : SnapEatApi;
 
 export const Recommend = api.recommend;
+export const SearchRestaurants = api.searchRestaurants;
 export const GetNearbyRestaurants = api.getNearbyRestaurants;
 export const GetSavedRestaurants = api.getSavedRestaurants;
 export const GetTrendingRestaurants = api.getTrendingRestaurants;

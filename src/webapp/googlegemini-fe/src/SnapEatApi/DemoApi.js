@@ -2,12 +2,18 @@ import recommendSample from "./recommend-sample.json"
 import nearbyRestaurantsSample from "./nearby-restaurants.json"
 import savedRestaurantsSample from "./saved-restaurants.json"
 import trendingRestaurantsSample from "./trending-restaurants.json"
+import searchRestaurantsSample from "./search-dessert-restaurants.json"
 import {FetchWithCatch} from "../Utils/Utils";
 
 
 export const recommend = (formData) => {
     let query = `./recommend-sample.json`;
-    return simulateNetworkCall(query, recommendSample, 3000);
+    return simulateNetworkCall(query, recommendSample, 4000);
+}
+
+export const searchRestaurants = (searchPrompt, location, userProfile) => {
+    let query = `./search-dessert-restaurants.json`;
+    return FetchWithCatch(query, simulateNetworkCallByQuery);
 }
 
 export const getNearbyRestaurants = (location) => {
@@ -33,6 +39,8 @@ function simulateNetworkCallByQuery(query) {
             return simulateNetworkCall(query, savedRestaurantsSample, 1000);
         case `./trending-restaurants.json`:
             return simulateNetworkCall(query, trendingRestaurantsSample, 1000);
+        case `./search-dessert-restaurants.json`:
+            return simulateNetworkCall(query, searchRestaurantsSample, 3000);
         default:
             return simulateNetworkCall(query, recommendSample, 3000);
     }

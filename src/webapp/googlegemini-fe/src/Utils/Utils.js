@@ -1,7 +1,11 @@
-export const IsList = (list) => {
-    if (list && list.constructor === Array && list.length > 0) {
+export const IsList = (array) => {
+    if (array && array.constructor === Array && array.length > 0) {
         return true;
     }
+}
+
+export const IsInArray = (array, value) => {
+    return array.indexOf(value) > -1;
 }
 
 export const FetchWithCatch = (query, fetchCall) => {

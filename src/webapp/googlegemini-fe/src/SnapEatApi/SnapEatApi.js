@@ -10,6 +10,11 @@ export const recommend = (formData) => {
         .then(res => res.json())
 }
 
+export const searchRestaurants = (searchPrompt, location, userProfile) => {
+    let query = `${domain}/restaurants/search/?searchPrompt=${searchPrompt}&location=${location}`;
+    return FetchWithCatch(query, fetchDataFromNetwork);
+}
+
 export const getNearbyRestaurants = (location) => {
     let query = `${domain}/restaurants/nearby/?location=${location}`;
     return FetchWithCatch(query, fetchDataFromNetwork);
@@ -22,11 +27,6 @@ export const getSavedRestaurants = (userId) => {
 
 export const getTrendingRestaurants = (location) => {
     let query = `${domain}/restaurants/trending/?location=${location}`;
-    return FetchWithCatch(query, fetchDataFromNetwork);
-}
-
-export const searchRestaurants = (prompt, location) => {
-    let query = `${domain}/restaurants/search/?location=${location}`;
     return FetchWithCatch(query, fetchDataFromNetwork);
 }
 
