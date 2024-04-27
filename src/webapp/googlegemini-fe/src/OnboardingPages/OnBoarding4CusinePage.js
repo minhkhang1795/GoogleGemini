@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 
 const Allergies = ["Vietnamese", "Italian", "Mexican", "Thai", "Japanese", "Halal", "Mediterranean", "Chinese",
-    "Korean", "American", "French", "Indian"]
+    "Korean", "American", "French", "Indian", "Filipino", "Spanish", "African", "Middle Eastern"]
 
 class OnBoarding4CuisinePage extends Component {
 
