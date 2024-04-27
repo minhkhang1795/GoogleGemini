@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 
 
-const Allergies = ["Spicy", "Less Spicy", "Umami", "Fatty", "Sweet", "Less Sweet", "Salty", "Less Salty", "Smoky", "Herbal", "Bitter", "Sour"]
+const Flavors = ["BBQ", "Cheesy", "Spicy", "Less Spicy", "Herbal", "Fatty", "Sweet", "Less Sweet", "Salty",
+    "Less Salty", "Peppery", "Smoky", "Sour", "Bitter", "Umami", "Tart", "Zesty", "Creamy", "Floral", "Aromatic",
+    "Citrusy", "Fruity"]
 
 class OnBoarding5FlavorPage extends Component {
 
@@ -20,7 +22,7 @@ class OnBoarding5FlavorPage extends Component {
                 <p className="my-4 text-dark">Please select three or more to proceed.</p>
                 <div className="d-flex flex-wrap justify-content-between m-2 align-items-stretch"
                      style={{overflow: "auto", maxHeight: "50vh"}}>
-                    {Allergies.map((diet) =>
+                    {Flavors.map((diet) =>
                         <div key={diet}
                              className=""
                              style={{width: '100%', flex: '1 1 50%', boxSizing: 'border-box', padding: '.3rem'}}>
