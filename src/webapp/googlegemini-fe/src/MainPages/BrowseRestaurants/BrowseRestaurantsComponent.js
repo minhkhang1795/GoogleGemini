@@ -66,7 +66,7 @@ class BrowseRestaurantsComponent extends Component {
                     </div>}
                 {restaurantResults?.isLoading &&
                     <LoadingComponent className="text-center"
-                                      style={{marginTop: '50%'}}
+                                      style={{marginTop: '40%'}}
                                       loadingMessage='Looking for your fav place!'/>}
             </div>
         )

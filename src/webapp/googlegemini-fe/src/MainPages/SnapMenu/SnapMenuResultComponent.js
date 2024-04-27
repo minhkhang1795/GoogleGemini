@@ -11,6 +11,7 @@ import {
     MDBModalDialog, MDBModalFooter
 } from "mdb-react-ui-kit";
 import LoadingComponent from "../../Utils/LoadingComponent";
+import ItemPopUpModal from "../Common/ItemPopUpModal";
 
 
 class SnapMenuResultComponent extends Component {
@@ -104,35 +105,9 @@ class SnapMenuResultComponent extends Component {
                                                 loadingMessage='Our chef is preparing your menu!'/>}
 
                 {/* Popup modal to show item detail */}
-                <MDBModal tabIndex='-1' open={this.state.showModal} onClose={() => this.toggleModal()}>
-                    <MDBModalDialog centered scrollable>
-                        <MDBModalContent>
-                            <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
-                                          src={this.state.currentItem?.image_urls && this.state.currentItem?.image_urls.length > 0 ? this.state.currentItem?.image_urls[0] : ""}
-                                          position='top'
-                                          alt={this.state.currentItem?.name}/>
-                            {/*<MDBBtn className='btn-close' color='none' onClick={() => this.toggleModal()}></MDBBtn>*/}
-                            <MDBModalBody>
-                                <h3 className="text-dark">{this.state.currentItem?.name}</h3>
-                                <p>
-                                    {this.state.currentItem?.description}
-                                    <br/>
-                                    <br/>
-                                    <b className="text-dark">Why we recommend this?</b>
-                                    <br/>
-                                    {this.state.currentItem?.match_explanation}
-                                </p>
-                            </MDBModalBody>
-                            <MDBModalFooter>
-                                <MDBBtn rounded color='dark'
-                                        style={{textTransform: 'none'}}
-                                        onClick={() => this.toggleModal()}>
-                                    Close
-                                </MDBBtn>
-                            </MDBModalFooter>
-                        </MDBModalContent>
-                    </MDBModalDialog>
-                </MDBModal>
+                <ItemPopUpModal showModal={this.state.showModal}
+                                toggleModal={() => this.toggleModal()}
+                                currentItem={this.state.currentItem}/>
             </div>
         )
     }
