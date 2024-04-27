@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 
 
-const Allergies = ["Lactose Intolerance", "Gluten Allergy", "Peanut Allergy", "Soy Allergy", "Shellfish Allergy",
-    "Mango Allergy", "Seafood Allergy", "Tree nut Allergy", "Egg Allergy", "Pineapple Allergy"]
+const Allergies = ["Spicy", "Less Spicy", "Sweet", "Less Sweet", "Salty", "Smoky", "Herbal", "Bitter"]
 
 class OnBoarding5FlavorPage extends Component {
 
