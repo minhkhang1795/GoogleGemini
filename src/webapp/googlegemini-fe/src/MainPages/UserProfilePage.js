@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBTypography} from "mdb-react-ui-kit";
-import LoadingComponent from "../Utils/LoadingComponent";
 
 class UserProfilePage extends Component {
     state = {
