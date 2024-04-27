@@ -6,7 +6,7 @@
       "category": "Appetizers",
       "price": "$12",
       "match_score": 90,
-      "match_explanation": "This classic Appetizers is perfect for seafood lovers and pairs well with a variety of Main Coursess.",
+      "match_explanation": "This classic appetizer is perfect for seafood lovers and pairs well with a variety of Main Courses.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.3fc62716a09abdcc64d50e477cb9059f&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]
@@ -57,11 +57,11 @@
     },
     {
       "name": "Tiramisu",
-      "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian Desserts that is both light and decadent.",
+      "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian dessert that is both light and decadent.",
       "category": "Desserts",
       "price": "$8 / $10",
       "match_score": 100,
-      "match_explanation": "This popular Desserts is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
+      "match_explanation": "This popular dessert is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.HERO5qLkxLVf41gMfZr3XgF6_0P2PqLJNHmrVsGZ_d2Z3nQ&w=472&h=280&c=13&rs=2&o=6&dpr=1.5&pid=SANGAM"
       ]
@@ -72,7 +72,7 @@
       "category": "Desserts",
       "price": "$9",
       "match_score": 90,
-      "match_explanation": "This decadent Desserts is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
+      "match_explanation": "This decadent dessert is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.be847f6c9f75f475ac60cce810cebb76&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]
@@ -83,7 +83,7 @@
       "category": "Desserts",
       "price": "$7",
       "match_score": 80,
-      "match_explanation": "This classic Desserts is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
+      "match_explanation": "This classic dessert is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.8277f28797958407014cdf02ac65cc04&w=202&h=202&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]

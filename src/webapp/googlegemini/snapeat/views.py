@@ -6,15 +6,16 @@ from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
+from .apis.UserProfile import UserProfile
 from .apis.google_place_api import GooglePlaceApi
 from .forms import UploadForm
-from .apis.menu_image_model import MenuImageModel
+from .apis.gemini_model import GeminiModel
 from .models import Image
 from .tables import ImageTable
 
 DEFAULT_LOCATION = "Manhattan, New York, NY"
 
-menu_image_model = MenuImageModel(os.getenv('GOOGLE_API_KEY'))
+gemini_model = GeminiModel(os.getenv('GOOGLE_API_KEY'))
 google_place_api = GooglePlaceApi(os.getenv('GOOGLE_PLACE_API_KEY'))
 
 @require_http_methods(["POST"])
@@ -23,7 +24,7 @@ def recommend_from_menu(request):
     if 'menuImage' not in request.FILES:
         return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
 
-    result = menu_image_model.menu_image_to_text(request.FILES['menuImage'])
+    result = gemini_model.menu_image_to_text(request.FILES['menuImage'])
     return JsonResponse({"result": result})
 
 
@@ -87,9 +88,14 @@ def upload_view(request):
     upload_form = UploadForm(data=request.POST, files=request.FILES)
 
     if upload_form.is_valid():
-        result = menu_image_model.menu_image_to_text(upload_form.instance.file)
-        request.session['result'] = result
-        logging.info(result)
+        menu_result = gemini_model.menu_image_to_text(upload_form.instance.file)
+        request.session['menu_result'] = menu_result
+        logging.info(menu_result)
+
+        user_profile = UserProfile("Low Calories", "Peanut Allergy", "Thai, Korean, Japanese", "Sweet, Less Spicy, Herbal")
+        recommended_result = gemini_model.recommend_menu_items(user_profile, menu_result)
+        request.session['recommended_result'] = recommended_result
+        logging.info(recommended_result)
     else:
         logging.warning("Something went wrong with uploading the file.")
         logging.warning(request.POST)

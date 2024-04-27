@@ -24,8 +24,13 @@
                 {{ upload_form|crispy }}
                 <input type="submit" class="btn btn-primary w-100" value="Upload">
             </form>
-            {% if result %}
-            <p>Menu items: {{ result }}</p>
+            {% if menu_result %}
+            <p>Menu items: {{ menu_result }}</p>
+            {% endif %}
+            <br/>
+            <br/>
+            {% if recommended_result %}
+            <p>Recommended items: {{ recommended_result }}</p>
             {% endif %}
         </div>
     </div>
