@@ -1,5 +1,6 @@
 import logging
 import os
+import json
 
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
@@ -8,15 +9,14 @@ from django.views.decorators.http import require_http_methods
 
 from .apis.UserProfile import UserProfile
 from .apis.google_place_api import GooglePlaceApi
+from .apis.snapeat_api import SnapEatApi
 from .forms import UploadForm
-from .apis.gemini_model import GeminiModel
 from .models import Image
 from .tables import ImageTable
 
 DEFAULT_LOCATION = "Manhattan, New York, NY"
-
-gemini_model = GeminiModel(os.getenv('GOOGLE_API_KEY'))
-google_place_api = GooglePlaceApi(os.getenv('GOOGLE_PLACE_API_KEY'))
+google_place_api = GooglePlaceApi(os.getenv('GOOGLE_API_KEY'))
+snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
 
 @require_http_methods(["POST"])
 @csrf_exempt
@@ -24,8 +24,15 @@ def recommend_from_menu(request):
     if 'menuImage' not in request.FILES:
         return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
 
-    result = gemini_model.menu_image_to_text(request.FILES['menuImage'])
-    return JsonResponse({"result": result})
+    test = request.POST.get('userProfile')
+    user_profile_data = json.loads(test)
+    diets = user_profile_data.get('diets')
+    allergies = user_profile_data.get('allergies')
+    cuisines = user_profile_data.get('cuisines')
+    flavors = user_profile_data.get('flavors')
+
+    user_profile = UserProfile(diets, allergies, cuisines, flavors)
+    return snapeat_api.recommend(request.FILES['menuImage'], user_profile)
 
 
 def get_nearby_restaurants(request):
@@ -86,15 +93,9 @@ def index(request):
 @require_http_methods(["POST"])
 def upload_view(request):
     upload_form = UploadForm(data=request.POST, files=request.FILES)
-
+    user_profile = UserProfile("Low Calories", "Peanut Allergy", "Thai, Korean, Japanese", "Sweet, Less Spicy, Herbal")
     if upload_form.is_valid():
-        menu_result = gemini_model.menu_image_to_text(upload_form.instance.file)
-        request.session['menu_result'] = menu_result
-        logging.info(menu_result)
-
-        user_profile = UserProfile("Low Calories", "Peanut Allergy", "Thai, Korean, Japanese", "Sweet, Less Spicy, Herbal")
-        recommended_result = gemini_model.recommend_menu_items(user_profile, menu_result)
-        request.session['recommended_result'] = recommended_result
+        recommended_result = snapeat_api.recommend(upload_form.instance.file, user_profile)
         logging.info(recommended_result)
     else:
         logging.warning("Something went wrong with uploading the file.")

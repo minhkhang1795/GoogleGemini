@@ -5,13 +5,13 @@ from snapeat.apis.Place import Place
 
 
 class GooglePlaceApi:
-    def __init__(self, apikey=None):
-        if apikey is None:
+    def __init__(self, api_key=None):
+        if api_key is None:
             logging.error('GOOGLE_PLACE_API_KEY is None')
             return
 
         # Create a Google Maps client object.
-        self.maps = googlemaps.Client(key=apikey)
+        self.maps = googlemaps.Client(key=api_key)
 
     def get_nearby_restaurant(self, location: str):
         """

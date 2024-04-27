@@ -6,15 +6,16 @@ class UserProfile:
         self.flavors = flavors
 
     def get_user_profile(self):
-        diet_allergy = ""
-        if self.diets is not None and self.diets != "":
-            diet_allergy += "I have these diet(s): " + self.diets + ". "
+        result = ""
+        if not self.diets:
+            result += "I have these diets: " + ", ".join(self.diets) + ". "
         else:
-            diet_allergy += "I don't have any diet. "
+            result += "I don't have any diet. "
 
-        if self.allergies is not None and self.allergies != "":
-            diet_allergy += "I have these allergies: " + self.allergies + ". "
+        if not self.allergies:
+            result += "I have these allergies: " + ", ".join(self.allergies) + ". "
         else:
-            diet_allergy += "I don't have any allergy. "
+            result += "I don't have any allergy. "
 
-        return diet_allergy + "My favorite cuisine are " + self.cuisines + ", and I love " + self.flavors + " flavors."
+        return (result + "My favorite cuisine are " + ", ".join(self.cuisines) + ", and I love "
+                + ", ".join(self.flavors) + " flavors.")

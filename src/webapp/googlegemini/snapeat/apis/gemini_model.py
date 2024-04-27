@@ -10,12 +10,12 @@ from snapeat.apis.UserProfile import UserProfile
 
 
 class GeminiModel:
-    def __init__(self, apikey=None):
-        if apikey is None:
+    def __init__(self, api_key=None):
+        if api_key is None:
             logging.error('GOOGLE_API_KEY is None')
             return
 
-        genai.configure(api_key=apikey)
+        genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel('gemini-1.5-pro-latest',
                                            generation_config=self.create_generation_config(),
                                            safety_settings=self.create_safety_config())
@@ -73,12 +73,13 @@ class GeminiModel:
         text = None
         start_time = time.perf_counter()
         try:
+            logging.info(f'recommending menu items for user profile: {user_profile.get_user_profile()}')
             prompt_input = "From the User_Profile, Menu "
             response_input = []
 
             if ChefRec is not None and ChefRec != "":
                 prompt_input += ", Chef Recommendation "
-                response_input.append("Chef_Reccomendation: " + ChefRec)
+                response_input.append("Chef_Recommendation: " + ChefRec)
             if GGreview is not None and GGreview != "":
                 prompt_input += ", Google Review "
                 response_input.append("Google_Review: " + GGreview)

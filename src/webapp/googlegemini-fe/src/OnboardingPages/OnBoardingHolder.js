@@ -40,10 +40,10 @@ class OnBoardingPageContainer extends Component {
         if (this.state.onboardingStep === 5) {
             let userProfile =
                     {
-                        diets: this.state.userDiets,
-                        allergies: this.state.userAllergies,
-                        cuisines: this.state.userCuisines,
-                        flavors: this.state.userFlavors,
+                        diets: Array.from(this.state.userDiets),
+                        allergies: Array.from(this.state.userAllergies),
+                        cuisines: Array.from(this.state.userCuisines),
+                        flavors: Array.from(this.state.userFlavors),
                     };
             this.props.handleFinishOnboarding(userProfile);
             console.log(this.state);

@@ -5,8 +5,10 @@ crispy-bootstrap4==2024.1
 Pillow==10.3.0
 google-generativeai==0.5.2
 googlemaps==4.10.0
+google_images_search==1.4.6
 python-dotenv==1.0.1
 psycopg2-binary==2.9.9
 gunicorn==21.2.0
 djangorestframework==3.15.1
 django-cors-headers==4.3.1
+windows-curses==2.3.2

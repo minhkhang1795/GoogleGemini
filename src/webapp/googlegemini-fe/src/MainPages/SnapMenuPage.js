@@ -17,7 +17,6 @@ const SnapMenuPageEnum = {
 class SnapMenuPage extends Component {
     state = {
         pageTitle: 'Snap Menu',
-        userProfile: "love Japanese foods, lactose intolerance, gluten free, love beef and meats",
         currentPage: SnapMenuPageEnum.Snap,
         result: {data: [], error: '', isLoading: false},
         previewImage: null,
@@ -48,7 +47,7 @@ class SnapMenuPage extends Component {
     handleSubmitMenu(event) {
         const formData = new FormData();
         formData.append('menuImage', this.state.previewImageFile);
-        formData.append('userProfile', this.state.userProfile);
+        formData.append('userProfile', JSON.stringify(this.props.userProfile));
         this.setState({showLoading: true, currentPage: SnapMenuPageEnum.Result});
         this.setState({previewImage: null, previewImageFile: null});
         if (this.state.result.isLoading) {
