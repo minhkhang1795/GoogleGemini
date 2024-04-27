@@ -18,20 +18,21 @@ DEFAULT_LOCATION = "Manhattan, New York, NY"
 google_place_api = GooglePlaceApi(os.getenv('GOOGLE_API_KEY'))
 snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
 
+
 @require_http_methods(["POST"])
 @csrf_exempt
 def recommend_from_menu(request):
     if 'menuImage' not in request.FILES:
         return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
 
-    test = request.POST.get('userProfile')
-    user_profile_data = json.loads(test)
-    diets = user_profile_data.get('diets')
-    allergies = user_profile_data.get('allergies')
-    cuisines = user_profile_data.get('cuisines')
-    flavors = user_profile_data.get('flavors')
+    if 'userProfile' not in request.POST:
+        return JsonResponse({'error': 'Invalid request: User profile is missing or empty'}, status=400)
 
-    user_profile = UserProfile(diets, allergies, cuisines, flavors)
+    user_profile = UserProfile.create_from_string(request.POST.get('userProfile'))
+    if not user_profile.is_valid():
+        return JsonResponse({'error': 'Invalid request: User profile is invalid. Cuisines and Flavors are '
+                                      'the required fields.'}, status=400)
+
     return snapeat_api.recommend(request.FILES['menuImage'], user_profile)
 
 

@@ -48,7 +48,7 @@ class GoogleImageAPI:
             return item_name, image_urls
 
         except Exception as e:
-            print(f"Error retrieving image URLs for '{item_name}': {type(e).__name__}: {e}")
+            logging.error(f"Error retrieving image URLs for '{item_name}': {type(e).__name__}: {e}")
             return self.retrieve_img_from_menu(item_name, retry - 1)
 
     def populate_img_urls(self, json_array):
@@ -69,7 +69,7 @@ class GoogleImageAPI:
                     if item["name"] == item_name:
                         item["image_urls"] = image_urls
         except Exception as e:
-            print(f"Error populating image URLs: {type(e).__name__}: {e}")
+            logging.error(f"Error populating image URLs: {type(e).__name__}: {e}")
 
         logging.info(json_array)
         return json_array
