@@ -30,15 +30,15 @@ class BrowseRestaurantsComponent extends Component {
                                    maxLength="50"/>
                         </form>
                     </div>
-                    <div className='responsive'>
+                    <div className='responsive' id='restaurantTabId'>
                         <div className='tabs ms-3'>
-                            {this.props.allTabs.map((category) =>
-                                <MDBBtn key={category}
+                            {this.props.allTabs.map((tab) =>
+                                <MDBBtn key={tab}
                                         rounded className='me-2 tab'
                                         style={{boxShadow: 'none', textTransform: 'none'}}
-                                        color={category === this.props.currentTab ? 'dark' : 'light'}
-                                        onClick={(e) => this.props.changeTab(category)}>
-                                    {category}
+                                        color={tab === this.props.currentTab ? 'dark' : 'light'}
+                                        onClick={(e) => this.props.changeTab(tab)}>
+                                    {tab}
                                 </MDBBtn>)}
                         </div>
                     </div>

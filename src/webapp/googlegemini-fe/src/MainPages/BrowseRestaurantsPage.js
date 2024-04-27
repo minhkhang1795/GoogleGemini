@@ -27,7 +27,7 @@ class BrowseRestaurantsPage extends Component {
         currentTab: RestaurantCategoryEnum.Nearby,
         allTabs: [RestaurantCategoryEnum.Nearby, RestaurantCategoryEnum.Saved, RestaurantCategoryEnum.Trending],
         restaurant: null,
-        restaurantResultsCache: {},
+        restaurantDetailsCache: {},
         searchTerm: '',
         nearbyResult: {data: [], error: null, isLoading: false},
         savedResult: {data: [], error: null, isLoading: false},
@@ -51,11 +51,11 @@ class BrowseRestaurantsPage extends Component {
         this.setState({restaurant: restaurant, currentPage: BrowseRestaurantsPageEnum.Result});
     }
 
-    updateRestaurantResultsCache(id, restaurantResult) {
+    updateRestaurantDetailsCache(id, restaurantResult) {
         this.setState(prevState => {
-            let cache = prevState.restaurantResultsCache;
+            let cache = prevState.restaurantDetailsCache;
             cache[id] = restaurantResult;
-            return {restaurantResultsCache: cache};
+            return {restaurantDetailsCache: cache};
         });
     }
 
@@ -106,23 +106,24 @@ class BrowseRestaurantsPage extends Component {
         }
     }
 
-    getRestaurantsByCategory() {
-        let result = this.getRestaurantResultByCurrentTab();
-        return IsArray(result.data) ? result.data : [];
-    }
-
     changeTab(tab) {
-        if (tab === RestaurantCategoryEnum.Nearby) {
-            this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
-        } else if (tab === RestaurantCategoryEnum.Saved) {
-            this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
-        } else if (tab === RestaurantCategoryEnum.Trending) {
-            this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
-        } else if (tab === RestaurantCategoryEnum.Search) {
-            this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', this.props.userProfile))
-        }
-
-        this.setState({currentTab: tab});
+        this.setState({currentTab: tab}, () => {
+            if (tab === RestaurantCategoryEnum.Nearby) {
+                this.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
+                // Scroll tab to start
+                const tabContainer = document.getElementById('restaurantTabId');
+                tabContainer.scrollLeft = 0;
+            } else if (tab === RestaurantCategoryEnum.Saved) {
+                this.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
+            } else if (tab === RestaurantCategoryEnum.Trending) {
+                this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
+            } else if (tab === RestaurantCategoryEnum.Search) {
+                this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', this.props.userProfile));
+                // Scroll tab to end
+                const tabContainer = document.getElementById('restaurantTabId');
+                tabContainer.scrollLeft = tabContainer.scrollWidth;
+            }
+        });
     }
 
     onSearchSubmit(e) {
@@ -177,8 +178,8 @@ class BrowseRestaurantsPage extends Component {
 
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>
                     <BrowseRestaurantsResultComponent restaurantId={this.state.restaurant.google_place_id}
-                                                      restaurantResultsCache={this.state.restaurantResultsCache}
-                                                      updateRestaurantResultsCache={(id, r) => this.updateRestaurantResultsCache(id, r)}/>
+                                                      restaurantDetailsCache={this.state.restaurantDetailsCache}
+                                                      updateRestaurantDetailsCache={(id, r) => this.updateRestaurantDetailsCache(id, r)}/>
                 </div>}
             </div>
         )

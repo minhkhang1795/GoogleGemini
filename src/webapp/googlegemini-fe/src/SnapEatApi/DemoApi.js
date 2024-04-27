@@ -11,7 +11,7 @@ const SpotDessertBarId = "ChIJ0QCeh5tZwokRh9J_3uvSPjU";
 
 export const recommend = (formData) => {
     let query = `./recommend-sample.json`;
-    return simulateNetworkCall(query, recommendSample, 3500);
+    return simulateNetworkCall(query, recommendSample, 3000);
 }
 
 export const recommendByRestaurant = (restaurantId, userProfile) => {
@@ -20,7 +20,7 @@ export const recommendByRestaurant = (restaurantId, userProfile) => {
         return simulateNetworkCall(query, noMenuSample, 500);
     }
 
-    return simulateNetworkCall(query, dessertRecommendSample, 3500);
+    return simulateNetworkCall(query, dessertRecommendSample, 2000);
 }
 
 export const searchRestaurants = (searchPrompt, location, userProfile) => {

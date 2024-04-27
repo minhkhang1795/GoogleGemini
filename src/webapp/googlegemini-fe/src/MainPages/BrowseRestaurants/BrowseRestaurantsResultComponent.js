@@ -31,34 +31,34 @@ class BrowseRestaurantsResultComponent extends Component {
         }
 
         // Get recommendation from cache
-        console.log(this.props.restaurantResultsCache);
-        if (id in this.props.restaurantResultsCache &&
-            IsArray(this.props.restaurantResultsCache[id]?.data)) {
+        console.log(this.props.restaurantDetailsCache);
+        if (id in this.props.restaurantDetailsCache &&
+            IsArray(this.props.restaurantDetailsCache[id]?.data)) {
             return;
         }
 
         // Call to get recommendation results
-        this.props.updateRestaurantResultsCache({data: [], error: '', isLoading: true})
+        this.props.updateRestaurantDetailsCache({data: [], error: '', isLoading: true})
         SnapEatApi.RecommendByRestaurant(id).then(data => {
             console.log(data);
             if (data && IsArray(data.result)) {
-                this.props.updateRestaurantResultsCache(id, {data: FilterItems(data.result), error: '', isLoading: false})
+                this.props.updateRestaurantDetailsCache(id, {data: FilterItems(data.result), error: '', isLoading: false})
                 return;
             }
 
             let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-            this.props.updateRestaurantResultsCache(id,
+            this.props.updateRestaurantDetailsCache(id,
                 {data: [], error: error, errorCode: data.errorCode, isLoading: false});
         }).catch(ex => {
             console.log(ex);
-            this.props.updateRestaurantResultsCache(id,
+            this.props.updateRestaurantDetailsCache(id,
                 {data: [], error: 'Server is busy right now. Please try again!', isLoading: false});
         });
     }
 
     getRestaurantResult() {
-        if (this.props.restaurantId in this.props.restaurantResultsCache) {
-            return this.props.restaurantResultsCache[this.props.restaurantId];
+        if (this.props.restaurantId in this.props.restaurantDetailsCache) {
+            return this.props.restaurantDetailsCache[this.props.restaurantId];
         } else {
             return {data: [], error: '', isLoading: true};
         }
