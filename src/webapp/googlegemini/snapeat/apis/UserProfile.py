@@ -1,6 +1,7 @@
 import json
 import logging
 
+
 class UserProfile:
     def __init__(self, diets, allergies, cuisines, flavors):
         self.diets = diets
@@ -38,17 +39,19 @@ class UserProfile:
         if not self.flavors:
             return False
 
+        return True
+
     def get_user_profile(self):
         result = ""
         if not self.diets:
-            result += "I have these diets: " + ", ".join(self.diets) + ". "
-        else:
             result += "I don't have any diet. "
+        else:
+            result += "I have these diets: " + ", ".join(self.diets) + ". "
 
         if not self.allergies:
-            result += "I have these allergies: " + ", ".join(self.allergies) + ". "
-        else:
             result += "I don't have any allergy. "
+        else:
+            result += "I have these allergies: " + ", ".join(self.allergies) + ". "
 
         return (result + "My favorite cuisine are " + ", ".join(self.cuisines) + ", and I love "
                 + ", ".join(self.flavors) + " flavors.")
