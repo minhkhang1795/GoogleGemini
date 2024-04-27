@@ -3,7 +3,7 @@
     {
       "name": "Durian De-luxe",
       "description": "Crispy tart, jackfruit, nata de coco, tapioca pudding. durian soft cheesecake, passion fruit foam",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 40,
       "match_explanation": "The dish has an interesting combination of textures and flavors, which may appeal to you.",
@@ -14,7 +14,7 @@
     {
       "name": "Pitaya Bowl",
       "description": "Crunchy cookie shell, fresh dragon fruit, strawberry jam, chiffon cake, coconut cream",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 30,
       "match_explanation": "The dish offers a variety of flavors and textures, which could be enjoyable for you.",
@@ -25,7 +25,7 @@
     {
       "name": "Watermelon Dacquoise",
       "description": "Pumpkin seeds, diplomat cream, coconut custard, rose syrup infused watermelon cake, fresh strawberries",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 35,
       "match_explanation": "The dish features a unique combination of ingredients, including rose syrup infused watermelon cake, which might intrigue you.",
@@ -36,7 +36,7 @@
     {
       "name": "Red Wine Hibby",
       "description": "Steamed hibiscus cake, mixed berries, hibiscus red wine vinegar caramel sauce, coconut sorbet",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 70,
       "match_explanation": "The dish offers a refreshing blend of flavors with hibiscus and mixed berries, which could be pleasant for you.",
@@ -47,7 +47,7 @@
     {
       "name": "Harvest",
       "description": "Layers of strawberries, soft cheesecake, chiffon cake, whipped cream, oreo crumbs, earl grey milk tea, rasberry sorbet",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 90,
       "match_explanation": "The dish encompasses a delightful combination of flavors and textures, including sweet strawberries and creamy cheesecake, which align with your preferences.",
@@ -58,7 +58,7 @@
     {
       "name": "Golden Toast",
       "description": "Honey buttered toast, strawberries, whipped cream, honey, powered sugar, cookie crumbs, condensed milk ice cream",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 60,
       "match_explanation": "The dish offers a mix of sweet and buttery flavors, with strawberries complementing the overall taste, which could be pleasing for you.",
@@ -69,7 +69,7 @@
     {
       "name": "Matcha Lava",
       "description": "Dark chocolate cake, matcha powder. chocolate pearls, cookie crumbs green tea ice cream",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 0,
       "match_explanation": "you strongly dislikes chocolate flavor, which makes this dish unsuitable for you.",
@@ -80,7 +80,7 @@
     {
       "name": "Milky Puff",
       "description": "Chour-puff pastry, broken burana, white chocolate honeycomb corn flakes, condensed milk ice cream",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 0,
       "match_explanation": "The dish contains chocolate flavor, which is not suitable for your preference.",
@@ -91,7 +91,7 @@
     {
       "name": "Cookie Camp",
       "description": "Fresh half baked marshmallow cookie, pretzels, cookie crumbs served with condensed milk ice cream",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$14.45",
       "match_score": 70,
       "match_explanation": "The dish presents unique textures with the marshmallow cookie and cookie crumbs, along with the sweetness of condensed milk ice cream, which could appeal to you.",

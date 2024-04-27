@@ -3,10 +3,10 @@
     {
       "name": "Crispy Calamari",
       "description": "Tender calamari rings lightly dusted in seasoned flour and fried to golden perfection, served with a zesty marinara sauce for dipping.",
-      "category": "Appetizer",
+      "category": "Appetizers",
       "price": "$12",
       "match_score": 90,
-      "match_explanation": "This classic appetizer is perfect for seafood lovers and pairs well with a variety of main courses.",
+      "match_explanation": "This classic Appetizers is perfect for seafood lovers and pairs well with a variety of Main Coursess.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.3fc62716a09abdcc64d50e477cb9059f&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]
@@ -14,7 +14,7 @@
     {
       "name": "Spinach and Artichoke Dip",
       "description": "A creamy and flavorful blend of spinach, artichoke hearts, and melted cheeses, served warm with tortilla chips for dipping.",
-      "category": "Appetizer",
+      "category": "Appetizers",
       "price": "$10",
       "match_score": 80,
       "match_explanation": "This crowd-pleasing dip is a great option for sharing and is ideal for those who enjoy rich and savory flavors.",
@@ -25,7 +25,7 @@
     {
       "name": "Grilled Salmon with Roasted Vegetables",
       "description": "Fresh salmon fillet grilled to flaky perfection, served with a medley of seasonal roasted vegetables for a healthy and satisfying meal.",
-      "category": "Main Course",
+      "category": "Main Courses",
       "price": "$30",
       "match_score": 100,
       "match_explanation": "This dish is ideal for health-conscious individuals and those who appreciate fresh, high-quality ingredients.",
@@ -36,7 +36,7 @@
     {
       "name": "Spaghetti Carbonara",
       "description": "Classic Italian pasta dish featuring spaghetti tossed in a rich and creamy sauce made with eggs, Parmesan cheese, pancetta, and black pepper.",
-      "category": "Main Course",
+      "category": "Main Courses",
       "price": "$22",
       "match_score": 90,
       "match_explanation": "This hearty and flavorful pasta dish is perfect for those who enjoy traditional Italian cuisine.",
@@ -47,7 +47,7 @@
     {
       "name": "Beef Bourguignon",
       "description": "Tender beef braised in a rich red wine sauce with carrots, onions, and mushrooms, served with creamy mashed potatoes.",
-      "category": "Main Course",
+      "category": "Main Courses",
       "price": "$28 - $32",
       "match_score": 80,
       "match_explanation": "This classic French stew is perfect for a special occasion and is ideal for those who appreciate slow-cooked, flavorful dishes.",
@@ -57,11 +57,11 @@
     },
     {
       "name": "Tiramisu",
-      "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian dessert that is both light and decadent.",
-      "category": "Dessert",
+      "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian Desserts that is both light and decadent.",
+      "category": "Desserts",
       "price": "$8 / $10",
       "match_score": 100,
-      "match_explanation": "This popular dessert is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
+      "match_explanation": "This popular Desserts is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.HERO5qLkxLVf41gMfZr3XgF6_0P2PqLJNHmrVsGZ_d2Z3nQ&w=472&h=280&c=13&rs=2&o=6&dpr=1.5&pid=SANGAM"
       ]
@@ -69,10 +69,10 @@
     {
       "name": "Chocolate Lava Cake",
       "description": "Warm chocolate cake with a molten chocolate center, served with a scoop of vanilla ice cream for the perfect balance of hot and cold.",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$9",
       "match_score": 90,
-      "match_explanation": "This decadent dessert is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
+      "match_explanation": "This decadent Desserts is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.be847f6c9f75f475ac60cce810cebb76&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]
@@ -80,10 +80,10 @@
     {
       "name": "Cheesecake",
       "description": "Creamy and smooth New York-style cheesecake with a graham cracker crust, served with your choice of fresh fruit or chocolate sauce.",
-      "category": "Dessert",
+      "category": "Desserts",
       "price": "$7",
       "match_score": 80,
-      "match_explanation": "This classic dessert is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
+      "match_explanation": "This classic Desserts is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
       "image_urls": [
         "https://th.bing.com/th?id=OSK.8277f28797958407014cdf02ac65cc04&w=202&h=202&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
       ]
