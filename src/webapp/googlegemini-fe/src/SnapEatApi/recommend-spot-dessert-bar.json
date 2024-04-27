@@ -61,7 +61,7 @@
       "category": "Dessert",
       "price": "$14.45",
       "match_score": 60,
-      "match_explanation": "The dish offers a delightful mix of sweet and buttery flavors, with strawberries complementing the overall taste, which could be pleasing for you.",
+      "match_explanation": "The dish offers a mix of sweet and buttery flavors, with strawberries complementing the overall taste, which could be pleasing for you.",
       "image_urls": [
         "https://s3-media0.fl.yelpcdn.com/bphoto/e4aAw_zHoZjpFOvNJ1-c_w/o.jpg"
       ]
@@ -94,7 +94,7 @@
       "category": "Dessert",
       "price": "$14.45",
       "match_score": 70,
-      "match_explanation": "The dish presents a delightful mix of textures with the marshmallow cookie and cookie crumbs, along with the sweetness of condensed milk ice cream, which could appeal to you.",
+      "match_explanation": "The dish presents unique textures with the marshmallow cookie and cookie crumbs, along with the sweetness of condensed milk ice cream, which could appeal to you.",
       "image_urls": [
         "https://s3-media0.fl.yelpcdn.com/bphoto/ObUBS1malyPEUR2NPkIyCw/o.jpg"
       ]
