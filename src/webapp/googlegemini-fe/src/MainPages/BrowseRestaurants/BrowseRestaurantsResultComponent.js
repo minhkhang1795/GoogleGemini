@@ -13,6 +13,7 @@ import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
 import {IsArray} from "../../Utils/Utils";
 import {FilterItems} from "../../SnapEatApi/ApiUtils";
 import ItemPopUpModal from "../Common/ItemPopUpModal";
+import ItemList from "../Common/ItemList";
 
 
 class BrowseRestaurantsResultComponent extends Component {
@@ -108,40 +109,8 @@ class BrowseRestaurantsResultComponent extends Component {
         return (
             <div style={{overflowY: 'hidden'}}>
                 {result.data && result.data.constructor === Array && result.data.length > 0 &&
-                    <div className="pt-3">
-                        <div className='responsive'>
-                            <div className='tabs ms-3'>
-                                {this.getCategories(result.data).map((category) =>
-                                    <MDBBtn key={category}
-                                            rounded className='me-2 tab'
-                                            style={{textTransform: 'none'}}
-                                            color={category === this.state.currentCategory ? 'dark' : 'light'}
-                                            onClick={(e) => {
-                                                this.setState({currentCategory: category})
-                                            }}>
-                                        {category}
-                                    </MDBBtn>)}
-                            </div>
-                        </div>
-
-                        <div>
-                            {this.getItemsByCategory(result.data).map((item) =>
-                                <MDBCard className='m-3' key={item.name}
-                                         onClick={() => this.popUpItemDetails(item)}>
-                                    <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
-                                                  src={item.image_urls && item.image_urls.length > 0 ? item.image_urls[0] : ""}
-                                                  position='top'
-                                                  alt={item.name}/>
-                                    <MDBCardBody>
-                                        <MDBCardTitle className="text-dark">{item.name}</MDBCardTitle>
-                                        <MDBCardText>
-                                            {item.description}
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCard>)}
-                        </div>
-                    </div>
-                }
+                    <ItemList items={result.data}
+                              popUpItemDetails={(item) => this.popUpItemDetails(item)}/>}
                 {result.error && <div className="text-bg-danger text-center text-light">
                     {result.error}
                 </div>}
@@ -162,8 +131,7 @@ class BrowseRestaurantsResultComponent extends Component {
                                     <p className="file-upload-main-error"></p></div>
                                 <ul className="file-upload-errors"></ul>
                                 <input type="file" id="menu-input-file" className="file-upload-input"
-                                       title="Upload your menu image" accept="image/*"
-                                       onChange={(e) => this.props.handleFileChange(e)}/>
+                                       title="Upload your menu image" accept="image/*"/>
                             </div>
                         </div>
                     </div>

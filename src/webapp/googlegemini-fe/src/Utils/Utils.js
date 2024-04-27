@@ -8,6 +8,11 @@ export const IsInArray = (array, value) => {
     return array.indexOf(value) > -1;
 }
 
+export const GenerateRandomId = () => {
+    // Generate a random number and convert it to a hexadecimal string
+    return 'component_' + Math.random().toString(36);
+}
+
 export const FetchWithCatch = (query, fetchCall) => {
     return fetchDataFromCache(query)
         .then(cachedData => {

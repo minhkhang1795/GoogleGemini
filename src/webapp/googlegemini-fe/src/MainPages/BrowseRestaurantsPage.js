@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
 import BrowseRestaurantsResultComponent from "./BrowseRestaurants/BrowseRestaurantsResultComponent";
-import {IsArray, IsInArray} from "../Utils/Utils";
+import {IsInArray} from "../Utils/Utils";
 import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 
 const BrowseRestaurantsPageEnum = {
@@ -51,10 +51,10 @@ class BrowseRestaurantsPage extends Component {
         this.setState({restaurant: restaurant, currentPage: BrowseRestaurantsPageEnum.Result});
     }
 
-    updateRestaurantDetailsCache(id, restaurantResult) {
+    updateRestaurantDetailsCache(id, restaurantDetail) {
         this.setState(prevState => {
             let cache = prevState.restaurantDetailsCache;
-            cache[id] = restaurantResult;
+            cache[id] = restaurantDetail;
             return {restaurantDetailsCache: cache};
         });
     }
@@ -179,7 +179,7 @@ class BrowseRestaurantsPage extends Component {
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>
                     <BrowseRestaurantsResultComponent restaurantId={this.state.restaurant.google_place_id}
                                                       restaurantDetailsCache={this.state.restaurantDetailsCache}
-                                                      updateRestaurantDetailsCache={(id, r) => this.updateRestaurantDetailsCache(id, r)}/>
+                                                      updateRestaurantDetailsCache={(id, d) => this.updateRestaurantDetailsCache(id, d)}/>
                 </div>}
             </div>
         )
