@@ -12,14 +12,51 @@
       ]
     },
     {
-      "name": "Spinach and Artichoke Dip",
-      "description": "A creamy and flavorful blend of spinach, artichoke hearts, and melted cheeses, served warm with tortilla chips for dipping.",
-      "category": "Appetizers",
-      "price": "$10",
-      "match_score": 80,
-      "match_explanation": "This crowd-pleasing dip is a great option for sharing and is ideal for those who enjoy rich and savory flavors.",
+      "name": "OMURICE ORIGINAL TOMATO SAUCE",
+      "description": "Japanese-style omelette over rice with chicken soboro",
+      "price": "$18",
+      "category": "Main Courses",
+      "match_score": 60,
+      "match_explanation": "This Japanese-style omelette with chicken soboro is likely a good match for your cuisine preferences. The tomato sauce adds a touch of sweetness and tanginess that could complement your taste.",
       "image_urls": [
-        "https://th.bing.com/th?id=OSK.af086ed44b7b855200a5bd8580e9ca54&w=202&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
+        "https://www.justonecookbook.com/wp-content/uploads/2020/08/Omurice-Omelette-Rice-Midnight-Diner-Tokyo-Stories-8475-I-2.jpg",
+        "https://japanesetaste.com/cdn/shop/articles/how-to-make-omurice-japanese-omelet-rice-at-home-japanese-taste.jpg?v=1694487033&width=600"
+      ]
+    },
+    {
+      "name": "Dry Pot Sauteed Pork with Cauliflower",
+      "description": "A savory and spicy dish with pork, cauliflower, pork belly, and leeks. Vegetarian or non-spicy options are available.",
+      "price": "$19",
+      "category": "Main Courses",
+      "match_score": 65,
+      "match_explanation": "This dish offers flexibility with vegetarian and non-spicy options, catering to various dietary needs. However, the default version might be spicy, so consider requesting the non-spicy option to better align with your preference for less spicy flavors.",
+      "image_urls": [
+        "https://thewoksoflife.com/wp-content/uploads/2018/05/dry-pot-cauliflower-8-500x375.jpg",
+        "https://i.ytimg.com/vi/ismyawgyKzU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD8HtzSk_q2k-3-bJJ0aajcLn-A8g"
+      ]
+    },
+    {
+      "name": "Braised Lamb Stew",
+      "description": "A hearty stew made with tender lamb, Chinese radish, and leeks.",
+      "price": "$32",
+      "category": "Main Courses",
+      "match_score": 70,
+      "match_explanation": "While lamb stews can be flavorful, they might be higher in calories compared to other options. However, the inclusion of Chinese radish and leeks suggests a balance of savory and potentially herbal notes, which could appeal to your preferences.",
+      "image_urls": [
+        "https://ediblesanfrancisco.com/wp-content/uploads/2019/02/kantine-lamb-stew.jpg",
+        "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-and-haricot-bean-stew-58c1e39.jpg?quality=90&resize=440,400"
+      ]
+    },
+    {
+      "name": "Green Peppercorn Beef with Enoki Mushroom",
+      "description": "A flavorful beef dish with sliced beef, enoki mushrooms, and green peppercorn.",
+      "price": "$29",
+      "category": "Main Courses",
+      "match_score": 78,
+      "match_explanation": "This beef dish with enoki mushrooms sounds like a delicious option. The green peppercorn adds a unique flavor profile, which might complement your preference for herbal notes. However, beef dishes can sometimes be higher in calories, so consider that aspect based on your dietary goals.",
+      "image_urls": [
+        "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-125205000000000000/menu/items/8/item-300000019039881298_1668022115.jpg?size=medium",
+        "https://www.inquirer.com/resizer/rOc6-D4ru_TYDy6eHaqDhVE4LO0=/760x507/smart/filters:format(webp)/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/S3ARBEN3LNBUTC3VEF6BFGBX64.jpg"
       ]
     },
     {
@@ -34,58 +71,99 @@
       ]
     },
     {
-      "name": "Spaghetti Carbonara",
-      "description": "Classic Italian pasta dish featuring spaghetti tossed in a rich and creamy sauce made with eggs, Parmesan cheese, pancetta, and black pepper.",
-      "category": "Main Courses",
-      "price": "$22",
-      "match_score": 90,
-      "match_explanation": "This hearty and flavorful pasta dish is perfect for those who enjoy traditional Italian cuisine.",
+      "name": "KIWI GRAPEFRUIT ADE",
+      "description": "A unique and tangy beverage combining the flavors of kiwi and grapefruit, likely with a sweet and citrusy taste.",
+      "price": "$10",
+      "category": "Drinks",
+      "match_score": 60,
+      "match_explanation": "This drink might be slightly higher in calories due to potential sweeteners, but it offers a unique and tangy flavor.",
       "image_urls": [
-        "https://th.bing.com/th?id=OSK.49f78796495928f663f01aaa00af92a4&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
+        "https://www.shutterstock.com/image-photo/ade-grapefruit-lemon-orange-cream-260nw-2412694853.jpg",
+        "https://kuvings.com/wp-content/uploads/2023/08/recipe_REVO830_GrapefruitAde-400x500.jpg"
       ]
     },
     {
-      "name": "Beef Bourguignon",
-      "description": "Tender beef braised in a rich red wine sauce with carrots, onions, and mushrooms, served with creamy mashed potatoes.",
-      "category": "Main Courses",
-      "price": "$28 - $32",
+      "name": "RED PAPAYA BLACK TEA",
+      "description": "Fragrant roses and sweet and rich flavors of papaya",
+      "price": "$7.5",
+      "category": "Drinks",
       "match_score": 80,
-      "match_explanation": "This classic French stew is perfect for a special occasion and is ideal for those who appreciate slow-cooked, flavorful dishes.",
+      "match_explanation": "This tea is a good match as it caters to your low-calorie diet and your preference for sweet flavors.",
       "image_urls": [
-        "https://th.bing.com/th?id=OSK.03d68d9c1315a988eeb4f629f9b51f08&w=205&h=136&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
+        "https://cdnimg.webstaurantstore.com/images/products/large/694503/2400762.jpg",
+        "https://m.media-amazon.com/images/I/519a0ECcUfL._SY350_PKmb-play-button-overlay_.jpg"
       ]
     },
     {
-      "name": "Tiramisu",
-      "description": "Layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and cocoa powder, creating a classic Italian dessert that is both light and decadent.",
-      "category": "Desserts",
-      "price": "$8 / $10",
-      "match_score": 100,
-      "match_explanation": "This popular dessert is perfect for coffee and chocolate lovers and is a great way to end a meal on a sweet note.",
+      "name": "SAMDAYEON TANGERINE TEA",
+      "description": "Fresh citrus aroma of Jeju tangerine with refreshing cedar",
+      "price": "$7.5",
+      "category": "Drinks",
+      "match_score": 75,
+      "match_explanation": "This tea aligns with your low-calorie diet and offers a refreshing citrus flavor, which might complement your preference for sweet and herbal tastes.",
       "image_urls": [
-        "https://th.bing.com/th?id=OSK.HERO5qLkxLVf41gMfZr3XgF6_0P2PqLJNHmrVsGZ_d2Z3nQ&w=472&h=280&c=13&rs=2&o=6&dpr=1.5&pid=SANGAM"
+        "https://m.media-amazon.com/images/I/519a0ECcUfL._SY350_PKmb-play-button-overlay_.jpg",
+        "https://mongersprovisions.com/cdn/shop/products/kettl-houjicha-toasted-green-tea-954512_533x.jpg?v=1651866615"
       ]
     },
     {
-      "name": "Chocolate Lava Cake",
-      "description": "Warm chocolate cake with a molten chocolate center, served with a scoop of vanilla ice cream for the perfect balance of hot and cold.",
-      "category": "Desserts",
-      "price": "$9",
-      "match_score": 90,
-      "match_explanation": "This decadent dessert is ideal for chocolate lovers and those who enjoy a warm and gooey treat.",
-      "image_urls": [
-        "https://th.bing.com/th?id=OSK.be847f6c9f75f475ac60cce810cebb76&w=205&h=307&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
-      ]
-    },
-    {
-      "name": "Cheesecake",
-      "description": "Creamy and smooth New York-style cheesecake with a graham cracker crust, served with your choice of fresh fruit or chocolate sauce.",
-      "category": "Desserts",
+      "name": "COFFEE JELLY",
+      "description": "homemade coffee jelly with whipped cream",
       "price": "$7",
-      "match_score": 80,
-      "match_explanation": "This classic dessert is perfect for those who enjoy a rich and creamy treat with a variety of topping options.",
+      "category": "Desserts",
+      "match_score": 60,
+      "match_explanation": "The coffee jelly with whipped cream offers a sweet and refreshing option, although it may not directly align with your preferred Asian flavors.",
       "image_urls": [
-        "https://th.bing.com/th?id=OSK.8277f28797958407014cdf02ac65cc04&w=202&h=202&rs=2&qlt=80&o=6&cdv=1&dpr=1.5&pid=16.1"
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZOkOsMHSsAZZCqufFU0A3AqN56GanossW1wqHIulSoEUJngRej1ziB1uhGjR1uKzcEUExcSEZDP-rtN6Dj_cp6sohgc0OoO96YhVCVzR9Ay2wzDc-NRoRU0qQEp7DHb_0uvtceqZPCV0p/s400/coffee+jelly+2.jpg",
+        "https://www.kawalingpinoy.com/wp-content/uploads/2016/10/creamy-coffee-jelly-2-680x680.jpg"
+      ]
+    },
+    {
+      "name": "FRUITS PARFAIT",
+      "description": "fresh fruits, rice crispy and ice cream",
+      "price": "$17",
+      "category": "Desserts",
+      "match_score": 70,
+      "match_explanation": "This parfait with fresh fruits, rice crispy, and ice cream aligns with your preference for sweet flavors and offers a variety of textures.",
+      "image_urls": [
+        "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/13/27/56/pic4YVwdL.jpg",
+        "https://food.unl.edu/recipes/halloween-fruit.jpg"
+      ]
+    },
+    {
+      "name": "MIXED BERRY HOT CAKE",
+      "description": "Fresh berries, vanilla ice cream, whipped cream",
+      "price": "$25",
+      "category": "Desserts",
+      "match_score": 70,
+      "match_explanation": "The mixed berry hot cake with vanilla ice cream and whipped cream aligns with your preference for sweet flavors and offers a refreshing fruit component.",
+      "image_urls": [
+        "https://www.skinnytaste.com/wp-content/uploads/2020/12/Yogurt-Sheet-Pan-Pancakes-8.jpg",
+        "https://thecakechica.com/wp-content/uploads/2021/04/White-Cupcakes-with-Mixed-Berry-Filling-Edited-1-WEB.jpg"
+      ]
+    },
+    {
+      "name": "CHOCOLATE BANANA PECAN HOT CAKE",
+      "description": "Caramelized banana, pecan, chocolate sauce, whipped cream, rum chocolate ice cream",
+      "price": "$25",
+      "category": "Desserts",
+      "match_score": 70,
+      "match_explanation": "This decadent hot cake with chocolate, banana, and pecan offers a rich and sweet experience that aligns with your flavor preferences.",
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/599ffa88cd0f68882d4efcbd/1506562423977-TZQLM5X4BO5FG1KV7ERJ/banana-cake-9059.jpg",
+        "https://www.chewboom.com/wp-content/uploads/2022/10/Bob-Evans-Adds-New-Banana-Nut-Hotcakes-Banana-Nut-Farmers-Choice-And-Holy-Cow-Chocolate-Cake-678x381.jpg"
+      ]
+    },
+    {
+      "name": "GREEN TEA HOT CAKE",
+      "description": "Anko, chestnut compote, green tea ice cream, whipped cream, green tea crème anglaise",
+      "price": "$25",
+      "category": "Desserts",
+      "match_score": 80,
+      "match_explanation": "This green tea hot cake is an excellent match for your preferences, featuring Asian-inspired flavors like green tea, anko, and chestnut, along with sweet elements like whipped cream and ice cream.",
+      "image_urls": [
+        "https://i.pinimg.com/736x/1f/02/90/1f0290009ad72eeb982edbefeebc8590.jpg",
+        "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/52/97/65/y7yaPeNMQ6qlCOvcxPmp_FluffyMatchaHotcakes_02.JPG"
       ]
     }
   ]

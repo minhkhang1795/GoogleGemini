@@ -27,7 +27,7 @@ class ItemPopUpModal extends Component {
                                       position='top'
                                       alt={item?.name}/>
                         <MDBModalBody>
-                            <h3 className="text-dark">{item?.name}</h3>
+                            <h3 className="text-dark" style={{textTransform: 'capitalize'}}>{item?.name?.toLowerCase()}</h3>
                             <p>
                                 {item?.description}
                                 <br/>

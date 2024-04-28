@@ -66,7 +66,7 @@ class ItemList extends Component {
                         {this.state.categories.map((category) =>
                             <MDBBtn key={category}
                                     rounded className='me-2 tab'
-                                    style={{textTransform: 'none'}}
+                                    style={{textTransform: 'capitalize'}}
                                     color={category === this.state.currentCategory ? 'dark' : 'light'}
                                     onClick={() => this.changeTab(category)}>
                                 {category}
@@ -83,7 +83,7 @@ class ItemList extends Component {
                                           position='top'
                                           alt={item.name}/>
                             <MDBCardBody>
-                                <MDBCardTitle className="text-dark">{item.name}</MDBCardTitle>
+                                <MDBCardTitle className="text-dark" style={{textTransform: 'capitalize'}}>{item.name?.toLowerCase()}</MDBCardTitle>
                                 <MDBCardText>
                                     {item.description}
                                 </MDBCardText>

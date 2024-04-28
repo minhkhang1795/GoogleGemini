@@ -1,0 +1,242 @@
+[
+    {
+      "name": "US WAGYU HAYASHI",
+      "description": "Hayashi Rice is a popular Western-style stew with beef slices, onions, and mushrooms in a demi-glace sauce",
+      "price": "$14",
+      "category": "Main Courses"
+    },
+    {
+      "name": "GACHI HAYASHI RICE",
+      "description": "Original Hayashi over rice",
+      "price": "$14",
+      "category": "Main Courses"
+    },
+    {
+      "name": "KATSU HAYASHI RICE",
+      "description": "Original hayashi with 2 kushi katsu",
+      "price": "$23",
+      "category": "Main Courses"
+    },
+    {
+      "name": "TENSHIN",
+      "description": "Original hayashi with poached egg",
+      "price": "$16",
+      "category": "Main Courses"
+    },
+    {
+      "name": "HAYASHI OMU RICE",
+      "description": "Japanese style omelette over rice",
+      "price": "$25",
+      "category": "Main Courses"
+    },
+    {
+      "name": "KUSHI KATSU a la carte",
+      "description": "Beef fillet cutlet on skewer",
+      "price": "$5.50/P",
+      "category": "Main Courses"
+    },
+    {
+      "name": "OMURICE ORIGINAL TOMATO SAUCE",
+      "description": "Japanese-style omelette over rice with chicken soboro",
+      "price": "$18",
+      "category": "Main Courses"
+    },
+    {
+      "name": "\"NAPOLITAN\" SPAGHETTI",
+      "description": "Japanese cafe style \"Spaghetti alla Napolitana\"",
+      "price": "$19",
+      "category": "Main Courses"
+    },
+    {
+      "name": "KATSU SANDWICH",
+      "description": "Morokoshi pork katsu, fried fingerling potato, milk bread",
+      "price": "$19",
+      "category": "Main Courses"
+    },
+    {
+      "name": "TAMAGO SANDWICH",
+      "description": "Egg salad, fried fingerling potatoes, milk bread",
+      "price": "$15",
+      "category": "Main Courses"
+    },
+    {
+      "name": "BON KATSU CURRY",
+      "description": "Berkshire pork cutlet curry with butter rice, fingerling potatoes, \"fukujinzuke\" pickles.",
+      "price": "$22",
+      "category": "Main Courses"
+    },
+    {
+      "name": "FRUITS SANDWICH",
+      "description": "seasonal fruits with whipped cream",
+      "price": "$12",
+      "category": "Desserts"
+    },
+    {
+      "name": "MATCHA RICE CRISPY",
+      "description": "with whipped cream & red bean",
+      "price": "$9",
+      "category": "Desserts"
+    },
+    {
+      "name": "COFFEE JELLY",
+      "description": "homemade coffee jelly with whipped cream",
+      "price": "$7",
+      "category": "Desserts"
+    },
+    {
+      "name": "FRUITS PARFAIT",
+      "description": "fresh fruits, rice crispy and ice cream",
+      "price": "$17",
+      "category": "Desserts"
+    },
+    {
+      "name": "HOT CAKE",
+      "description": "Japanese style pancakes with homemade granola",
+      "price": null,
+      "category": "Desserts"
+    },
+    {
+      "name": "ORIGINAL HOT CAKE",
+      "description": "Butter, maple syrup, brown sugar ice cream",
+      "price": "$19",
+      "category": "Desserts"
+    },
+    {
+      "name": "MIXED BERRY HOT CAKE",
+      "description": "Fresh berries, vanilla ice cream, whipped cream",
+      "price": "$25",
+      "category": "Desserts"
+    },
+    {
+      "name": "CHOCOLATE BANANA PECAN HOT CAKE",
+      "description": "Caramelized banana, pecan, chocolate sauce, whipped cream, rum chocolate ice cream",
+      "price": "$25",
+      "category": "Desserts"
+    },
+    {
+      "name": "GREEN TEA HOT CAKE",
+      "description": "Anko, chestnut compote, green tea ice cream, whipped cream, green tea crème anglaise",
+      "price": "$25",
+      "category": "Desserts"
+    },
+    {
+        "name": "COLD BREW ICED COFFEE",
+        "description": "Cold brew iced coffee is a refreshing and smooth beverage made by steeping coffee grounds in cold water for an extended period, resulting in a less acidic and bitter taste compared to traditional hot brewed coffee.",
+        "price": "$6",
+        "category": "Drinks"
+      },
+      {
+        "name": "JAPANESE ICED COFFEE",
+        "description": "Japanese iced coffee is a brewing method where hot coffee is brewed directly over ice, resulting in a clean and flavorful cup with a slightly chilled temperature.",
+        "price": "$8.50",
+        "category": "Drinks"
+      },
+      {
+        "name": "MOON WALK",
+        "description": "Floral green tea with rose petals and calendula embodying sweet muscat scent",
+        "price": "$7.5",
+        "category": "Drinks"
+      },
+      {
+        "name": "RED PAPAYA BLACK TEA",
+        "description": "Fragrant roses and sweet and rich flavors of papaya",
+        "price": "$7.5",
+        "category": "Drinks"
+      },
+      {
+        "name": "SAMDAYEON TANGERINE TEA",
+        "description": "Fresh citrus aroma of Jeju tangerine with refreshing cedar",
+        "price": "$7.5",
+        "category": "Drinks"
+      },
+      {
+        "name": "SWEET BERRY ROOIBOS TEA",
+        "description": "Herbal tea with fresh raspberries and a touch of caramel. Caffeine free.",
+        "price": "$7",
+        "category": "Drinks"
+      },
+      {
+        "name": "CAMELLIA FLOWER TEA",
+        "description": "Perfect combination of aromatic camellia flowers and tropical fruits",
+        "price": "$7",
+        "category": "Drinks"
+      },
+      {
+        "name": "KIWI LEMONADE",
+        "description": "A refreshing beverage made with kiwi, lemon juice, and a touch of sweetness.",
+        "price": "$10",
+        "category": "Drinks"
+      },
+      {
+        "name": "KIWI GRAPEFRUIT ADE",
+        "description": "A delightful blend of kiwi, grapefruit juice, and a hint of sweetness, creating a tangy and refreshing drink.",
+        "price": "$10",
+        "category": "Drinks"
+      },
+      {
+        "name": "FRESHLY SQUEEZED ORANGE JUICE",
+        "description": "Freshly squeezed orange juice is a classic and nutritious beverage made from oranges, providing a burst of vitamin C and a sweet and tangy flavor.",
+        "price": "$7",
+        "category": "Drinks"
+      },
+      {
+        "name": "FRESHLY SQUEEZED GRAPEFRUIT JUICE",
+        "description": "Freshly squeezed grapefruit juice is a tangy and slightly bitter beverage made from grapefruits, known for its high vitamin C content and refreshing taste.",
+        "price": "$7",
+        "category": "Drinks"
+      },
+      {
+        "name": "HOUSE BLEND",
+        "description": "A blend of coffee beans roasted and ground to create a balanced and flavorful cup.",
+        "price": "$6",
+        "category": "Drinks"
+      },
+      {
+        "name": "POUR OVER",
+        "description": "A brewing method where hot water is poured over coffee grounds in a filter, resulting in a clean and flavorful cup.",
+        "price": "$6",
+        "category": "Drinks"
+      },
+      {
+        "name": "SIPHON",
+        "description": "A brewing method that uses a vacuum to brew coffee, resulting in a unique and flavorful cup.",
+        "price": "$8",
+        "category": "Drinks"
+      },
+      {
+        "name": "HANA",
+        "description": "Easy approachable flavor profile with sweet notes of dark chocolate and berry",
+        "price": "$18",
+        "category": "Drinks"
+      },
+      {
+        "name": "FINCA TRAVESIA GUATEMALA",
+        "description": "Mixed berries, cacao nib, sorghum, honeydew melon",
+        "price": "$26",
+        "category": "Drinks"
+      },
+      {
+        "name": "EL GUACO HONDURAS",
+        "description": "Velvety with notes of red currant and ripe plum",
+        "price": "$26",
+        "category": "Drinks"
+      },
+      {
+        "name": "PULCAL GUATEMALA",
+        "description": "Crisp and comforting, notes of marzipan and milk chocolate",
+        "price": "$23",
+        "category": "Drinks"
+      },
+      {
+        "name": "KOSSA GESHE ETHIOPIA",
+        "description": "Bright, jammy and floral",
+        "price": "$23",
+        "category": "Drinks"
+      },
+      {
+        "name": "YINYIN AVILEZ TABERA",
+        "description": "Juicy & clean floral medium-dark",
+        "price": "$23",
+        "category": "Drinks"
+      }
+  ]
