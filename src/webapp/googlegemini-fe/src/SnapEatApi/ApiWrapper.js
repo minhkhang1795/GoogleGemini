@@ -9,6 +9,7 @@ const api = demo ? TestApi : SnapEatApi;
 export const Recommend = api.recommend;
 export const RecommendByRestaurant = api.recommendByRestaurant;
 export const SearchRestaurants = api.searchRestaurants;
-export const GetNearbyRestaurants = api.getNearbyRestaurants;
-export const GetSavedRestaurants = api.getSavedRestaurants;
-export const GetTrendingRestaurants = api.getTrendingRestaurants;
+// These APIs are just for demo
+export const GetNearbyRestaurants = TestApi.getNearbyRestaurants;
+export const GetSavedRestaurants = TestApi.getSavedRestaurants;
+export const GetTrendingRestaurants = TestApi.getTrendingRestaurants;
