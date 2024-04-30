@@ -63,9 +63,8 @@ class GeminiModel:
             response.resolve()
             if response.text:
                 text = response.text
-                if "[]" in text:
+                if text is None or text == "" or text == "[]\n" or text == "[]":
                     error = f'Failed to read menu image. Please make sure the image is clear and try again!'
-                    text = None
             else:
                 error = f'Gemini failed to analyze the menu image.'
         except Exception as e:
@@ -118,9 +117,8 @@ class GeminiModel:
             response.resolve()
             if response.text:
                 text = response.text
-                if "[]" in text:
+                if text is None or text == "" or text == "[]\n" or text == "[]":
                     error = "Failed to recommend dishes from the menu."
-                    text = None
             else:
                 error = "Failed to recommend dishes from the menu."
         except Exception as e:
