@@ -3,7 +3,10 @@ import googlemaps
 
 from snapeat.apis.Place import Place
 
-
+"""
+To search for a restaurant from text
+https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=place_id%2Cformatted_address%2Cname&inputtype=textquery&key=GOOGLE_API_KEY&input=Levain%20Bakery
+"""
 class GooglePlaceApi:
     def __init__(self, api_key=None):
         if api_key is None:
