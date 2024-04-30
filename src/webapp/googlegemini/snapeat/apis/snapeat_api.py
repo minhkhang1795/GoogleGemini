@@ -4,7 +4,7 @@ from django.http import JsonResponse
 
 from snapeat.apis import UserProfile
 from snapeat.apis.gemini_model import GeminiModel
-from snapeat.apis.google_image_api import GoogleImageAPI
+from snapeat.apis.google_image_api import GoogleImageApi
 from snapeat.apis.google_place_api import GooglePlaceApi
 
 
@@ -14,7 +14,7 @@ class SnapEatApi:
         self.project_cx = project_cx
         self.gemini_model = GeminiModel(api_key)
         self.google_place_api = GooglePlaceApi(api_key)
-        self.google_image_api = GoogleImageAPI(api_key, project_cx)
+        self.google_image_api = GoogleImageApi(api_key, project_cx)
 
     def recommend_from_menu_image(self, menu_image, user_profile: UserProfile):
         """

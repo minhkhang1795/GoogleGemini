@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 
@@ -8,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
 from .apis.UserProfile import UserProfile
+from .apis.google_image_api import GoogleImageApi
 from .apis.google_place_api import GooglePlaceApi
 from .apis.snapeat_api import SnapEatApi
 from .forms import UploadForm
@@ -16,6 +18,7 @@ from .tables import ImageTable
 
 DEFAULT_LOCATION = "Manhattan, New York, NY"
 google_place_api = GooglePlaceApi(os.getenv('GOOGLE_API_KEY'))
+google_images_search = GoogleImageApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
 snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
 
 
@@ -73,7 +76,13 @@ def recommend_by_restaurant(request):
 
 
 def search_restaurants(request):
-    pass
+    restaurantId = "ChIJyX-WBOZZwokRROjVTDdgeZE"
+    menu_json_file = os.path.join(settings.BASE_DIR, 'static', 'menu_json', f'{restaurantId}.json')
+
+    with open(menu_json_file) as fd:
+        json_data = json.load(fd)
+
+        return google_images_search.populate_img_urls(json_data)
 
 
 def get_nearby_restaurants(request):

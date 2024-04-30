@@ -3,7 +3,7 @@ from multiprocessing import Pool
 from google_images_search import GoogleImagesSearch
 
 
-class GoogleImageAPI:
+class GoogleImageApi:
     def __init__(self, api_key, project_cx):
         if api_key is None:
             logging.error('GOOGLE_IMAGE_SEARCH_API_KEY is None')
@@ -16,7 +16,7 @@ class GoogleImageAPI:
         # Configure Google Images Search
         self.gis = GoogleImagesSearch(api_key, project_cx)
 
-    def retrieve_img_from_menu(self, item_name, retry=2):
+    def retrieve_img_from_menu(self, item_name, retry=5):
         """
         Retrieve image URLs for a menu item.
 
@@ -62,7 +62,7 @@ class GoogleImageAPI:
             # Retrieve image URLs in parallel
             with Pool() as pool:
                 results = pool.map(self.retrieve_img_from_menu, [item["name"] for item in list(
-                    filter(lambda item: 'image_urls' in item and len(item['image_urls']) == 0, json_array))])
+                    filter(lambda item: 'image_urls' not in item or len(item['image_urls']) == 0, json_array))])
 
             # Update data with retrieved image URLs
             for item_name, image_urls in results:
