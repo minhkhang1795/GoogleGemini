@@ -16,7 +16,7 @@ class SnapEatApi:
         self.google_place_api = GooglePlaceApi(api_key)
         self.google_image_api = GoogleImageAPI(api_key, project_cx)
 
-    def recommend(self, menu_image, user_profile: UserProfile):
+    def recommend_from_menu_image(self, menu_image, user_profile: UserProfile):
         """
         Returns a json response with dish recommendations given a menu image and user profile.
         The json response will have 2 fields: result and error.
@@ -29,7 +29,17 @@ class SnapEatApi:
             logging.error(f"Failed to read menu image.")
             return JsonResponse({"result": [], "error": error})
 
-        recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_result)
+        return self.recommend_from_menu_str(menu_result, user_profile)
+
+    def recommend_from_menu_str(self, menu_str: str, user_profile: UserProfile):
+        """
+        Returns a json response with dish recommendations given a menu image and user profile.
+        The json response will have 2 fields: result and error.
+        @param menu_str: the menu json.
+        @param user_profile: the user profile.
+        @return: json response with dish recommendations.
+        """
+        recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_str)
         if recommended_result is None:
             logging.error(f"Failed recommend items from the menu.")
             return JsonResponse({"result": [], "error": error})

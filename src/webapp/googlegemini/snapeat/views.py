@@ -1,6 +1,5 @@
 import logging
 import os
-import json
 
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
@@ -23,9 +22,9 @@ snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_
 @csrf_exempt
 def recommend_from_menu(request):
     """
-    Recommends dishes from a menu image and user profile
-    @param request:
-    @return:
+    Recommends dishes from a menu image and user profile.
+    @param request: A POST request must contain menuImage and userProfile.
+    @return: dish recommendation from chef Gemini.
     """
     if 'menuImage' not in request.FILES:
         return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
@@ -38,11 +37,37 @@ def recommend_from_menu(request):
         return JsonResponse({'error': 'Invalid request: User profile is invalid. Cuisines and Flavors are '
                                       'the required fields.'}, status=400)
 
-    return snapeat_api.recommend(request.FILES['menuImage'], user_profile)
+    return snapeat_api.recommend_from_menu_image(request.FILES['menuImage'], user_profile)
 
 
 def recommend_by_restaurant(request):
-    pass
+    """
+    Recommend dishes from a saved restaurant menu and user profile
+    @param request: A GET request must contain restaurantId and userProfile.
+    @return: dish recommendation from chef Gemini.
+    """
+    if 'userProfile' not in request.POST:
+        return JsonResponse({'error': 'Invalid request: User profile is missing or empty'}, status=400)
+
+    user_profile = UserProfile.create_from_string(request.POST.get('userProfile'))
+    if not user_profile.is_valid():
+        return JsonResponse({'error': 'Invalid request: User profile is invalid. Cuisines and Flavors are '
+                                      'the required fields.'}, status=400)
+
+    if 'restaurantId' not in request.GET:
+        return JsonResponse({'error': 'Invalid request: Restaurant ID is invalid'}, status=400)
+
+    menu_json_file = f'{request.GET.get('restaurantId')}.json'
+
+    try:
+        with open(menu_json_file, 'r') as file:
+            menu_json_string = file.read()
+
+        return snapeat_api.recommend_from_menu_str(menu_json_string, user_profile)
+    except FileNotFoundError:
+        return JsonResponse({'error': 'Sorry, we do not have menu for this restaurant!'}, status=500)
+    except Exception:
+        return JsonResponse({'error': 'Internal Server Error'}, status=500)
 
 
 def search_restaurants(request):
@@ -131,7 +156,7 @@ def upload_view(request):
     upload_form = UploadForm(data=request.POST, files=request.FILES)
     user_profile = UserProfile("Low Calories", "Peanut Allergy", "Thai, Korean, Japanese", "Sweet, Less Spicy, Herbal")
     if upload_form.is_valid():
-        recommended_result = snapeat_api.recommend(upload_form.instance.file, user_profile)
+        recommended_result = snapeat_api.recommend_from_menu_image(upload_form.instance.file, user_profile)
         logging.info(recommended_result)
     else:
         logging.warning("Something went wrong with uploading the file.")
