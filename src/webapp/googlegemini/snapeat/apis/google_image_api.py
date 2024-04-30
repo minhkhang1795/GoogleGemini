@@ -61,7 +61,8 @@ class GoogleImageAPI:
         try:
             # Retrieve image URLs in parallel
             with Pool() as pool:
-                results = pool.map(self.retrieve_img_from_menu, [item["name"] for item in json_array])
+                results = pool.map(self.retrieve_img_from_menu, [item["name"] for item in list(
+                    filter(lambda item: 'image_urls' in item and len(item['image_urls']) == 0, json_array))])
 
             # Update data with retrieved image URLs
             for item_name, image_urls in results:

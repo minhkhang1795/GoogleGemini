@@ -1,7 +1,7 @@
-import {IsArray} from "../Utils/Utils";
+import {IsNonEmptyArray} from "../Utils/Utils";
 
 export const FilterItems = (items, minMatchScore=60) => {
-    if (!IsArray(items)) {
+    if (!IsNonEmptyArray(items)) {
         return [];
     }
 

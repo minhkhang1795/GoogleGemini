@@ -3,6 +3,7 @@ import os
 
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
@@ -46,10 +47,10 @@ def recommend_by_restaurant(request):
     @param request: A GET request must contain restaurantId and userProfile.
     @return: dish recommendation from chef Gemini.
     """
-    if 'userProfile' not in request.POST:
+    if 'userProfile' not in request.GET:
         return JsonResponse({'error': 'Invalid request: User profile is missing or empty'}, status=400)
 
-    user_profile = UserProfile.create_from_string(request.POST.get('userProfile'))
+    user_profile = UserProfile.create_from_string(request.GET.get('userProfile'))
     if not user_profile.is_valid():
         return JsonResponse({'error': 'Invalid request: User profile is invalid. Cuisines and Flavors are '
                                       'the required fields.'}, status=400)
@@ -57,7 +58,8 @@ def recommend_by_restaurant(request):
     if 'restaurantId' not in request.GET:
         return JsonResponse({'error': 'Invalid request: Restaurant ID is invalid'}, status=400)
 
-    menu_json_file = f'{request.GET.get('restaurantId')}.json'
+    restaurant_id = request.GET.get('restaurantId')
+    menu_json_file = os.path.join(settings.BASE_DIR, 'static', 'menu_json', f'{restaurant_id}.json')
 
     try:
         with open(menu_json_file, 'r') as file:

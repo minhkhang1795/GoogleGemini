@@ -1,16 +1,8 @@
 import React, {Component} from 'react';
 import '../../fileupload.css';
-import {
-    MDBBtn,
-    MDBCard,
-    MDBCardBody,
-    MDBCardImage,
-    MDBCardText,
-    MDBCardTitle,
-} from "mdb-react-ui-kit";
 import LoadingComponent from "../../Utils/LoadingComponent";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
-import {IsArray} from "../../Utils/Utils";
+import {IsArray, IsNonEmptyArray} from "../../Utils/Utils";
 import {FilterItems} from "../../SnapEatApi/ApiUtils";
 import ItemPopUpModal from "../Common/ItemPopUpModal";
 import ItemList from "../Common/ItemList";
@@ -41,7 +33,7 @@ class BrowseRestaurantsResultComponent extends Component {
         this.props.updateRestaurantDetailsCache({data: [], error: '', isLoading: true})
         SnapEatApi.RecommendByRestaurant(id, JSON.stringify(this.props.userProfile)).then(data => {
             console.log(data);
-            if (data && IsArray(data.result)) {
+            if (data && IsNonEmptyArray(data.result)) {
                 this.props.updateRestaurantDetailsCache(id, {
                     data: FilterItems(data.result),
                     error: '',
@@ -66,32 +58,6 @@ class BrowseRestaurantsResultComponent extends Component {
         } else {
             return {data: [], error: '', isLoading: true};
         }
-    }
-
-    getCategories(items) {
-        let categories = new Set();
-        if (items && items.length > 0) {
-            for (const item of items) { // Use 'of' instead of 'in' to iterate over array elements
-                if (item.category) {
-                    categories.add(item.category);
-                }
-            }
-        }
-        let categoriesWithAll = Array.from(categories);
-        categoriesWithAll.unshift("All"); // Add "All" to the beginning of the array
-
-        return categoriesWithAll;
-    }
-
-    getItemsByCategory(items) {
-        let categories = [];
-        for (const item of items) { // Use 'of' instead of 'in' to iterate over array elements
-            if (this.state.currentCategory === "All" || item.category === this.state.currentCategory) {
-                categories.push(item);
-            }
-        }
-
-        return categories;
     }
 
     popUpItemDetails(item) {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdb-react-ui-kit";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
 import LoadingComponent from "../../Utils/LoadingComponent";
-import {IsArray} from "../../Utils/Utils";
+import {IsNonEmptyArray} from "../../Utils/Utils";
 
 class BrowseRestaurantsComponent extends Component {
     state = {};
@@ -15,7 +15,7 @@ class BrowseRestaurantsComponent extends Component {
 
     getRestaurantsByCategory() {
         let result = this.props.getRestaurantResultByCurrentTab();
-        return IsArray(result.data) ? result.data : [];
+        return IsNonEmptyArray(result.data) ? result.data : [];
     }
 
     render() {

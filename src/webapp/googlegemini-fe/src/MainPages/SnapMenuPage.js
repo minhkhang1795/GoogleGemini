@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
-import {IsArray} from "../Utils/Utils";
+import {IsNonEmptyArray} from "../Utils/Utils";
 import {FilterItems} from "../SnapEatApi/ApiUtils";
 
 const SnapMenuPageEnum = {
@@ -64,7 +64,7 @@ class SnapMenuPage extends Component {
             }
 
             console.log(data)
-            if (data && IsArray(data.result)) {
+            if (data && IsNonEmptyArray(data.result)) {
                 this.setState({result: {data: FilterItems(data.result), error: '', isLoading: false}});
                 return;
             }

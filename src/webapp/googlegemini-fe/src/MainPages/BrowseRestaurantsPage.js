@@ -177,7 +177,8 @@ class BrowseRestaurantsPage extends Component {
                 </div>}
 
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>
-                    <BrowseRestaurantsResultComponent restaurantId={this.state.restaurant.google_place_id}
+                    <BrowseRestaurantsResultComponent userProfile={this.props.userProfile}
+                                                      restaurantId={this.state.restaurant.google_place_id}
                                                       restaurantDetailsCache={this.state.restaurantDetailsCache}
                                                       updateRestaurantDetailsCache={(id, d) => this.updateRestaurantDetailsCache(id, d)}/>
                 </div>}

@@ -99,6 +99,7 @@ class GeminiModel:
                                    "- description: description of the dish copied from the menu json.\n"
                                    "- price: the price of the dish copied from the menu json.\n"
                                    "- category: the category of the dish copied from the menu json.\n"
+                                   "- image_urls: the image_urls list copied from the menu json."
                                    "- match_score: this is an integer value from 0 to 100 for each item on the menu (0 means the user cannot eat this or feels unpleasant to eat it, and 100 means perfect match with the user preferences and the menu food)."
                                    "Dietary and Allergies from the user profile should be prioritized first. Dietary and Allergies information might not be provided in the input so please treat them as optional factors in match_score evaluation"
                                    "All the dishes in the menu are from the same restaurant and are very likely from the same cuisine. The user's cuisine preference should weighted more than the user's preferred flavors. "
