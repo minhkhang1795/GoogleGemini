@@ -22,6 +22,11 @@ snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_
 @require_http_methods(["POST"])
 @csrf_exempt
 def recommend_from_menu(request):
+    """
+    Recommends dishes from a menu image and user profile
+    @param request:
+    @return:
+    """
     if 'menuImage' not in request.FILES:
         return JsonResponse({'error': 'Invalid request: Menu image is missing or empty'}, status=400)
 
@@ -36,7 +41,20 @@ def recommend_from_menu(request):
     return snapeat_api.recommend(request.FILES['menuImage'], user_profile)
 
 
+def recommend_by_restaurant(request):
+    pass
+
+
+def search_restaurants(request):
+    pass
+
+
 def get_nearby_restaurants(request):
+    """
+    Returns a list of restaurants nearby.
+    @param request:
+    @return:
+    """
     location = request.GET.get('location')
 
     if not location:
@@ -49,7 +67,8 @@ def get_nearby_restaurants(request):
 def get_saved_restaurants(request):
     """
     Returns a list of all saved restaurants.
-    This is just a static function for demo.
+    @param request:
+    @return:
     """
     location = request.GET.get('location')
 
@@ -63,7 +82,8 @@ def get_saved_restaurants(request):
 def get_trending_restaurants(request):
     """
     Returns a list of all saved restaurants.
-    This is just a static function for demo.
+    @param request:
+    @return:
     """
     location = request.GET.get('location')
 
@@ -75,10 +95,20 @@ def get_trending_restaurants(request):
 
 
 def ping(request):
+    """
+    Ping the server to see if it's up and running.
+    @param request: the request
+    @return: OK if it's up and running.'
+    """
     return JsonResponse({"success": "OK"})
 
 
 def index(request):
+    """
+    Test django index view
+    @param request:
+    @return:
+    """
     images = Image.objects.all()
     image_table = ImageTable(images)
     upload_form = UploadForm()
@@ -93,6 +123,11 @@ def index(request):
 
 @require_http_methods(["POST"])
 def upload_view(request):
+    """
+    Test django upload view
+    @param request:
+    @return:
+    """
     upload_form = UploadForm(data=request.POST, files=request.FILES)
     user_profile = UserProfile("Low Calories", "Peanut Allergy", "Thai, Korean, Japanese", "Sweet, Less Spicy, Herbal")
     if upload_form.is_valid():

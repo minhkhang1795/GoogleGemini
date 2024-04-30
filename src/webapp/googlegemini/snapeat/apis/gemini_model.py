@@ -47,6 +47,7 @@ class GeminiModel:
         @return: the menu text in json format.
         """
         text = None
+        error = None
         start_time = time.perf_counter()
         try:
             logging.info(f'analyzing menu image {image}')
@@ -62,15 +63,22 @@ class GeminiModel:
             response.resolve()
             if response.text:
                 text = response.text
+                if "[]" in text:
+                    error = f'Failed to read menu image. Please make sure the image is clear and try again!'
+                    text = None
+            else:
+                error = f'Gemini failed to analyze the menu image.'
         except Exception as e:
             logging.error(f'{type(e).__name__}: {e}')
+            error = f'Gemini failed to analyze the menu image: {e}'
 
         elapsed_time = time.perf_counter() - start_time
         logging.info(f'{elapsed_time} seconds. Menu result: {text}')
-        return text
+        return text, error
 
     def recommend_menu_items(self, user_profile: UserProfile, menu: str, GGreview=None, ChefRec=None):
         text = None
+        error = None
         start_time = time.perf_counter()
         try:
             logging.info(f'recommending menu items for user profile: {user_profile.get_user_profile()}')
@@ -109,9 +117,15 @@ class GeminiModel:
             response.resolve()
             if response.text:
                 text = response.text
+                if "[]" in text:
+                    error = "Failed to recommend dishes from the menu."
+                    text = None
+            else:
+                error = "Failed to recommend dishes from the menu."
         except Exception as e:
             logging.error(f'{type(e).__name__}: {e}')
+            error = f'Failed to recommend dishes from the menu: {e}'
 
         elapsed_time = time.perf_counter() - start_time
         logging.info(f'{elapsed_time} seconds. Menu result: {text}')
-        return text
+        return text, error

@@ -39,7 +39,7 @@ class BrowseRestaurantsResultComponent extends Component {
 
         // Call to get recommendation results
         this.props.updateRestaurantDetailsCache({data: [], error: '', isLoading: true})
-        SnapEatApi.RecommendByRestaurant(id).then(data => {
+        SnapEatApi.RecommendByRestaurant(id, JSON.stringify(this.props.userProfile)).then(data => {
             console.log(data);
             if (data && IsArray(data.result)) {
                 this.props.updateRestaurantDetailsCache(id, {

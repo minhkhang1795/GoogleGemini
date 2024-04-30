@@ -11,12 +11,12 @@ export const recommend = (formData) => {
 }
 
 export const recommendByRestaurant = (restaurantId, userProfile) => {
-    let query = `${domain}/recommendByRestaurant/?restaurantId=${restaurantId}`;
+    let query = `${domain}/recommendByRestaurant/?restaurantId=${restaurantId}&userProfile=${userProfile}`;
     return FetchWithCatch(query, fetchDataFromNetwork);
 }
 
 export const searchRestaurants = (searchPrompt, location, userProfile) => {
-    let query = `${domain}/restaurants/search/?searchPrompt=${searchPrompt}&location=${location}`;
+    let query = `${domain}/restaurants/search/?searchPrompt=${searchPrompt}&location=${location}&userProfile=${userProfile}`;
     return FetchWithCatch(query, fetchDataFromNetwork);
 }
 

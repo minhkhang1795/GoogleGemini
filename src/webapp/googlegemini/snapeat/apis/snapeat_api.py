@@ -24,24 +24,26 @@ class SnapEatApi:
         @param user_profile: the user profile.
         @return: json response with dish recommendations.
         """
-        menu_result = self.gemini_model.menu_image_to_text(menu_image)
+        menu_result, error = self.gemini_model.menu_image_to_text(menu_image)
         if menu_result is None:
             logging.error(f"Failed to read menu image.")
-            return JsonResponse({"result": [], "error": "Failed to read menu image. Please make sure the image "
-                                                        "is clear and try again!"})
+            return JsonResponse({"result": [], "error": error})
 
-        recommended_result = self.gemini_model.recommend_menu_items(user_profile, menu_result)
+        recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_result)
         if recommended_result is None:
             logging.error(f"Failed recommend items from the menu.")
-            return JsonResponse({"result": [], "error": "Failed recommend items from the menu. Please try again!."})
+            return JsonResponse({"result": [], "error": error})
 
+        recommended_json = []
         try:
             recommended_json = self._filter_recommended_results(json.loads(recommended_result))
             self.google_image_api.populate_img_urls(recommended_json)
             return JsonResponse({"result": recommended_json, "error": None})
         except Exception as e:
-            logging.error(f"Error recommending menu item: {type(e).__name__}: {e}")
-            return JsonResponse({"result": [], "error": "Internal server error. Please try again!"})
+            logging.error(f"Error parsing recommendations: {type(e).__name__}: {e}")
+            return JsonResponse({"result": recommended_json,
+                                 "error": "Sorry, our chef recommended you some dishes, "
+                                          "but his handwriting is so bad our server is unable to comprehend!"})
 
     def _filter_recommended_results(self, recommended_result, min_match_score=60):
         """
