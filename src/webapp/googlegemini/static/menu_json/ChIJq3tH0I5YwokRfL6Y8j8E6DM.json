@@ -1,0 +1,449 @@
+[
+  {
+    "name": "Korean BBQ Burger",
+    "description": "100% Angus beef cheeseburger topped with crispy sweet onions, fresh scallions, and ShackSauce",
+    "price": "$6.99",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://thecozyapron.com/wp-content/uploads/2015/06/korean-bbq-burger_thecozyapron_06-26-15_1.jpg",
+      "https://i.ytimg.com/vi/S-dBl9GsWmQ/sddefault.jpg"
+    ]
+  },
+  {
+    "name": "ShackBurger",
+    "description": "Angus beef cheeseburger with lettuce, tomato, and ShackSauce on a toasted potato bun",
+    "price": "$5.69",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://shakeshack.com/sites/default/files/2020-05-26_Blog_DIY-ShackBurger_800x800-540x540.jpg",
+      "https://foodschmooze.org/wp-content/uploads/2018/05/Shackburger-recipe_SHAKESHACK.jpg"
+    ]
+  },
+  {
+    "name": "Avocado Bacon Burger",
+    "description": "Angus beef cheeseburger topped with freshly sliced avocado, applewood-smoked bacon, and ShackSauce",
+    "price": "$7.19",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://afm-6b83.kxcdn.com/wp-content/uploads/2018/02/Pic-794A-Bacon-Burger-with-Sweet-Savory-Avocado-Bacon-Spread.jpg",
+      "https://noblepig.com/images/2014/09/Bacon-Avocado-Cheeseburger-10.jpg"
+    ]
+  },
+  {
+    "name": "SmokeShack",
+    "description": "Angus beef cheeseburger with applewood-smoked bacon, chopped cherry peppers, and ShackSauce",
+    "price": "$6.79",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://media.gannett-cdn.com/41698457001/41698457001_5780456473001_5780454592001-vs.jpg?pubId=41698457001&width=660&height=371&format=pjpg&auto=webp",
+      "https://www.cjonline.com/gcdn/presto/2021/08/10/NTCJ/a32e02b0-e3fd-46b5-a1f2-c2949c50c7e8-20210805_FatDaddys.EN-1.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp"
+    ]
+  },
+  {
+    "name": "Veggie Shack",
+    "description": "Our veggie burger packed with mushrooms, sweet potatoes, carrots, farro, and quinoa, topped with lettuce, tomato, pickle, onion, and ShackSauce",
+    "price": "$6.39",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://shakeshack.com/sites/default/files/Veggie-Shack-540x540.jpg",
+      "https://cdn.outsideonline.com/wp-content/uploads/2023/05/Shake-Shack.jpg?crop=25:14&width=500&enable=upscale"
+    ]
+  },
+  {
+    "name": "'Shroom Burger",
+    "description": "Crisp-fried portobello mushroom filled with melted muenster and cheddar cheeses, topped with lettuce, tomato, and ShackSauce",
+    "price": "$5.19",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.redrobin.com/sites/default/files/2023-10/gourmet-burgers-sauteed-shroom.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/53/74/15/dgPvxPOxTkKGunCCCIBf_shake_shack_shroom_burger_02.jpg"
+    ]
+  },
+  {
+    "name": "Shack Stack",
+    "description": "Angus beef cheeseburger topped with a 'Shroom Burger with lettuce, tomato, and ShackSauce",
+    "price": "$7.79",
+    "category": "Main Courses",
+    "image_urls": [
+      "http://www.howeieat.com/media/2011/03/shack-stack-ooze.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/53/74/28/90u2KdpQdWDcOrBhfdtm_shake_shack_shack_stack_burger_03.jpg"
+    ]
+  },
+  {
+    "name": "Hamburger",
+    "description": "Angus beef patty and your choice of toppings on a toasted potato bun",
+    "price": "$3.79",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.mashed.com/img/gallery/fast-food-hamburgers-ranked-worst-to-best/intro-1540401194.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/McDonald%27s_Quarter_Pounder_with_Cheese%2C_United_States.jpg/640px-McDonald%27s_Quarter_Pounder_with_Cheese%2C_United_States.jpg"
+    ]
+  },
+  {
+    "name": "Cheeseburger",
+    "description": "Angus beef patty with cheese and your choice of toppings on a toasted potato bun",
+    "price": "$4.49",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://media.cnn.com/api/v1/images/stellar/prod/230711092413-burger-king-real-cheeseburger.jpg?c=16x9&q=w_850,c_fill",
+      "https://www.foodrepublic.com/img/gallery/all-american-cheeseburger-recipe/intro-import.jpg"
+    ]
+  },
+  {
+    "name": "Bacon Cheeseburger",
+    "description": "Angus beef cheeseburger topped with applewood-smoked bacon on a toasted potato bun",
+    "price": "$5.09",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.mashed.com/img/gallery/fast-food-bacon-burgers-ranked-worst-to-best/intro-1655922152.jpg",
+      "https://www.dispatch.com/gcdn/authoring/authoring-images/2023/12/27/USAT/72037887007-jr-bacon-cheeseburger-1.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp"
+    ]
+  },
+  {
+    "name": "BLT",
+    "description": "All-natural Applewood Smoked bacon, lettuce, tomato, and ShackSauce on toasted potato bread",
+    "price": "$3.89",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://static01.nyt.com/images/2021/08/16/dining/as-blt/merlin_192901173_25299364-0bef-44b8-bb99-bb641d80ba12-articleLarge.jpg",
+      "https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com//content/a0/6e/126b589c538a99e5f5cecff230cb/wholefoodsprincetonttla._TTW_._CR0,140,640,360_.jpg"
+    ]
+  },
+  {
+    "name": "Grilled Cheese",
+    "description": "American cheese melted in a grilled potato bun",
+    "price": "$3.29",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://static01.nyt.com/images/2016/04/12/dining/grilledcheese-copy/grilledcheese-articleLarge.jpg",
+      "https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ-480x270.jpg"
+    ]
+  },
+  {
+    "name": "Korean Style Fried Chicken Sandwich",
+    "description": "Crispy, white-meat chicken breast coated in a spicy and sweet Gochujang glaze",
+    "price": "$6.99",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/korean-fried-chicken-burgers-d18b2ad.jpg?quality=90&resize=440,400",
+      "https://external-preview.redd.it/pZit3aVYY_1_j7B8OFJkL2fmGfF6G_cP7Qs0nPuxSBE.jpg?auto=webp&s=ac9193e43768ba5ea6599e86b6da49d58ec75ae6"
+    ]
+  },
+  {
+    "name": "Avocado Bacon Chicken",
+    "description": "Crispy chicken breast with freshly sliced avocado, applewood-smoked bacon, crisp lettuce, and creamy mayonnaise on a toasted bun",
+    "price": "$7.99",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://pinchofyum.com/wp-content/uploads/Chicken-Bacon-Avocado-Salad-square.jpg",
+      "https://www.halfbakedharvest.com/wp-content/uploads/2023/04/Black-Pepper-Pretzel-Chicken-And-Avocado-Bacon-Salad-1-340x510.jpg"
+    ]
+  },
+  {
+    "name": "Chicken Shack",
+    "description": "Crispy, white-meat chicken breast over lettuce, pickles, and buttermilk herb mayo",
+    "price": "$6.49",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://chickenshack.com/wp-content/uploads/2020/07/shack-pack.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/Ng4W9V9jPneAeBCfsG98OA/348s.jpg"
+    ]
+  },
+  {
+    "name": "Chicken Bites",
+    "description": "Crispy, whole white-meat bites served with ranch, honey mustard or BBQ",
+    "price": "$4.49",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Chicken_Nuggets.jpg/800px-Chicken_Nuggets.jpg",
+      "https://www.tasteofhome.com/wp-content/uploads/2022/11/chicken-tenders-labelled-UD.jpg?fit=700%2C467"
+    ]
+  },
+  {
+    "name": "Spicy Korean BBQ Fries",
+    "description": "Crispy crinkle cuts spiced with kimchi seasoning and served with a side of kimchi",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://www.thedailymeal.com/img/gallery/shake-shacks-swicy-and-savory-menu-review/intro-1704978361.jpg",
+      "https://mykoreankitchen.com/wp-content/uploads/2007/01/2.-Dak-Galbi-Korean-Spicy-Chicken-Stir-Fry-500x500.jpg"
+    ]
+  },
+  {
+    "name": "Spicy Korean BBQ Cheese Fries",
+    "description": "Crispy crinkle cuts topped with our cheese sauce spiced with kimchi seasoning and...",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://www.thedailymeal.com/img/gallery/shake-shacks-swicy-and-savory-menu-review/intro-1704978361.jpg",
+      "https://static.wixstatic.com/media/e26ec3_bfbf3d03d33f43d58700d1405c04d1fc~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/e26ec3_bfbf3d03d33f43d58700d1405c04d1fc~mv2.jpg"
+    ]
+  },
+  {
+    "name": "Fries",
+    "description": "Crispy crinkle cut fries (contains soy)",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg?w=500&h=375&crop=1",
+      "https://upload.wikimedia.org/wikipedia/commons/8/83/French_Fries.JPG"
+    ]
+  },
+  {
+    "name": "Cheese Fries",
+    "description": "Crispy crinkle cuts topped with our cheese sauce (contains soy and milk)",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg?w=500&h=375&crop=1",
+      "https://www.wienerschnitzel.com/wp-content/uploads/2014/10/Classic-Chili-Cheese-Fries.jpg"
+    ]
+  },
+  {
+    "name": "Bacon Cheese Fries",
+    "description": "Crispy crinkle cuts topped with our cheese sauce and applewood-smoked bacon...",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://reallifedinner.com/wp-content/uploads/2015/09/Bacon-Wrapped-Cheese-Fries-Appetizer-Football-Food.jpg",
+      "https://media.cheddars.com/en_us/images/product/menu-side-loaded-french-fries.jpg"
+    ]
+  },
+  {
+    "name": "Strawberry Frosted Donut Shake",
+    "description": "Donut frozen custard hand-spun with rainbow sprinkles and topped with a glazed donut",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://img.freepik.com/premium-photo/chocolate-indulgent-frosting-exreme-milkshake-with-donut-sweets-crazy-freakshake-food-trend-copy-space_154293-12082.jpg",
+      "https://m.media-amazon.com/images/I/81nZhroA0rL._AC_UF350,350_QL80_.jpg"
+    ]
+  },
+  {
+    "name": "Chocolate Salted Caramel Shake",
+    "description": "Chocolate frozen custard hand-spun with salted caramel and chocolate brownie pieces",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://bestmedweightloss.com/cdn/shop/products/chocolate-salted-caramel-shake-or-pudding-mix-7box-aspartame-free-bestmed-bestmed-5.jpg?v=1649869689",
+      "https://m.media-amazon.com/images/I/41etJGzaDoL._AC_.jpg"
+    ]
+  },
+  {
+    "name": "Peaches and Cream Shake",
+    "description": "Vanilla frozen custard hand-spun with real peach, topped with whipped cream and a slice of peach",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://cdn.premierprotein.com/p/a/baseprod/n-Premier_Protein_Product_Thumbnail_Peaches_Shake_11_5oz.jpg",
+      "https://www.loveandzest.com/wp-content/uploads/2017/07/Peaches-n-Cream-Protein-Shake-102-400x400.jpg"
+    ]
+  },
+  {
+    "name": "Vanilla Shake",
+    "description": "House-made vanilla frozen custard with real vanilla (contains milk and egg)",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/12/classic-vanilla-milkshake-9e7745f.jpg?quality=90&resize=544,494",
+      "https://www.seriouseats.com/thmb/_6uu8ymN6oZzRFrH9lpmpLTSn2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2014__05__20140508-292352-vanilla-milkshakes-primary-6044330b4f874a34a5146150d2902e2f.jpg"
+    ]
+  },
+  {
+    "name": "Chocolate Shake",
+    "description": "House-made chocolate frozen custard (contains milk and egg)",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://uproxx.com/wp-content/uploads/2022/08/shakes-grid-uproxx.jpg?w=710",
+      "https://i.ytimg.com/vi/6Xf858oNEak/sddefault.jpg"
+    ]
+  },
+  {
+    "name": "Cookies and Cream Shake",
+    "description": "Chocolate cookie crumbles hand spun with our house-made vanilla frozen custard",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://shakeshack.com/sites/default/files/ChocolateCookiesCream_1-540x359.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnDgswSkAaSJ9EhCHCW3Tzy3uIaLiKid1T4a3pmveytSuHaFFwzDFH9efH5h4e_00CuxM_SYgQfjrsgNL2mLkDOM9XbEsUieXKYh2GfaZUB0hm7a3p1slF_LgaRIbY5LRDUbVcfYU6BNc/s1600/chick+fil+a+meal+milkshake.jpg"
+    ]
+  },
+  {
+    "name": "Strawberry Shake",
+    "description": "Real strawberry hand spun with our house-made vanilla frozen custard (contains milk and egg)",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-7625_11-b68c89d.jpg?quality=90&resize=440,400",
+      "https://i.ytimg.com/vi/JU-LFi7tD88/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6pfAbaCN6hCqrFMIn3dO57htvbg"
+    ]
+  },
+  {
+    "name": "Black & White Shake",
+    "description": "Our house-made vanilla frozen custard with our chocolate fudge sauce hand spun with chocolate cookie crumbles",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://shakeshack.com/sites/default/files/Mint-Cookies-Cream-Shake_Evan-Sung-540x540.jpg",
+      "https://media-cdn.tripadvisor.com/media/photo-s/0f/f9/f4/bd/black-white-shake-fries.jpg"
+    ]
+  },
+  {
+    "name": "Vanilla & Chocolate Shake",
+    "description": "Our house-made vanilla and chocolate frozen custards (contains milk and egg)",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://static.wixstatic.com/media/100c18_d99b9e23f95549ec8188822b9cbd3f6a~mv2.jpg/v1/fill/w_640,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/100c18_d99b9e23f95549ec8188822b9cbd3f6a~mv2.jpg",
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/12/classic-vanilla-milkshake-9e7745f.jpg?quality=90&resize=544,494"
+    ]
+  },
+  {
+    "name": "Floats",
+    "description": "Root beer or Creamsicleï¿½ (contains milk and egg)",
+    "price": "$",
+    "category": "Other",
+    "image_urls": [
+      "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1623695763-19183982_fpx.jpg?crop=1.00xw:0.817xh;0,0.0489xh&resize=980:*",
+      "https://s3.amazonaws.com/secretsaucefiles/photos/images/000/116/283/large/IMG_3430.jpg?1485404626"
+    ]
+  },
+  {
+    "name": "Frozen Custard",
+    "description": "Vanilla or Chocolate frozen custard made in house every day (contains milk and egg)",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://media-cdn.tripadvisor.com/media/photo-s/17/73/f4/23/20190508-180523-largejpg.jpg",
+      "https://media-cdn.tripadvisor.com/media/photo-s/1b/cf/7e/e8/good-burger.jpg"
+    ]
+  },
+  {
+    "name": "Non-Dairy Chocolate Shake",
+    "description": "Handspun chocolatey, creamy, plant-based, non-dairy frozen custard made with oat milk",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/PIE/product/64389d9244c140077c1c5481_0855643006076-glamor-front-2023-03-23t14-38-42-iphone-x-quality-90-1-33-0-user-62007be7ec32e60fa58d2f55-c8w6-527436._FMwebp__SR600,600_.jpg",
+      "https://nmgprod.s3.amazonaws.com/media/files/9a/15/9a1564ab50274bd1e20826287bf43b5a/cover_image_1652474597.jpg.760x400_q85_crop_upscale.jpg"
+    ]
+  },
+  {
+    "name": "Non-Dairy Chocolate Frozen Custard",
+    "description": "Chocolatey, creamy scoops of plant-based, non-dairy frozen custard made with oat milk",
+    "price": "$",
+    "category": "Desserts",
+    "image_urls": [
+      "https://external-preview.redd.it/shake-shack-launches-new-non-dairy-chocolate-frozen-custard-v0-AdjinVBLJgKJwLOeaQTsE3uT53NuuzPPxW1svRzJnBc.jpg?auto=webp&s=ed5ba7b1c7a8bf0a670effd145a4cea3a0c03f68",
+      "https://www.chewboom.com/wp-content/uploads/2023/05/Shake-Shack-Launches-New-Veggie-Shack-Alongside-New-Non-Dairy-Chocolate-Shake-And-New-Non-Dairy-Frozen-Custard-678x381.jpg"
+    ]
+  },
+  {
+    "name": "Sunset Lemonade",
+    "description": "Real strawberry and Meyer lemon juice mixed with orange zest and our house-made lemonade.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://www.redrobin.com/sites/default/files/2023-10/beverages-sunset-lemonade.jpg",
+      "https://i0.wp.com/www.theimpulsivebuy.com/wordpress/wp-content/uploads/2018/07/Starbucks-Summer-Sunset-Cold-Foam-Tea-Lemonade.jpg?fit=550%2C550&ssl=1"
+    ]
+  },
+  {
+    "name": "Yuzu Honey Lemonade",
+    "description": "Yuzu and sudachi citrus juices mixed in with real lemonade and honey.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://m.media-amazon.com/images/I/61E52OZEuoL._AC_UF1000,1000_QL80_.jpg",
+      "https://disneylandnews.com/tachyon/sites/2/2023/07/DLR_DCA_AuntCassCafe_HoneyLemonade_05042023_DSC05855DN.jpg?fit=750%2C750"
+    ]
+  },
+  {
+    "name": "Dragonfruit Pomegranate",
+    "description": "Real dragonfruit and pomegranate mixed with house-made lemonade.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://img.freepik.com/premium-vector/tropical-fruits-frame-vegan-cuisine-with-hand-drawn-vector-avocado-dragon-fruit-papaya-pineapple-banana-pomegranate-mangosteen-fig-organic-fruit-vegetarian-food_599742-67.jpg",
+      "https://media.post.rvohealth.io/wp-content/uploads/2022/02/pomegranate-seeds-fruit-732x549-thumbnail.jpg"
+    ]
+  },
+  {
+    "name": "Shack-made Lemonade",
+    "description": "Made in house with real juice and real cane sugar.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/WcFS0WGNlr1IP_kVRApj9g/348s.jpg?height=349&width=349&quality=04",
+      "https://www.chewboom.com/wp-content/uploads/2023/01/Shake-Shack-Offers-Buy-Any-Lemonade-Online-Get-One-Free-From-2-5PM-Through-March-31-2023.jpg"
+    ]
+  },
+  {
+    "name": "Fifty/Fiftyï¿½ Lemonades",
+    "description": "Half lemonade of your choice, half organic iced tea.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": []
+  },
+  {
+    "name": "Organic Iced Tea",
+    "description": "Organic Harney & Sons iced tea brewed fresh daily.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/PIE/product/64244f94b04dff096cdf022c_2023-03-29_14-48-09_front.main._FMwebp__SR600,600_.jpg",
+      "https://s3.amazonaws.com/media.gregoryscoffee.com/uploads/food/photo/116/marqii_food_full_BLACK_ICED_TEA.jpg"
+    ]
+  },
+  {
+    "name": "Fountain Soda",
+    "description": "Coke, Diet Coke, Dr Pepper, Fanta Orange, Sprite, Ginger Ale, Coca-Cola...",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://explorestlouis.com/wp-content/uploads/2023/01/Soda-Fountain-at-Union-Station-Website-2.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/ab6O6WVAzYw4YzLYdI0-ZQ/348s.jpg"
+    ]
+  },
+  {
+    "name": "Draft Root Beer",
+    "description": "Made with real Louisiana cane sugar.",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://m.media-amazon.com/images/I/31AheBNu2WL._AC_UF894,1000_QL80_.jpg",
+      "https://i.ebayimg.com/images/g/TkgAAOSwdUBehTFi/s-l400.jpg"
+    ]
+  },
+  {
+    "name": "Shack2O Water",
+    "description": "Bottled still water",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://media-cdn.tripadvisor.com/media/photo-s/24/74/04/91/amazing-shake-shack-burger.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/2n8tCsEkT_fteZyuCIEpaw/348s.jpg"
+    ]
+  },
+  {
+    "name": "Sparkling Shack2O Water",
+    "description": "Bottled sparkling water",
+    "price": "$",
+    "category": "Drinks",
+    "image_urls": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/2n8tCsEkT_fteZyuCIEpaw/348s.jpg",
+      "https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/af47a347-10d6-4278-aff4-229f5bfaef45.jpg"
+    ]
+  },
+  {
+    "name": "Hot Dog",
+    "description": "100% beef from the pros at Vienna Beef in Chicago (contains wheat, milk, sesame...).",
+    "price": "$",
+    "category": "Main Courses",
+    "image_urls": [
+      "http://www.inmyredkitchen.com/wp-content/uploads/2014/02/Chili-dog-1-inmyredkitchen.jpg",
+      "https://www.mashed.com/img/gallery/fast-food-hot-dogs-ranked-worst-to-best/intro-1601658896.jpg"
+    ]
+  }
+]

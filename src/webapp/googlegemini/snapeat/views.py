@@ -71,18 +71,20 @@ def recommend_by_restaurant(request):
 
         return snapeat_api.recommend_from_menu_str(menu_json_string, user_profile)
     except FileNotFoundError:
-        return JsonResponse({'error': 'Sorry, we do not have menu for this restaurant!'}, status=500)
-    except Exception:
+        return JsonResponse({'error': 'We currently do not have menu for this restaurant. '
+                                      'Feel free to contribute by uploading menu photo(s).',
+                             'errorCode': 'NoMenu'}, status=500)
+    except Exception as e:
         return JsonResponse({'error': 'Internal Server Error'}, status=500)
 
 
 def search_restaurants(request):
-    restaurantId = "ChIJjzU486hZwokRR1xdL_9PWPU"
+    restaurantId = "ChIJq3tH0I5YwokRfL6Y8j8E6DM"
     menu_json_file = os.path.join(settings.BASE_DIR, 'static', 'menu_json', f'{restaurantId}.json')
 
     with open(menu_json_file) as fd:
         json_data = json.load(fd)
-
+        t = str(google_images_search.populate_img_urls(json_data))
         return google_images_search.populate_img_urls(json_data)
 
 
