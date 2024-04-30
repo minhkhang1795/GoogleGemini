@@ -1,5 +1,5 @@
 export const IsArray = (array) => {
-    if (array && array.constructor === Array && array.length > 0) {
+    if (array && array.constructor === Array) {
         return true;
     }
 }

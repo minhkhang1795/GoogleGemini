@@ -9,8 +9,8 @@ class BrowseRestaurantsComponent extends Component {
 
     componentDidMount() {
         this.props.updateDataForTab('nearbyResult', SnapEatApi.GetNearbyRestaurants(''));
-        this.props.updateDataForTab('savedResult', SnapEatApi.GetTrendingRestaurants(''));
-        this.props.updateDataForTab('trendingResult', SnapEatApi.GetNearbyRestaurants(''));
+        this.props.updateDataForTab('savedResult', SnapEatApi.GetSavedRestaurants(''));
+        this.props.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
     }
 
     getRestaurantsByCategory() {
@@ -45,14 +45,17 @@ class BrowseRestaurantsComponent extends Component {
 
                     <div>
                         {this.getRestaurantsByCategory().length > 0 && this.getRestaurantsByCategory().map((place) =>
-                            <MDBCard className='m-3' key={place.name}
+                            <MDBCard className='m-3'
+                                     key={place.name}
                                      onClick={() => this.props.setRestaurant(place)}>
                                 <MDBCardImage style={{maxHeight: '30vh', objectFit: 'cover'}}
                                               src={place.image_urls && place.image_urls.length > 0 ? place.image_urls[0] : ""}
                                               position='top'
                                               alt={place.name}/>
                                 <MDBCardBody>
-                                    <MDBCardTitle className="text-dark">{place.name}</MDBCardTitle>
+                                    <MDBCardTitle className="text-dark"
+                                                  style={{textTransform: 'capitalize'}}>{place.name?.toLowerCase()}
+                                    </MDBCardTitle>
                                     <MDBCardText>
                                         {place.description}
                                     </MDBCardText>

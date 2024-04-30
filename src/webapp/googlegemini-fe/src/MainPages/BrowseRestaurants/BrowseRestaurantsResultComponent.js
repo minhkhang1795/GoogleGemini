@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../../fileupload.css';
 import LoadingComponent from "../../Utils/LoadingComponent";
 import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
-import {IsArray, IsNonEmptyArray} from "../../Utils/Utils";
+import {IsNonEmptyArray} from "../../Utils/Utils";
 import {FilterItems} from "../../SnapEatApi/ApiUtils";
 import ItemPopUpModal from "../Common/ItemPopUpModal";
 import ItemList from "../Common/ItemList";
@@ -25,7 +25,7 @@ class BrowseRestaurantsResultComponent extends Component {
         // Get recommendation from cache
         console.log(this.props.restaurantDetailsCache);
         if (id in this.props.restaurantDetailsCache &&
-            IsArray(this.props.restaurantDetailsCache[id]?.data)) {
+            this.props.restaurantDetailsCache[id].isLoading) {
             return;
         }
 
