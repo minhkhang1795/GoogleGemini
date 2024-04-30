@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Squid Fries",
+    "description": "Squid fries served with soy wasabi mayo & vinegar gochujang dip",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://i.ytimg.com/vi/tHXJFvisAeY/sddefault.jpg",
+      "https://omnivorescookbook.com/wp-content/uploads/2019/07/Chinese-Style-Squid-Stir-Fry-550-500x375.jpg"
+    ]
+  },
+  {
+    "name": "French Fries",
+    "description": "French fries served with potato, smoked pimento, truffle oil, jalapeno ash mayo dip",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg?w=500&h=375&crop=1",
+      "https://images.immediate.co.uk/production/volatile/sites/30/2021/03/French-fries-b9e3e0c.jpg?quality=90&resize=556,505"
+    ]
+  },
+  {
+    "name": "Wings",
+    "description": "Seven pieces of our famous double-fried chicken wings, choice of your favorite flavor (Salt & Pepper | Spicy | Soy & Garlic | Classic)",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://www.recipetineats.com/wp-content/uploads/2019/01/Baked-Buffalo-Wings_0.jpg?w=500&h=375&crop=1",
+      "https://hips.hearstapps.com/hmg-prod/images/fried-chicken-wings-index-65c103e1356ec.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
+    ]
+  },
+  {
+    "name": "DAnjang-Foie Gras Mousse & Toast",
+    "description": "doenjang cured Hudson Valley foie gras, pomegranate reduction, toasted brioche",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://www.chicagotribune.com/wp-content/uploads/migration/2017/01/11/NYFAF2U3AVF3LOMJ5GNKVGTFOU.jpg?w=620",
+      "https://media.timeout.com/images/105990890/750/422/image.jpg"
+    ]
+  },
+  {
+    "name": "Sweet Potato Fries",
+    "description": "hand-cut Korean sweet potatoes, jalapeno ash mayo dip",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://hips.hearstapps.com/hmg-prod/images/sweet-potato-fries-1565971389.jpg?crop=0.573xw:1.00xh;0.230xw,0&resize=640:*",
+      "https://media.yardhouse.com/en_us/images/product/Sweet-Potato-Fries-2020.jpg"
+    ]
+  },
+  {
+    "name": "Chef Selected Seasonal Local Oysters",
+    "description": "Freshly shucked oysters",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://savorjapan.com/gg/content_image/h0085_016_20180207031615.jpg",
+      "https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/jrplcfmz/70813416-79e6-4069-b84b-4aea24a05127.jpg"
+    ]
+  },
+  {
+    "name": "Endive & Korean Pear",
+    "description": "Endive, frisee, pomegranate, candied walnut, manchego, Korean pear, pear vinaigrette, and pomegranate reduction.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://i0.wp.com/maxskitchenandgarden.com/wp-content/uploads/2018/12/endive-boats-with-caramelized-nuts-blue-cheese-and-asian-pear-modified-e1543876466917.jpg?fit=550%2C557&ssl=1",
+      "https://maxskitchenandgarden.com/wp-content/uploads/2018/12/endive-boats-with-caramelized-nuts-blue-cheese-and-asian-pear-modified-e1543876466917.jpg"
+    ]
+  },
+  {
+    "name": "Beef Tartare",
+    "description": "hand-cut prime beef, Korean pear, quail egg, gochujang remoulade, pine nut",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://images.immediate.co.uk/production/volatile/sites/30/2023/09/Steak-Tartare-c0d766e.jpg?quality=90&resize=556,505",
+      "https://images.squarespace-cdn.com/content/v1/6109e64cfe878a0cad199515/47447489-536b-44f2-9d83-bde7d0237260/2U6A2551.jpg?format=500w"
+    ]
+  },
+  {
+    "name": "Cured Shrimp (3pcs)",
+    "description": "Four days soy-cured Botan Ebi, capelin roe, chef-selected uni, quinoa & rice",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://m.media-amazon.com/images/I/318Rwjn5iZL._AC_UF350,350_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/51WXfn-vSRL.jpg"
+    ]
+  },
+  {
+    "name": "Short Rib",
+    "description": "Grilled short rib",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://i.ytimg.com/vi/ipi-vdJr4kU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBF2hixzyFESNimdwirlXr09gvJXQ",
+      "https://static01.nyt.com/images/2017/12/16/dining/16COOKING-BRAISED-SHORTRIBS/16COOKING-BRAISED-SHORTRIBS-articleLarge.jpg"
+    ]
+  },
+  {
+    "name": "Scallop",
+    "description": "Grilled scallop",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/scallops-20e866a-scaled.jpg?quality=90&crop=23px,0px,1529px,1389px&resize=556,505",
+      "https://i0.wp.com/memoriediangelina.com/wp-content/uploads/2023/02/Capesante-alla-veneziana-featured.jpg?fit=800%2C534&ssl=1"
+    ]
+  },
+  {
+    "name": "Gochujang Pork Belly",
+    "description": "Pork belly with gochujang sauce",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://i.ytimg.com/vi/r9HHSoO9kt4/sddefault.jpg",
+      "https://images.immediate.co.uk/production/volatile/sites/30/2022/07/Gochujang-pork-belly-lettuce-wraps-33bcebe.jpg?quality=90&resize=556,505"
+    ]
+  },
+  {
+    "name": "Shishito Pepper",
+    "description": "Grilled shishito pepper",
+    "price": "",
+    "category": "Other",
+    "image_urls": [
+      "https://www.denverpost.com/wp-content/uploads/2016/04/20130715__20130717_C1_FE17FDPEPPERSp2.jpg?w=428",
+      "https://www.foodandwine.com/thmb/3MrynXvmk0k94vuTmA0mDb-79cQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HD-201409-r-blistered-shishito-peppers-with-miso-7b5622010ea44c48991a68b9029cef1a.jpg"
+    ]
+  },
+  {
+    "name": "Gabil Chicken",
+    "description": "Grilled chicken",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://i.ytimg.com/vi/12ai_EuUh6c/sddefault.jpg",
+      "https://www.shutterstock.com/image-photo/chicken-food-photos-photography-restaurant-600w-2332174053.jpg"
+    ]
+  },
+  {
+    "name": "Shiitake",
+    "description": "Grilled shiitake mushroom",
+    "price": "",
+    "category": "Other",
+    "image_urls": [
+      "https://www.thekitchenmagpie.com/wp-content/uploads/images/2019/11/howtocookshiitakemushrooms.jpg",
+      "https://static.emerils.com/styles/wmax-600-sq/public/IMG_7515.JPG?itok=BRyEO6mb"
+    ]
+  },
+  {
+    "name": "Prawn Head-On Shrimp",
+    "description": "Grilled prawn head-on shrimp",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://i.ytimg.com/vi/jyGq-S6w1Lk/sddefault.jpg",
+      "https://simply-delicious-food.com/wp-content/uploads/2021/07/Grilled-prawns-4-500x375.jpg"
+    ]
+  },
+  {
+    "name": "Bone Marrow",
+    "description": "A dish made with roasted bone marrow, onion purée, and toasted baguette.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://www.southernkitchen.com/gcdn/presto/2022/01/07/NSKT/a72194ac-c10e-484a-bc92-37fbfa11f371-IMG_3645.jpg?width=660&height=495&fit=crop&format=pjpg&auto=webp",
+      "https://media.post.rvohealth.io/wp-content/uploads/2020/08/bone-marrow-732x549-thumbnail-732x549.jpg"
+    ]
+  },
+  {
+    "name": "Seafood Rose Tteokbokki",
+    "description": "A Korean rice cake dish with seafood, including shrimp, mussels, and squid, in a rose-shaped tteokbokki.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://christieathome.com/wp-content/uploads/2021/11/Rose-Tteokbokki-14-500x500.jpg",
+      "https://christieathome.com/wp-content/uploads/2023/10/Rose-Tteokbokki-Steps4-360x360.jpg"
+    ]
+  },
+  {
+    "name": "Potato & Zucchini Jeon",
+    "description": "A Korean pancake dish made with potato, zucchini, and other vegetables.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://christieathome.com/wp-content/uploads/2023/02/Korean-Zucchini-Fritters-11-1-500x375.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/18/08/33/pic5xI6uP.jpg"
+    ]
+  },
+  {
+    "name": "Gambas",
+    "description": "A dish made with shrimp, garlic, olive oil, bamboo shoot, bird's eye chili, piquillo pepper, and toasted sourdough.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/12/70/29/uoTJVprzStylivGnLAjn_pr.jpg",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFJCZ-t_g_vgijxgTKgnHKYulgXAwnd0J9PwwSnsfRvpevUu0sA-NWd52Kj0hr26iHyjlsXk7UVD84heczK0k6burviHJk-jNpn_3ueI8JMZtAlmWhYSiYmFQUehx-oZe02GKe_zaiQi52/s1600/IMG_4384.JPG"
+    ]
+  },
+  {
+    "name": "Baby Octopus",
+    "description": "A dish made with baby octopus, bird's eye chili, onion, micro cilantro, and potato nest.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://www.koreanbapsang.com/wp-content/uploads/2012/08/Baby-octopus.jpg",
+      "https://i.ytimg.com/vi/xFw2liTbFDg/hqdefault.jpg"
+    ]
+  },
+  {
+    "name": "Mushroom Japchae",
+    "description": "A Korean noodle dish made with shiitake mushroom, oyster mushroom, glass noodle, and poached egg.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://kimchimari.com/wp-content/uploads/2019/02/shitakemushrooms_Japchae.jpg",
+      "https://i.ytimg.com/vi/R9OePUXtriE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB-A7bXAldZxH0yOni8yYBh2mawzA"
+    ]
+  },
+  {
+    "name": "Avocado & Crab",
+    "description": "A dish made with charred avocado, crab meat, wasabi tobiko, yuzu extract, garlic aioli.",
+    "price": "",
+    "category": "Appetizers",
+    "image_urls": [
+      "https://i.guim.co.uk/img/media/c1f7496c49ef8d09fc61aa3cdee9f15a6a6eba10/0_357_1642_1285/master/1642.jpg?width=465&dpr=1&s=none",
+      "http://www.confessionsofachocoholic.com/wp-content/uploads/2014/09/avocado-crab-toast.jpg"
+    ]
+  },
+  {
+    "name": "Osamil Burger",
+    "description": "A burger made with half pound of house-blended beef patty, brioche bun, kimchi jam, cheddar cheese, and french fries with jalapeno mayo dip.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://images.squarespace-cdn.com/content/v1/578fe21237c58134d46c29d6/1681910394678-91WBNRIPGKJK4ZAYAZ3Z/Osamil+Burger_72+dpi.jpg?format=750w",
+      "https://images.sideways.nyc/4eA7IurFTaQvhN3VjmXjZM/osamil-1.jpg?auto=format&w=768&fit=crop"
+    ]
+  },
+  {
+    "name": "Bulgogi",
+    "description": "A Korean dish made with grilled marinated beef, soy sauce, king oyster mushrooms, onions, and scallion salad.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://s23209.pcdn.co/wp-content/uploads/2019/04/240124_DD_korean-beef-bulgogi_274-480x270.jpg",
+      "https://images.immediate.co.uk/production/volatile/sites/2/2022/09/Bulgogi-a63fca6.jpg?resize=768,574"
+    ]
+  },
+  {
+    "name": "Nearly Famous Lamb Galbi",
+    "description": "A dish made with Colorado lamb chops, galbi sauce, nueske bacon, barley, yuzu-kosho.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.recipetineats.com/wp-content/uploads/2021/04/Korean-Beef-Short-Ribs-Galbi_6-1-SQ.jpg?w=500&h=375&crop=1",
+      "https://e9h6jba7255.exactdn.com/wp-content/uploads/2023/09/IMG_2333-808x538.jpg?strip=all&lossy=0&ssl=1"
+    ]
+  },
+  {
+    "name": "Pork Jowl",
+    "description": "A dish made with charred onion, scallion, radish, ssam-jang, and radish kimchi.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://i0.wp.com/spicepaw.com/wp-content/uploads/2020/08/Thai-pork-jowl-5.jpg?resize=730%2C487&ssl=1",
+      "http://en.sempio.com/image/XE/OS/2017042114474977513d605a4-18f1-4e43-8da8-d260db974550.jpg"
+    ]
+  },
+  {
+    "name": "Korean Market Fried Chicken",
+    "description": "A Korean fried chicken dish made with Mountaine Farm's blue label whole chicken, scallion, cornsoy garlic & signature dip.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.emmymade.com/wp-content/uploads/2021/05/korean_fried_chicken-500x500.jpg",
+      "https://i.ytimg.com/vi/s4fy9Mn-uSA/sddefault.jpg"
+    ]
+  },
+  {
+    "name": "Pork Shank",
+    "description": "A dish made with juicy pork shank, perilla-apple salad, spicy radish kimchi, ssam-jang, pickled radish, jalapeno & onion, lettuce wrap.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://www.seriouseats.com/thmb/DfUz_Upucg26P68k3OT1E1D1hmk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__12__20121212-232973-cook-the-book-stinco-526a7835499e4887be35e1094e805807.jpg",
+      "https://thewoksoflife.com/wp-content/uploads/2019/12/tipang-14.jpg"
+    ]
+  },
+  {
+    "name": "Osamil Kimchi Fried Rice",
+    "description": "A kimchi fried rice dish made with house-made kimchi, nueske bacon, rice, garlic crumble, egg.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/HvxtF0bxm_zPUdV19I4MBw/348s.jpg",
+      "https://fastly.4sqi.net/img/general/600x600/65196064_vlUun4v7369vKUISFI6uT9vdKG5ephDcixLgAOJqBBs.jpg"
+    ]
+  },
+  {
+    "name": "Uni Bibimbap",
+    "description": "A Korean rice dish made with chef selected uni, wasabi tobiko, rice, house-made kimchi, soy picked radish & dressing, perilla, shallot, seaweed puree, frisee.",
+    "price": "",
+    "category": "Main Courses",
+    "image_urls": [
+      "https://media-cdn.tripadvisor.com/media/photo-s/1a/db/3d/76/uni-sea-urchin-bibimbap.jpg",
+      "https://preview.redd.it/hd370v2rdo171.jpg?width=640&crop=smart&auto=webp&s=d726164b72edaba74eba30e62a80de8f2787f974"
+    ]
+  },
+  {
+    "name": "Johnson Tang",
+    "description": "A Korean stew dish made with nueske bacon, assorted sausage, spam, house-made ramen, tofu, american cheese, peanut paste, baked bean.",
+    "price": "",
+    "category": "Soup",
+    "image_urls": [
+      "https://www.ocregister.com/wp-content/uploads/2020/01/OCR-L-TangTang-wBox-0123-1-1.jpg?w=467",
+      "https://images.booksense.com/images/700/698/9781773698700.jpg"
+    ]
+  },
+  {
+    "name": "Clam Tang",
+    "description": "A Korean soup dish made with cherry stone, manila, garlic, jalapeno, bonito.",
+    "price": "",
+    "category": "Soup",
+    "image_urls": [
+      "https://m.media-amazon.com/images/I/81Ee5yKRWAL._AC_UF350,350_QL80_.jpg",
+      "http://lh3.ggpht.com/_2TO1eko-LLQ/TK0d_w_mhWI/AAAAAAAACNo/D5jbks9XFyg/_MG_7467%5B3%5D.jpg?imgmax=800"
+    ]
+  }
+]

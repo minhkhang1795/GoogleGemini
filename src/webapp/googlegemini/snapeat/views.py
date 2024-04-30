@@ -76,7 +76,7 @@ def recommend_by_restaurant(request):
 
 
 def search_restaurants(request):
-    restaurantId = "ChIJyX-WBOZZwokRROjVTDdgeZE"
+    restaurantId = "ChIJjzU486hZwokRR1xdL_9PWPU"
     menu_json_file = os.path.join(settings.BASE_DIR, 'static', 'menu_json', f'{restaurantId}.json')
 
     with open(menu_json_file) as fd:

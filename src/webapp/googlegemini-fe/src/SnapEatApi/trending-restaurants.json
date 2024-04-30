@@ -92,6 +92,17 @@
       ]
     },
     {
+      "google_place_id": "ChIJ0QCeh5tZwokRh9J_3uvSPjU",
+      "name": "Spot Dessert Bar",
+      "description": "Trendy outpost mixing Asian elements like green tea & yuzu into cookies, cakes & boba drinks. Known for unique & over-the-top creations.",
+      "latitude": 40.731392,
+      "longitude": -73.9884,
+      "address": "13 St Marks Pl, New York, NY 10003",
+      "price_level": "2",
+      "rating": 4.5,
+      "image_urls": ["https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/images/CarinaFinn_CookieCAmp_SpotDessertBar_ig7hon"]
+    },
+    {
       "google_place_id": "ChIJWVD7FadZwokRs_pS6XY7VOU",
       "name": "Upland",
       "description": "Spacious, casually chic brasserie with hearty dishes featuring Californian & Italian influences.",
