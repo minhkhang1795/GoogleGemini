@@ -9,12 +9,12 @@ class UserProfilePage extends Component {
     componentDidMount() {
     }
 
-    getArrayStringOrNone(set) {
-        if (!set || set.size === 0) {
+    getArrayStringOrNone(arr) {
+        if (!arr || arr.length === 0) {
             return "None";
         }
 
-        return Array.from(set).join(", ");
+        return arr.join(", ");
     }
 
     render() {

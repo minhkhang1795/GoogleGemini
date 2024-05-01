@@ -25,7 +25,7 @@ class BrowseRestaurantsPage extends Component {
         pageTitle: 'Find Restaurants',
         currentPage: BrowseRestaurantsPageEnum.Browse,
         currentTab: RestaurantCategoryEnum.Nearby,
-        allTabs: [RestaurantCategoryEnum.Nearby, RestaurantCategoryEnum.Saved, RestaurantCategoryEnum.Trending],
+        allTabs: [RestaurantCategoryEnum.Nearby, RestaurantCategoryEnum.Trending, RestaurantCategoryEnum.Saved],
         restaurant: null,
         restaurantDetailsCache: {},
         searchTerm: '',
