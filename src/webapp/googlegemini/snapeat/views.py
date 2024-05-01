@@ -66,10 +66,9 @@ def recommend_by_restaurant(request):
 
     try:
         with open(menu_json_file, 'r') as file:
-            menu_json_string = file.read()
-            # return JsonResponse({"result": json.load(file), "error": None})
+            menu_json = json.load(file)
 
-        return snapeat_api.recommend_from_menu_str(menu_json_string, user_profile)
+        return snapeat_api.recommend_from_menu_json(menu_json, user_profile)
     except FileNotFoundError:
         return JsonResponse({'error': 'We currently do not have menu for this restaurant. '
                                       'Feel free to contribute by uploading menu photo(s).',

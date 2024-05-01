@@ -69,6 +69,7 @@ class GoogleImageApi:
                 for item in json_array:
                     if item["name"] == item_name:
                         item["image_urls"] = image_urls
+                        break
         except Exception as e:
             logging.error(f"Error populating image URLs: {type(e).__name__}: {e}")
 

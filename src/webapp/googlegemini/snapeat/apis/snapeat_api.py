@@ -29,31 +29,38 @@ class SnapEatApi:
             logging.error(f"Failed to read menu image.")
             return JsonResponse({"result": [], "error": error})
 
-        return self.recommend_from_menu_str(menu_result, user_profile)
+        try:
+            menu_json = json.loads(menu_result)
+            return self.recommend_from_menu_json(menu_json, user_profile)
+        except Exception as e:
+            logging.error(f"Error parsing menu: {type(e).__name__}: {e}")
+            return JsonResponse({"result": [],
+                                 "error": f"Failed to read menu image: {e}"})
 
-    def recommend_from_menu_str(self, menu_str: str, user_profile: UserProfile):
+    def recommend_from_menu_json(self, menu_json: json, user_profile: UserProfile):
         """
         Returns a json response with dish recommendations given a menu image and user profile.
         The json response will have 2 fields: result and error.
-        @param menu_str: the menu json.
+        @param menu_json: the menu json.
         @param user_profile: the user profile.
         @return: json response with dish recommendations.
         """
-        recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_str)
-        if recommended_result is None:
+        recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_json)
+        if recommended_result is None or len(recommended_result) == 0:
             logging.error(f"Failed recommend items from the menu.")
             return JsonResponse({"result": [], "error": error})
 
-        recommended_json = []
+        recommended_json = recommended_result
         try:
-            recommended_json = self._filter_recommended_results(json.loads(recommended_result))
+            recommended_json = self._filter_recommended_results(recommended_result)
             self.google_image_api.populate_img_urls(recommended_json)
             return JsonResponse({"result": recommended_json, "error": None})
         except Exception as e:
             logging.error(f"Error parsing recommendations: {type(e).__name__}: {e}")
             return JsonResponse({"result": recommended_json,
                                  "error": "Sorry, our chef recommended you some dishes, "
-                                          "but his handwriting is so bad our server is unable to comprehend!"})
+                                          "but his handwriting is so bad our server cannot comprehend! "
+                                          "Here is the full menu."})
 
     def _filter_recommended_results(self, recommended_result, min_match_score=60):
         """
@@ -64,7 +71,7 @@ class SnapEatApi:
         """
         result_array = []
         for item in recommended_result:
-            if item["match_score"] is not None and item["match_score"] >= min_match_score:
+            if "match_score" in item and item["match_score"] is not None and item["match_score"] >= min_match_score:
                 result_array.append(item)
 
         return result_array
