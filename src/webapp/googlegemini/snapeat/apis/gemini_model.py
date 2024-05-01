@@ -61,9 +61,9 @@ class GeminiModel:
                     "Otherwise, each item in the list should have these attributes:\n"
                     "- name: the name of the dish copied from the image.\n"
                     "- description: from the description of the dish copied from the image, please provide a descriptive text to help user understand the dish better. If description is not available, generate a description based on the name of the dish\n"
-                    "- price: the price of the dish as a string with a dollar symbol in front. The price must be a string because it might be a price range.\n"
-                    "- category: please classify the dish as one of these categories: Appetizers, Main Courses, Desserts, or Drinks. If nothing fits, please leave it as Other\n"
-                    "If the menu is not in English, translate it to English. Beware of the dish category name, don't include the section name into the json list",
+                    "- price: the price of the dish as a string with a dollar symbol in front. The price must be a string because it might be a price range. If there is no price, please leave the field as an empty string.\n"
+                    "- category: please classify the dish as one of these categories: Appetizers, Main Courses, Desserts, or Drinks. If nothing fits, please leave it as Other. Beware of the dish category name, don't include the section name into the json list.\n"
+                    "If the menu is not in English, translate it to English and do not include special characters from other languages.",
                     img])
             response.resolve()
             if response.text:
@@ -178,8 +178,10 @@ class GeminiModel:
         for item in menu:
             for item_with_recommendations in menu_with_recommendations:
                 if item["name"] == item_with_recommendations["name"]:
-                    item["match_score"] = item_with_recommendations["match_score"]
-                    item["match_explanation"] = item_with_recommendations["match_explanation"]
+                    if "match_score" in item_with_recommendations:
+                        item["match_score"] = item_with_recommendations["match_score"]
+                    if "match_explanation" in item_with_recommendations:
+                        item["match_explanation"] = item_with_recommendations["match_explanation"]
                     break
 
     def get_name_and_description(self, menu):
