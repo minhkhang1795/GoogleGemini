@@ -73,7 +73,12 @@ class BrowseRestaurantsResultComponent extends Component {
 
                 {isLoading && <LoadingComponent className="text-center"
                                                 style={{marginTop: '50%'}}
-                                                loadingMessage='Our chef is preparing your menu!'/>}
+                                                loadingMessage='Our chef is preparing your menu!'
+                                                additionalMessages={['Just a moment while we analyze your preferences.',
+                                                    'Hm, interesting tastes!',
+                                                    'Your personalized recommendations are simmering away!',
+                                                    'Almost there! We\'re fine-tuning your culinary matches.',
+                                                    'We\'re cooking up something special based on your tastes!']}/>}
 
                 {/* Popup modal to show item detail */}
                 <ItemPopUpModal showModal={this.state.showModal}

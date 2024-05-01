@@ -104,9 +104,6 @@ class GeminiModel:
 
         return menu_json, error
 
-    def _process_wrapper(self, args):
-        return self._recommend_menu_items(*args)
-
     def _recommend_menu_items(self, request_number, user_profile: UserProfile, menu_json, GGreview=None, ChefRec=None):
         """
         Ask Gemini to recommend dishes from the menu and user profile.

@@ -2,9 +2,27 @@ import React, {Component} from 'react';
 
 
 class LoadingComponent extends Component {
-    state = {};
+    state = {
+        message: '',
+    };
 
     componentDidMount() {
+        this.setState({message: this.props.loadingMessage})
+        // Start adding messages every 10 seconds
+        this.interval = setInterval(() => {
+            if (this.props.additionalMessages && this.props.additionalMessages.length > 0) {
+                console.log(this.props.additionalMessages);
+                const nextMessage = this.props.additionalMessages.shift();
+                console.log(nextMessage);
+                this.setState(prevState => ({
+                    message: nextMessage,
+                }));
+            }
+        }, 10000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     render() {
@@ -23,7 +41,7 @@ class LoadingComponent extends Component {
                     </div>
                 </div>
                 <div className='mt-3'>
-                    <p>{this.props.loadingMessage}</p>
+                    <p>{this.state.message}</p>
                 </div>
                 <a href="https://www.vecteezy.com/free-vector/plate" style={{display: 'none'}}>
                     Plate Vectors by Vecteezy

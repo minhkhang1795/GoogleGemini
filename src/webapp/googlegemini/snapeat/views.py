@@ -74,7 +74,7 @@ def recommend_by_restaurant(request):
                                       'Feel free to contribute by uploading menu photo(s).',
                              'errorCode': 'NoMenu'}, status=500)
     except Exception as e:
-        return JsonResponse({'error': 'Internal Server Error'}, status=500)
+        return JsonResponse({'error': f'Internal Server Error: {e}'}, status=500)
 
 
 def search_restaurants(request):

@@ -10,6 +10,7 @@ class UserProfilePage extends Component {
     }
 
     getArrayStringOrNone(arr) {
+        console.log(arr);
         if (!arr || arr.length === 0) {
             return "None";
         }

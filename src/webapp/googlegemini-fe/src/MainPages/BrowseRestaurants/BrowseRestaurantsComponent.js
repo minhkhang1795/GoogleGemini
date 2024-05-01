@@ -70,7 +70,10 @@ class BrowseRestaurantsComponent extends Component {
                 {restaurantResults?.isLoading &&
                     <LoadingComponent className="text-center"
                                       style={{marginTop: '40%'}}
-                                      loadingMessage='Looking for your fav place!'/>}
+                                      loadingMessage='Looking for your fav place!'
+                                      additionalMessages={['Exploring eateries that cater to your unique palate.',
+                                          'Delving deep into our database to find a restaurant that suits your individual tastes',
+                                          'Venturing into the culinary scene to discover a top pick tailored just for you.']}/>}
             </div>
         )
     }

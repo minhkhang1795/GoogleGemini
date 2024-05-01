@@ -12,7 +12,7 @@ const AppPageEnum = {
 class App extends Component {
 
     state = {
-        userProfile: {diets: new Set(), allergies: new Set(), cuisine: new Set(), users: new Set()},
+        userProfile: {diets: [], allergies: [], cuisine: [], users: []},
         currentPage: AppPageEnum.OnBoarding,
     };
 
