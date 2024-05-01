@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import BrowseRestaurantsComponent from "./BrowseRestaurants/BrowseRestaurantsComponent";
 import BrowseRestaurantsResultComponent from "./BrowseRestaurants/BrowseRestaurantsResultComponent";
-import {IsInArray} from "../Utils/Utils";
+import {IsInArray, IsNonEmptyArray} from "../Utils/Utils";
 import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 
 const BrowseRestaurantsPageEnum = {
@@ -48,7 +48,29 @@ class BrowseRestaurantsPage extends Component {
 
     setRestaurant(restaurant) {
         console.log("Recommending menu for restaurant", restaurant);
+        let id = restaurant.google_place_id;
         this.setState({restaurant: restaurant, currentPage: BrowseRestaurantsPageEnum.Result});
+        // Call to get recommendation results
+        this.updateRestaurantDetailsCache({data: [], error: '', isLoading: true})
+        SnapEatApi.RecommendByRestaurant(id, JSON.stringify(this.props.userProfile)).then(data => {
+            console.log(data);
+            if (data && IsNonEmptyArray(data.result)) {
+                this.updateRestaurantDetailsCache(id, {
+                    data: data.result,
+                    error: '',
+                    isLoading: false
+                })
+                return;
+            }
+
+            let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
+            this.updateRestaurantDetailsCache(id,
+                {data: [], error: error, errorCode: data.errorCode, isLoading: false});
+        }).catch(ex => {
+            console.log(ex);
+            this.updateRestaurantDetailsCache(id,
+                {data: [], error: 'Server is busy right now. Please try again!', isLoading: false});
+        });
     }
 
     updateRestaurantDetailsCache(id, restaurantDetail) {
@@ -179,8 +201,7 @@ class BrowseRestaurantsPage extends Component {
                 {this.state.currentPage === BrowseRestaurantsPageEnum.Result && <div>
                     <BrowseRestaurantsResultComponent userProfile={this.props.userProfile}
                                                       restaurantId={this.state.restaurant.google_place_id}
-                                                      restaurantDetailsCache={this.state.restaurantDetailsCache}
-                                                      updateRestaurantDetailsCache={(id, d) => this.updateRestaurantDetailsCache(id, d)}/>
+                                                      restaurantDetailsCache={this.state.restaurantDetailsCache}/>
                 </div>}
             </div>
         )

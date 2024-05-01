@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import '../../fileupload.css';
 import LoadingComponent from "../../Utils/LoadingComponent";
-import * as SnapEatApi from "../../SnapEatApi/ApiWrapper";
-import {IsNonEmptyArray} from "../../Utils/Utils";
-import {FilterItems} from "../../SnapEatApi/ApiUtils";
 import ItemPopUpModal from "../Common/ItemPopUpModal";
 import ItemList from "../Common/ItemList";
 
@@ -28,28 +25,6 @@ class BrowseRestaurantsResultComponent extends Component {
             this.props.restaurantDetailsCache[id].isLoading) {
             return;
         }
-
-        // Call to get recommendation results
-        this.props.updateRestaurantDetailsCache({data: [], error: '', isLoading: true})
-        SnapEatApi.RecommendByRestaurant(id, JSON.stringify(this.props.userProfile)).then(data => {
-            console.log(data);
-            if (data && IsNonEmptyArray(data.result)) {
-                this.props.updateRestaurantDetailsCache(id, {
-                    data: FilterItems(data.result),
-                    error: '',
-                    isLoading: false
-                })
-                return;
-            }
-
-            let error = data && data.error ? data.error : 'Server is busy right now. Please try again!';
-            this.props.updateRestaurantDetailsCache(id,
-                {data: [], error: error, errorCode: data.errorCode, isLoading: false});
-        }).catch(ex => {
-            console.log(ex);
-            this.props.updateRestaurantDetailsCache(id,
-                {data: [], error: 'Server is busy right now. Please try again!', isLoading: false});
-        });
     }
 
     getRestaurantResult() {

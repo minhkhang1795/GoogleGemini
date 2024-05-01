@@ -7,7 +7,6 @@ import * as SnapEatApi from "../SnapEatApi/ApiWrapper";
 import SnapMenuResultComponent from "./SnapMenu/SnapMenuResultComponent";
 import SnapMenuUploadAndPreviewComponent from "./SnapMenu/SnapMenuUploadAndPreviewComponent";
 import {IsNonEmptyArray} from "../Utils/Utils";
-import {FilterItems} from "../SnapEatApi/ApiUtils";
 
 const SnapMenuPageEnum = {
     Snap: 'Snap',
@@ -65,7 +64,7 @@ class SnapMenuPage extends Component {
 
             console.log(data)
             if (data && IsNonEmptyArray(data.result)) {
-                this.setState({result: {data: FilterItems(data.result), error: '', isLoading: false}});
+                this.setState({result: {data: data.result, error: '', isLoading: false}});
                 return;
             }
 
