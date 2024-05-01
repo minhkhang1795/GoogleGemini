@@ -1,13 +1,9 @@
 export const IsArray = (array) => {
-    if (array && array.constructor === Array) {
-        return true;
-    }
+    return array && array.constructor === Array;
 }
 
 export const IsNonEmptyArray = (array) => {
-    if (array && array.constructor === Array && array.length > 0) {
-        return true;
-    }
+    return array && array.constructor === Array && array.length > 0;
 }
 
 export const IsInArray = (array, value) => {

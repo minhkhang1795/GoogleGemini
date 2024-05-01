@@ -15,15 +15,8 @@ class BrowseRestaurantsResultComponent extends Component {
     componentDidMount() {
         let id = this.props.restaurantId;
         if (!id) {
-            console.log('Unexpected error when retrieving menu from restaurant');
-            return;
-        }
-
-        // Get recommendation from cache
-        console.log(this.props.restaurantDetailsCache);
-        if (id in this.props.restaurantDetailsCache &&
-            this.props.restaurantDetailsCache[id].isLoading) {
-            return;
+            console.log('Unexpected error when retrieving menu for restaurant');
+            return {data: [], error: 'Unexpected error when retrieving menu for restaurant', isLoading: false};
         }
     }
 
