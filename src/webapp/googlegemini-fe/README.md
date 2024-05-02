@@ -1,6 +1,6 @@
 # Getting Started with SnapEat front-end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The demo for the front-end only (without the back-end) can be found at: https://proud-mud-016f9a510.5.azurestaticapps.net/?demo=true
 
 ## Requirements
 You’ll need to have Node >= 14 on your local development machine (but it’s not required on the server). To install neccessary requirements (defined in `packages.json`), please run:
