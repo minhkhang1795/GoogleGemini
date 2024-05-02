@@ -89,8 +89,8 @@ class BrowseRestaurantsPage extends Component {
         if (!this.state[tabName].isLoading) {
             this.setState({
                 [tabName]: {
-                    data: this.state[tabName].data,
-                    error: this.state[tabName].error,
+                    data: forceUpdate ? [] : this.state[tabName].data,
+                    error: forceUpdate ? '' : this.state[tabName].error,
                     isLoading: true
                 }
             });
@@ -155,6 +155,7 @@ class BrowseRestaurantsPage extends Component {
         }
 
         console.log('Search term:', e.target[0].value);
+
         this.setState({searchTerm: e.target[0].value});
         this.setState(prevState => {
             if (IsInArray(prevState.allTabs, RestaurantCategoryEnum.Search))
