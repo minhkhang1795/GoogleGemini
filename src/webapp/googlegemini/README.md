@@ -7,7 +7,10 @@ You’ll need to have Python 3.12 on your machiner. To install neccessary requir
 ### `pip install -r requirements.txt`
 
 After that, you will need to set up environment variables for Gemini APIs and other stuff:
-
+- GOOGLE_API_KEY: your API key here
+- GOOGLE_PROJECT_CX: your programmable search engine CX value. Can be created at [programmablesearchengine.google.com](https://programmablesearchengine.google.com/controlpanel/all) (e.g d28c7fb544d3e4ffc)
+- DJANGO_DEBUG: 1
+- DJANGO_SECRET_KEY: a random secret key
 
 ## Start the project
 
