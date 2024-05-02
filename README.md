@@ -1,7 +1,8 @@
 # SnapEat
 
 "Your Perfect Plate, One Snap Away"
-SnapEat - Your foodie bestie where you can get answers for the two most difficult questions: “Where to eat” and “What to eat”
+
+SnapEat is your foodie bestie where you can get answers for the two most difficult questions: “Where to eat” and “What to eat”
 
 This is a project for [Google AI Hackathon 2014](https://devpost.com/software/hello-mqav0p)
 
