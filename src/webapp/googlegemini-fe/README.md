@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+You’ll need to have Node >= 14 on your local development machine (but it’s not required on the server). To install neccessary requirements (defined in `packages.json`), please run:
+
+### `npm install`
+
+## Start the project
+
+Run the below command to spin up SnapEat:
+
+### `npm start`
+
+You can explore the front-end app without the back-end by providing parameter `?demo=true` in the URL. Demo data will be populated without spinning up the back-end.
+
+http://localhost:3000/?demo=true
+
 ## Available Scripts
 
 In the project directory, you can run:
