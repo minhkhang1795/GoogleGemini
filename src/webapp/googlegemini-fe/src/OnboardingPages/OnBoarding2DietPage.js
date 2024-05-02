@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 
 const Dietaries = ["Soft Diet", "Liquid Diet", "Low Calories", "Low Fat", "Vegan", "Vegetarian",
-    "Low Sodium", "Low Sugar"]
+    "Low Sodium", "Low Sugar", "Halal", "No Beef", "No Pork", "No Red Meat"]
 
 class OnBoarding2DietPage extends Component {
 
