@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with SnapEat front-end
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -17,7 +17,7 @@ You can explore the front-end app without the back-end by providing parameter `?
 
 http://localhost:3000/?demo=true
 
-## Available Scripts
+## Other Available Scripts
 
 In the project directory, you can run:
 
