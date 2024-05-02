@@ -16,7 +16,7 @@ from .forms import UploadForm
 from .models import Image
 from .tables import ImageTable
 
-DEFAULT_LOCATION = "Manhattan, New York, NY"
+DEFAULT_LOCATION = "New York, NY"
 google_place_api = GooglePlaceApi(os.getenv('GOOGLE_API_KEY'))
 google_images_search = GoogleImageApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
 snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX', 'd28c7fb544d3e4ffc'))
