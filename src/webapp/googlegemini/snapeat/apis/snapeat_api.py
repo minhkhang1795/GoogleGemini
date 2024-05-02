@@ -27,7 +27,7 @@ class SnapEatApi:
         menu_result, error = self.gemini_model.menu_image_to_text(menu_image)
         if menu_result is None:
             logging.error(f"Failed to read menu image.")
-            return JsonResponse({"result": [], "error": error})
+            return JsonResponse({"result": [], "error": error}, status=500)
 
         try:
             menu_json = json.loads(menu_result)
@@ -35,7 +35,7 @@ class SnapEatApi:
         except Exception as e:
             logging.error(f"Error parsing menu: {type(e).__name__}: {e}")
             return JsonResponse({"result": [],
-                                 "error": f"Failed to read menu image: {e}"})
+                                 "error": f"Failed to read menu image: {e}"}, status=500)
 
     def recommend_from_menu_json(self, menu_json: json, user_profile: UserProfile):
         """
@@ -48,19 +48,36 @@ class SnapEatApi:
         recommended_result, error = self.gemini_model.recommend_menu_items(user_profile, menu_json)
         if recommended_result is None or len(recommended_result) == 0:
             logging.error(f"Failed recommend items from the menu.")
-            return JsonResponse({"result": [], "error": error})
+            return JsonResponse({"result": [], "error": error}, status=500)
 
         recommended_json = recommended_result
         try:
             recommended_json = self._filter_recommended_results(recommended_result)
-            self.google_image_api.populate_img_urls(recommended_json)
+            self.google_image_api.populate_img_urls(recommended_json, "food")
             return JsonResponse({"result": recommended_json, "error": None})
         except Exception as e:
             logging.error(f"Error parsing recommendations: {type(e).__name__}: {e}")
             return JsonResponse({"result": recommended_json,
                                  "error": "Sorry, our chef recommended you some dishes, "
                                           "but his handwriting is so bad our server cannot comprehend! "
-                                          "Here is the full menu."})
+                                          "Here is the full menu."}, status=500)
+
+    def recommend_restaurants(self, location, search_prompt, user_profile: UserProfile):
+        """
+        Returns a json response with restaurant recommendations given a search prompt and user profile.
+        The json response will have 2 fields: result and error.
+        @param location: the location.
+        @param search_prompt: the search prompt.
+        @param user_profile: the user profile.
+        @return: json response with restaurant recommendations.
+        """
+        recommended_result, error = self.gemini_model.recommend_restaurant(location, user_profile, search_prompt)
+        if recommended_result is None or len(recommended_result) == 0:
+            logging.error(f"Failed recommend items from the menu: {error}")
+            return JsonResponse({"result": [], "error": error}, status=500)
+
+        self.google_image_api.populate_img_urls(recommended_result, "restaurant")
+        return JsonResponse({"result": recommended_result, "error": None})
 
     def _filter_recommended_results(self, recommended_result, min_match_score=60):
         """

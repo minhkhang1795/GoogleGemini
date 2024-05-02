@@ -39,6 +39,7 @@ export const getTrendingRestaurants = (location) => {
 function fetchDataFromNetwork(query) {
     return fetch(query)
         .then(response => {
+            console.log("response: ", response)
             // Cache the response
             if (response.ok) {
                 console.log("adding to cache: ", query)

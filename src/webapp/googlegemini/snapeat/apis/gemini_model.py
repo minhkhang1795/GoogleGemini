@@ -2,7 +2,6 @@ import logging
 import time
 import json
 from itertools import batched
-from multiprocessing import Pool
 
 import google.generativeai as genai
 import PIL.Image
@@ -42,6 +41,49 @@ class GeminiModel:
             HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
         }
+
+    def recommend_restaurant(self, location, user_profile, search_prompt):
+        """
+        Ask Gemini to recommend restaurants based on user profile and the search prompt.
+        @param location: the location to search for.
+        @param user_profile: the user profile.
+        @param search_prompt: the search prompt.
+        @return: a list of restaurant recommendations.
+        """
+        recommendations = []
+        error = None
+        start_time = time.perf_counter()
+        try:
+            logging.info(
+                f'Recommending restaurant with location {location}, search prompt {search_prompt} for user profile: {user_profile.get_user_profile()}')
+            prompt = (
+                "From the location, search_prompt and user_profile provided below, create a JSON file of restaurant recommendations."
+                "The search prompt is the input the user provided to find restaurants. If the provided search prompt is inappropriate, just recommend based on user profile and their location. "
+                "The user profile is their dietary and food preferences. "
+                "The output will be a JSON array of restaurant recommendations. Each recommendation must have these 2 attributes:\n"
+                "- name: the name of the restaurant based on your knowledge that could suit the user profile, their location and the search prompt.\n"
+                "- description: the description of restaurant with some explanation to explain why you think the user will love this restaurant. "
+                "Please refer to the user as you/your and make it sound user friendly.\n"
+            )
+            response_input = ["location: " + location,
+                              "user_profile: " + user_profile.get_user_profile(),
+                              "search_prompt: " + search_prompt,
+                              "output: "]
+            response = self.model.generate_content([prompt] + response_input)
+            response.resolve()
+            if response.text:
+                recommendations = json.loads(response.text)
+                if recommendations is None or len(recommendations) == 0:
+                    error = "Failed to recommend restaurant to user."
+            else:
+                error = "Failed to recommend restaurant to user."
+        except Exception as e:
+            logging.error(f'{type(e).__name__}: {e}')
+            error = f'Failed to recommend restaurant to user: {e}'
+
+        elapsed_time = time.perf_counter() - start_time
+        logging.info(f'{elapsed_time} seconds. Restaurant result: {recommendations}')
+        return recommendations, error
 
     def menu_image_to_text(self, image):
         """
@@ -144,7 +186,7 @@ class GeminiModel:
                                    "You should not refer to previous dish as the dishes might be shuffled."
             )
             response_input.append("user_profile: " + user_profile.get_user_profile())
-            response_input.append("menu: " + json.dumps(self.get_name_and_description(menu_json)))
+            response_input.append("menu: " + json.dumps(self._get_name_and_description(menu_json)))
             response_input.append("name: ")
             response_input.append("description: ")
             response_input.append("match_score: ")
@@ -181,9 +223,9 @@ class GeminiModel:
                         item["match_explanation"] = item_with_recommendations["match_explanation"]
                     break
 
-    def get_name_and_description(self, menu):
+    def _get_name_and_description(self, menu):
         """
-        Return a smaller name and description.
+        Return a smaller name and description to speed up Gemini's processing time.
         @param menu: the original menu.
         @return: the simplified menu with name and description.
         """

@@ -7,13 +7,13 @@ class LoadingComponent extends Component {
     };
 
     componentDidMount() {
+        let additionalMessages = Array.from(this.props.additionalMessages);
+        console.log("test", additionalMessages);
         this.setState({message: this.props.loadingMessage})
         // Start adding messages every 10 seconds
         this.interval = setInterval(() => {
-            if (this.props.additionalMessages && this.props.additionalMessages.length > 0) {
-                console.log(this.props.additionalMessages);
-                const nextMessage = this.props.additionalMessages.shift();
-                console.log(nextMessage);
+            if (additionalMessages && additionalMessages.length > 0) {
+                const nextMessage = additionalMessages.shift();
                 this.setState(prevState => ({
                     message: nextMessage,
                 }));

@@ -19,7 +19,7 @@ from .tables import ImageTable
 DEFAULT_LOCATION = "Manhattan, New York, NY"
 google_place_api = GooglePlaceApi(os.getenv('GOOGLE_API_KEY'))
 google_images_search = GoogleImageApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
-snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX'))
+snapeat_api = SnapEatApi(os.getenv('GOOGLE_API_KEY'), os.getenv('GOOGLE_PROJECT_CX', 'd28c7fb544d3e4ffc'))
 
 
 @require_http_methods(["POST"])
@@ -78,13 +78,40 @@ def recommend_by_restaurant(request):
 
 
 def search_restaurants(request):
-    restaurantId = "ChIJq3tH0I5YwokRfL6Y8j8E6DM"
+    """
+    Returns a list of restaurants that match user profile.
+    @param request:
+    @return:
+    """
+    if 'userProfile' not in request.GET:
+        return JsonResponse({'error': 'Invalid request: User profile is missing or empty'}, status=400)
+
+    user_profile = UserProfile.create_from_string(request.GET.get('userProfile'))
+    if not user_profile.is_valid():
+        return JsonResponse({'error': 'Invalid request: User profile is invalid. Cuisines and Flavors are '
+                                      'the required fields.'}, status=400)
+
+    if 'searchPrompt' not in request.GET:
+        return JsonResponse({'error': 'Invalid request: Search prompt is invalid.'}, status=400)
+
+    location = None
+    if 'location' in request.GET:
+        location = request.GET.get('location')
+
+    if location is None or location == "":
+        location = DEFAULT_LOCATION
+
+    search_prompt = request.GET.get('searchPrompt')
+    return snapeat_api.recommend_restaurants(location, search_prompt, user_profile)
+
+
+def populate_menu_images(restaurantId):
     menu_json_file = os.path.join(settings.BASE_DIR, 'static', 'menu_json', f'{restaurantId}.json')
 
     with open(menu_json_file) as fd:
         json_data = json.load(fd)
-        t = str(google_images_search.populate_img_urls(json_data))
-        return google_images_search.populate_img_urls(json_data)
+        t = str(google_images_search.populate_img_urls(json_data, "food"))
+        return google_images_search.populate_img_urls(json_data, "food")
 
 
 def get_nearby_restaurants(request):

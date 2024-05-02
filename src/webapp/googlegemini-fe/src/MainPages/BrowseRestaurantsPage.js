@@ -82,7 +82,7 @@ class BrowseRestaurantsPage extends Component {
     }
 
     updateDataForTab(tabName, updateFunction, forceUpdate = false) {
-        if (this.state[tabName].data && this.state[tabName].data.length > 0) {
+        if (!forceUpdate && this.state[tabName].data && this.state[tabName].data.length > 0) {
             return;
         }
 
@@ -140,7 +140,7 @@ class BrowseRestaurantsPage extends Component {
             } else if (tab === RestaurantCategoryEnum.Trending) {
                 this.updateDataForTab('trendingResult', SnapEatApi.GetTrendingRestaurants(''));
             } else if (tab === RestaurantCategoryEnum.Search) {
-                this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', JSON.stringify(this.props.userProfile)));
+                this.updateDataForTab("searchResult", SnapEatApi.SearchRestaurants(this.state.searchTerm, '', JSON.stringify(this.props.userProfile)), true);
                 // Scroll tab to end
                 const tabContainer = document.getElementById('restaurantTabId');
                 tabContainer.scrollLeft = tabContainer.scrollWidth;
