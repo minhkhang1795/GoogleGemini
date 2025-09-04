@@ -4,7 +4,7 @@
 
 SnapEat is your foodie bestie where you can get answers for the two most difficult questions: “Where to eat” and “What to eat”
 
-This is a project for [Google AI Hackathon 2014](https://devpost.com/software/hello-mqav0p)
+This is a project for [Google AI Hackathon 2024](https://devpost.com/software/hello-mqav0p)
 
 Demo: https://proud-mud-016f9a510.5.azurestaticapps.net/
 - Please be patient for the Snap Menu feature. It might take up to 2 minutes to finish the request.
